@@ -1,0 +1,81 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include_dir_merge_list sensors
+binary_sensor: !include binary_sensor.yaml
+
+frontend:
+  themes: !include frontend.yaml
+
+homeassistant:
+  customize: !include customize.yaml
+
+# Notifications
+notify:
+  - name: 34DT Hassio
+    platform: pushover
+    api_key:  aiqsstb3fdzjfiufhry3sxp8i7tw4f
+    user_key: utevcgmbad4mq263sto1k6sfw5bq45
+
+logger:
+  default: info
+  logs:
+    # log level for HA core
+    homeassistant.core: fatal
+
+    # log level for remote rpio override
+    custom_components.remote_rpi_gpio: info
+
+amcrest:
+  - host: 192.168.1.54
+    username: six50joe
+    password: unbelief-ramp-best
+    name: Living Room
+
+  - host: 192.168.1.13
+    username: six50joe
+    password: unbelief-ramp-best
+    name: Driveway
+
+  - host: 192.168.1.56
+    username: six50joe
+    password: unbelief-ramp-best
+    name: Piano Room
+
+camera:
+  - platform: amcrest
+  
+sonos:
+  media_player:
+    hosts:
+      192.168.1.12
+    
+media_player:
+  platform: sonos
+
+light:
+  - platform: template
+    lights:
+      path_lights:
+        friendly_name: "Path Lights"
+        turn_on:
+          service: switch.turn_on
+          data:
+            entity_id: switch.jasco_products_12722_on_off_relay_switch_switch
+        turn_off:
+          service: switch.turn_off
+          data:
+            entity_id: switch.jasco_products_12722_on_off_relay_switch_switch
+

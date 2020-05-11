@@ -1,0 +1,402 @@
+- id: '1583167274451'
+  alias: Reboot notification
+  description: Notify when system rebooted
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      message: 34DT Hassio Rebooted
+    service: notify.34dt_hassio
+- id: '1583167744310'
+  alias: Front Door Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.front_door
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.joseph_thomas
+      state: not_home
+    - condition: state
+      entity_id: person.jamie_thomas
+      state: not_home
+  action:
+  - data:
+      message: 34DT Front Door Opened
+    service: notify.34dt_hassio
+- id: '1583167835627'
+  alias: Garage Door Entry Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.garage_entry
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.joseph_thomas
+      state: not_home
+    - condition: and
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: not_home
+  action:
+  - data:
+      message: 34DT Garage Entry Opened
+    service: notify.34dt_hassio
+- id: '1583283013697'
+  alias: Piano Room Motion Detected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.piano_room_motion_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.jamie_thomas
+      state: not_home
+    - condition: and
+      conditions:
+      - condition: state
+        entity_id: person.joseph_thomas
+        state: not_home
+  action:
+  - data:
+      message: Piano Room Motion Detected
+    service: notify.34dt_hassio
+- id: '1583283118831'
+  alias: Exercise Room Motion Detected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.exercise_room_motion_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.joseph_thomas
+      state: not_home
+    - condition: state
+      entity_id: person.jamie_thomas
+      state: not_home
+  action:
+  - data:
+      message: Exercise Room Motion Detected
+    service: notify.34dt_hassio
+- id: '1583838999172'
+  alias: Kitchen Motion Detected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.kitchen_motion_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.joseph_thomas
+      state: not_home
+    - condition: state
+      entity_id: person.jamie_thomas
+      state: not_home
+  action:
+  - data:
+      message: Kitchen Area Motion Detected
+    service: notify.34dt_hassio
+- id: '1583840584254'
+  alias: Joe Left Home
+  description: ''
+  trigger:
+  - entity_id: person.joseph_thomas
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      message: Joe Left Home
+    service: notify.34dt_hassio
+- id: '1583840738068'
+  alias: Jamie Left Home
+  description: ''
+  trigger:
+  - entity_id: person.jamie_thomas
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      message: Jamie Left Home
+    service: notify.34dt_hassio
+- id: '1583840787571'
+  alias: Joe Arrived Home
+  description: ''
+  trigger:
+  - entity_id: person.joseph_thomas
+    from: not_home
+    platform: state
+    to: home
+  condition: []
+  action:
+  - data:
+      message: Joe Arrived Home
+    service: notify.34dt_hassio
+- id: '1583840831037'
+  alias: Jamie Arrived Home
+  description: ''
+  trigger:
+  - entity_id: person.jamie_thomas
+    from: not_home
+    platform: state
+    to: home
+  condition: []
+  action:
+  - data:
+      message: Jamie Arrived Home
+    service: notify.34dt_hassio
+- id: '1583884186260'
+  alias: Kitchen Sliding Door Openend
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.kitchen_sliding_doors_status
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.joseph_thomas
+      state: not_home
+    - condition: state
+      entity_id: person.jamie_thomas
+      state: not_home
+  action:
+  - data:
+      message: Kitchen Sliding Door Opened
+    service: notify.34dt_hassio
+- id: '1583970826722'
+  alias: Family Room Sliding Doors Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.family_room_sliding_door_status
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.joseph_thomas
+      state: not_home
+    - condition: and
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: not_home
+  action:
+  - data:
+      message: Family Room sliding door opened
+    service: notify.34dt_hassio
+- id: '1585016862253'
+  alias: Check Lakehouse Disconnected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.lake_house
+    from: 'Connected '
+    platform: state
+    to: Disconnected
+  condition: []
+  action:
+  - data:
+      message: Lakehouse had been reachable but is now not
+    service: notify.34dt_hassio
+- id: '1585017089811'
+  alias: Check Lakehouse Connected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.lake_house
+    from: Diaconnected
+    platform: state
+    to: Connected
+  condition: []
+  action:
+  - data:
+      message: Lakehouse had not been reachable, but is now
+    service: notify.34dt_hassio
+- id: '1585054962692'
+  alias: Store Kitchen Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.kitchen_motion_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(states.binary_sensor.kitchen_motion_sensor.last_changed)
+        | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
+      topic: hass/storage/motion/on_time/kitchenmotion
+    service: mqtt.publish
+- id: piano_room_motion
+  alias: Store Piano Room Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.piano_room_motion_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(states.binary_sensor.piano_room_motion_sensor.last_changed)
+        | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
+      topic: hass/storage/motion/on_time/pianoroommotion
+    service: mqtt.publish
+- id: exercise_room_motion
+  alias: Store Exercise Room Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.exercise_room_motion_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(states.binary_sensor.exercise_room_motion_sensor.last_changed)
+        | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
+      topic: hass/storage/motion/on_time/exerciseroommotion
+    service: mqtt.publish
+- id: driveway_motion
+  alias: Store Driveway Motion Time
+  description: ''
+  trigger:
+  - above: '0'
+    below: '10'
+    entity_id: sensor.driveway_floodlight_sensor_burglar
+    platform: numeric_state
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(states.sensor.driveway_floodlight_sensor_burglar.last_updated)
+        | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
+      topic: hass/storage/motion/on_time/drivewaymotion
+    service: mqtt.publish
+- id: driveway_motion_while_away
+  alias: Motion in driveway while away
+  description: ''
+  trigger:
+  - entity_id: sensor.driveway_floodlight_sensor_burglar
+    from: '0'
+    platform: state
+    to: '8'
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.joseph_thomas
+      state: not_home
+    - condition: and
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: not_home
+  action:
+  - data:
+      message: Motion detected in 34DT Driveway while away
+    service: notify.34dt_hassio
+- id: 34dt_upstairs_smoke
+  alias: Upstairs Smoke
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_upstairs_status
+    from: idle
+    platform: state
+    to: smoke
+  condition: []
+  action:
+  - data:
+      message: Smoke detected upstairs at 34DT!
+    service: notify.34dt_hassio
+- id: 34dt_upstairs_co
+  alias: Upstairs Carbon Monoxide
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_upstairs_status
+    from: idle
+    platform: state
+    to: co
+  condition: []
+  action:
+  - data:
+      message: Carbon Monoxide detected upstairs at 34DT!
+    service: notify.34dt_hassio
+- id: 34dt_main_level_smoke
+  alias: Main Floor Smoke
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_main_level_status
+    from: idle
+    platform: state
+    to: smoke
+  condition: []
+  action:
+  - data:
+      message: Smoke detected main floor at 34DT!
+    service: notify.34dt_hassio
+- id: 34dt_main_level_co
+  alias: Main Floor Carbon Monoxide
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_main_level_status
+    from: idle
+    platform: state
+    to: co
+  condition: []
+  action:
+  - data:
+      message: Carbon Monoxide detected main floor at 34DT!
+    service: notify.34dt_hassio
+- id: 34dt_downstairs_smoke
+  alias: Downstairs Smoke
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_downstairs_status
+    from: idle
+    platform: state
+    to: smoke
+  condition: []
+  action:
+  - data:
+      message: Smoke detected downstairs at 34DT!
+    service: notify.34dt_hassio
+- id: 34dt_downstairs_co
+  alias: Downstairs Carbon Monoxide
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_downstairs_status
+    from: idle
+    platform: state
+    to: co
+  condition: []
+  action:
+  - data:
+      message: Carbon Monoxide detected downstairs at 34DT!
+    service: notify.34dt_hassio

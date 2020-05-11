@@ -1,0 +1,7 @@
+{
+  "log_level": "info",
+  "system_packages": [],
+  "python_packages": [
+    "colorzero"
+  ]
+}

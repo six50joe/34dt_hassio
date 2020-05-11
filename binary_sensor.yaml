@@ -1,0 +1,62 @@
+# Lakehouse ping
+- platform: ping
+  host: 12ridgegarden.dyndns.org
+  name: "Lake House"
+- platform: ping
+  host: 192.168.1.98
+  name: "Neg test"
+
+#
+# GPIOs
+#
+- platform: remote_rpi_gpio
+  host: 192.168.1.51
+  ports:
+    26: Laundry Room Window
+    22: Family Room Sliding Door
+    25: Door to Downstairs
+    20: Dining Room Windows
+    16: Downstairs Sliding Door
+    24: Kitchen Windows
+    27: Kitchen Sliding Doors
+    18: Garage Entry
+    17: Front Door
+  invert_logic: true
+- platform: template
+  sensors:
+    front_door_status:
+      value_template: "{{ is_state('binary_sensor.front_door', 'on') }}"
+      friendly_name: 'Front Door'
+      device_class: door
+    garage_entry_status:
+      value_template: "{{ is_state('binary_sensor.garage_entry', 'on') }}"
+      friendly_name: 'Garage Entry'
+      device_class: door
+    kitchen_sliding_doors_status:
+      value_template: "{{ is_state('binary_sensor.kitchen_sliding_doors', 'on') }}"
+      friendly_name: 'Kitchen Sliding Doors'
+      device_class: door
+    family_room_sliding_door_status:
+      value_template: "{{ is_state('binary_sensor.family_room_sliding_door', 'on') }}"
+      friendly_name: 'Family Room Sliding Door'
+      device_class: door
+    dining_room_windows_status:
+      value_template: "{{ is_state('binary_sensor.dining_room_windows', 'on') }}"
+      friendly_name: 'Dining Room Windows'
+      device_class: door
+    door_to_downstairs_status:
+      value_template: "{{ is_state('binary_sensor.door_to_downstairs', 'on') }}"
+      friendly_name: 'Door to Downstairs'
+      device_class: door
+    downstairs_sliding_door_status:
+      value_template: "{{ is_state('binary_sensor.downstairs_sliding_door', 'on') }}"
+      friendly_name: 'Downstairs Sliding Door'
+      device_class: door
+    kitchen_windows_status:
+      value_template: "{{ is_state('binary_sensor.kitchen_windows', 'on') }}"
+      friendly_name: 'Kitchen Windows'
+      device_class: door
+    laundry_room_window_status:
+      value_template: "{{ is_state('binary_sensor.laundry_room_window', 'on') }}"
+      friendly_name: 'Laundry Room Window'
+      device_class: door      
