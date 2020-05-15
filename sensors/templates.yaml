@@ -120,3 +120,8 @@
           mdi:garage-variant
         {% endif %}
 
+    water_gpm:
+      friendly_name: "Water Usage Gallons Per Minute"
+      unit_of_measurement: 'gpm'
+      value_template: "{{ states('variable.water_usage_rate') }}"
+

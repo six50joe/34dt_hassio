@@ -3,6 +3,6 @@ hello_world:
   module: hello
   class: HelloWorld
 
-Btester:
-  module:  button
-  class: Btester
+water_usage:
+  module: water_usage
+  class: WaterUsage

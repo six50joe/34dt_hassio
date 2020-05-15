@@ -37,6 +37,20 @@ logger:
 
     # log level for remote rpio override
     custom_components.remote_rpi_gpio: info
+       
+variable:
+  water_usage_rate:
+    value: 0
+    name: WaterUsageRate
+  water_usage:
+    value: 0
+    name: WaterUsage
+  prev_water_usage:
+    value: 0
+    name: PrevWaterUsage
+  prev_water_time:
+    value: 0
+    name: PrevWaterTime
 
 amcrest:
   - host: 192.168.1.54
