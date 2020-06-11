@@ -22,6 +22,8 @@ frontend:
 homeassistant:
   customize: !include customize.yaml
 
+shopping_list:
+
 # Notifications
 notify:
   - name: 34DT Hassio

@@ -219,7 +219,7 @@
   description: ''
   trigger:
   - entity_id: binary_sensor.lake_house
-    from: 'Connected '
+    from: Connected
     platform: state
     to: Disconnected
   condition: []
@@ -399,4 +399,56 @@
   action:
   - data:
       message: Carbon Monoxide detected downstairs at 34DT!
+    service: notify.34dt_hassio
+- id: sonos_volume_mute
+  alias: Sonos Volume Mute
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.tv_room
+      volume_level: 0
+- id: sonos_volume_low
+  alias: Sonos Volume Low
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.tv_room
+      volume_level: 0.1
+- id: sonos_volume_mid
+  alias: Sonos Volume Mid
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.tv_room
+      volume_level: 0.26
+- id: sonos_volume_high
+  alias: Sonos Volume High
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.tv_room
+      volume_level: 0.48
+- id: ac_imminent
+  alias: Air Conditioning Imminent
+  description: ''
+  trigger: []
+  condition:
+  - above: '79'
+    condition: numeric_state
+    entity_id: sensor.air_conditioning_temperature
+  action:
+  - data:
+      message: Air conditioning imminent; close windows
     service: notify.34dt_hassio

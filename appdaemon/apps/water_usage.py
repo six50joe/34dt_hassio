@@ -28,7 +28,7 @@ class WaterUsage(hass.Hass):
                     return True
         return False
 
-    def minutes_passed(self.previous_epoch, current_epoch):
+    def minutes_passed(self, previous_epoch, current_epoch):
         return float( (current_epoch - previous_epoch) / 60 )
         
     def flow_detected(self, entity=None, data=None, arg1=None, arg2=None, arg3=None):
@@ -39,7 +39,7 @@ class WaterUsage(hass.Hass):
         prev_water_time = float(self.get_state("variable.prev_water_time", "state"))
         prev_water_usage = float(self.get_state("variable.prev_water_usage", "state"))
         
-        usage = float(arg2)
+        water_usage = float(arg2)
         now  = time.time()
 
         minutes_passed = self.minutes_passed(prev_water_time, now)
@@ -48,11 +48,15 @@ class WaterUsage(hass.Hass):
 
         rate = float((water_usage - prev_water_usage) / minutes_passed)
         rate = round(rate, 3)
+        self.log("USAGE RATE: %f" % rate)
 
         if rate > 1:
             if self.not_home():
                 self.send_notification("Warning: water usage detected while not at home")
         
+        if rate > 5:
+            self.send_notification("Warning: water usage (%f) seems high" % rate)
+
         # ts = datetime.datetime.fromtimestamp(now).strftime('%Y-%m-%d_%H:%M:%S')
         
         # self.log("EPOCH_NOW: %d FORMATTED: %s" \
@@ -61,7 +65,7 @@ class WaterUsage(hass.Hass):
         
         self.call_service("variable/set_variable", variable='water_usage_rate', value=rate)
 
-        self.call_service("variable/set_variable", variable='prev_water_usage', value=usage)
+        self.call_service("variable/set_variable", variable='prev_water_usage', value=water_usage)
         self.call_service("variable/set_variable", variable='prev_water_time', value=now)
         
 
