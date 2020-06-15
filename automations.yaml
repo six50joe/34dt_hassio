@@ -443,12 +443,37 @@
 - id: ac_imminent
   alias: Air Conditioning Imminent
   description: ''
-  trigger: []
-  condition:
+  trigger:
   - above: '79'
-    condition: numeric_state
     entity_id: sensor.air_conditioning_temperature
+    platform: numeric_state
+  condition: []
   action:
   - data:
       message: Air conditioning imminent; close windows
     service: notify.34dt_hassio
+- id: water_shutoff
+  alias: Water Main Shut Off
+  description: Water main has been closed manually or leak detected
+  trigger:
+  - entity_id: switch.water_shutoff_switch
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: Basement leak detected or main manually shut off
+    service: notify.34dt_hassio
+- id: emergency_water_button
+  alias: Emergency Water Shutoff Button Pressed
+  description: ''
+  trigger:
+  - entity_id: switch.emergency_water_shutoff_switch
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+    service: homeassistant.toggle
+    entity_id: switch.water_shutoff_switch

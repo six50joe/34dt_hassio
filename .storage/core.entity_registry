@@ -575,7 +575,7 @@
                 "entity_id": "sensor.six50joe_bssid_2",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:wifi-star",
+                "original_icon": "mdi:wifi-off",
                 "original_name": "six50joe BSSID",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -607,7 +607,7 @@
                 "entity_id": "sensor.six50joe_activity_2",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:human-male",
+                "original_icon": "mdi:help-circle",
                 "original_name": "six50joe Activity",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -639,7 +639,7 @@
                 "entity_id": "sensor.six50joe_connection_type_2",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:wifi",
+                "original_icon": "mdi:signal",
                 "original_name": "six50joe Connection Type",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -671,7 +671,7 @@
                 "entity_id": "sensor.six50joe_battery_level_2",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-80",
+                "original_icon": "mdi:battery-70",
                 "original_name": "six50joe Battery Level",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -735,7 +735,7 @@
                 "entity_id": "sensor.six50joe_battery_state_2",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-80",
+                "original_icon": "mdi:battery-70",
                 "original_name": "six50joe Battery State",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -767,7 +767,7 @@
                 "entity_id": "sensor.six50joe_ssid_2",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:wifi",
+                "original_icon": "mdi:wifi-off",
                 "original_name": "six50joe SSID",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -2140,9 +2140,9 @@
                 "device_class": null,
                 "device_id": "88f49314a44245e689be8473aff26527",
                 "disabled_by": null,
-                "entity_id": "zwave.jasco_products_12719_plug_in_smart_switch",
+                "entity_id": "zwave.emergency_shutoff_water_switch",
                 "icon": null,
-                "name": null,
+                "name": "Emergency Water Shutoff Button",
                 "original_icon": null,
                 "original_name": "Jasco Products 12719 Plug-in Smart Switch",
                 "platform": "zwave",
@@ -2184,11 +2184,15 @@
             },
             {
                 "capabilities": {
+                    "fan_modes": [
+                        "Auto Low",
+                        "On Low"
+                    ],
                     "hvac_modes": [
-                        "off",
                         "heat",
-                        "cool",
-                        "heat_cool"
+                        "off",
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -2203,7 +2207,7 @@
                 "original_icon": null,
                 "original_name": "Linear (Nortek Security Control LLC) GC-TBZ48 Battery Powered Z-Wave Thermostat Mode",
                 "platform": "zwave",
-                "supported_features": 67,
+                "supported_features": 75,
                 "unique_id": "14-72057594278051844",
                 "unit_of_measurement": null
             },
@@ -2258,10 +2262,10 @@
             {
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
-                        "cool",
-                        "heat_cool"
+                        "off",
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -2330,11 +2334,15 @@
             },
             {
                 "capabilities": {
+                    "fan_modes": [
+                        "Auto Low",
+                        "On Low"
+                    ],
                     "hvac_modes": [
-                        "off",
                         "heat",
-                        "cool",
-                        "heat_cool"
+                        "off",
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -2349,7 +2357,7 @@
                 "original_icon": null,
                 "original_name": "Linear (Nortek Security Control LLC) GC-TBZ48 Battery Powered Z-Wave Thermostat Mode",
                 "platform": "zwave",
-                "supported_features": 67,
+                "supported_features": 75,
                 "unique_id": "17-72057594328383492",
                 "unit_of_measurement": null
             },
@@ -2404,10 +2412,10 @@
             {
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
-                        "cool",
-                        "heat_cool"
+                        "off",
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -2461,10 +2469,10 @@
             {
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
-                        "cool",
-                        "heat_cool"
+                        "off",
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -2517,11 +2525,15 @@
             },
             {
                 "capabilities": {
+                    "fan_modes": [
+                        "Auto Low",
+                        "On Low"
+                    ],
                     "hvac_modes": [
-                        "off",
                         "heat",
-                        "cool",
-                        "heat_cool"
+                        "off",
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -2536,7 +2548,7 @@
                 "original_icon": null,
                 "original_name": "Linear (Nortek Security Control LLC) GC-TBZ48 Battery Powered Z-Wave Thermostat Mode",
                 "platform": "zwave",
-                "supported_features": 67,
+                "supported_features": 75,
                 "unique_id": "20-72057594378715140",
                 "unit_of_measurement": null
             },
@@ -2978,9 +2990,9 @@
                 "device_class": null,
                 "device_id": "88f49314a44245e689be8473aff26527",
                 "disabled_by": null,
-                "entity_id": "switch.jasco_products_12719_plug_in_smart_switch_switch",
+                "entity_id": "switch.emergency_water_shutoff_switch",
                 "icon": null,
-                "name": null,
+                "name": "Emergency Water Shutoff Button",
                 "original_icon": null,
                 "original_name": "Jasco Products 12719 Plug-in Smart Switch Switch",
                 "platform": "zwave",
@@ -3138,9 +3150,9 @@
                 "device_class": null,
                 "device_id": "2b7d35fcc7f448c9b5aca257f46773cb",
                 "disabled_by": null,
-                "entity_id": "zwave.jasco_products_12722_on_off_relay_switch",
+                "entity_id": "zwave.path_lights_switch",
                 "icon": null,
-                "name": null,
+                "name": "Path Lights Switch",
                 "original_icon": null,
                 "original_name": "Jasco Products 12722 On/Off Relay Switch",
                 "platform": "zwave",
@@ -3154,7 +3166,7 @@
                 "device_class": null,
                 "device_id": "2b7d35fcc7f448c9b5aca257f46773cb",
                 "disabled_by": null,
-                "entity_id": "switch.jasco_products_12722_on_off_relay_switch_switch",
+                "entity_id": "switch.path_lights_switch_switch",
                 "icon": null,
                 "name": null,
                 "original_icon": null,
@@ -3215,10 +3227,10 @@
             {
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
-                        "cool",
-                        "heat_cool"
+                        "off",
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -4179,7 +4191,7 @@
                 "entity_id": "sensor.joseph_s_ipad_battery_state_2",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-outline",
+                "original_icon": "mdi:battery-90",
                 "original_name": "Joseph's iPad battery state",
                 "platform": "icloud",
                 "supported_features": 0,
@@ -4195,7 +4207,7 @@
                 "entity_id": "sensor.six50joe_battery_state_3",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-80",
+                "original_icon": "mdi:battery-70",
                 "original_name": "six50joe battery state",
                 "platform": "icloud",
                 "supported_features": 0,
@@ -4243,7 +4255,7 @@
                 "entity_id": "sensor.josephs_macbook_pro_battery_state",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-70",
+                "original_icon": "mdi:battery-40",
                 "original_name": "Joseph\u2019s MacBook Pro battery state",
                 "platform": "icloud",
                 "supported_features": 0,
@@ -4251,7 +4263,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -4264,6 +4276,294 @@
                 "platform": "automation",
                 "supported_features": 0,
                 "unique_id": "ac_imminent",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "025daa77fd5740eb806bc9b5d8335a17",
+                "device_class": "timestamp",
+                "device_id": "163c8ff435ad4fd192d1f0bd14113e04",
+                "disabled_by": "integration",
+                "entity_id": "sensor.epson_xp_830_series_uptime",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:clock-outline",
+                "original_name": "EPSON XP-830 Series Uptime",
+                "platform": "ipp",
+                "supported_features": 0,
+                "unique_id": "cfe92100-67c4-11d4-a45f-9caed37faece_uptime",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "025daa77fd5740eb806bc9b5d8335a17",
+                "device_class": null,
+                "device_id": "163c8ff435ad4fd192d1f0bd14113e04",
+                "disabled_by": null,
+                "entity_id": "sensor.epson_xp_830_series_black_ink",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:water",
+                "original_name": "EPSON XP-830 Series Black ink",
+                "platform": "ipp",
+                "supported_features": 0,
+                "unique_id": "cfe92100-67c4-11d4-a45f-9caed37faece_marker_0",
+                "unit_of_measurement": "%"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "025daa77fd5740eb806bc9b5d8335a17",
+                "device_class": null,
+                "device_id": "163c8ff435ad4fd192d1f0bd14113e04",
+                "disabled_by": null,
+                "entity_id": "sensor.epson_xp_830_series_cyan_ink",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:water",
+                "original_name": "EPSON XP-830 Series Cyan ink",
+                "platform": "ipp",
+                "supported_features": 0,
+                "unique_id": "cfe92100-67c4-11d4-a45f-9caed37faece_marker_1",
+                "unit_of_measurement": "%"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "025daa77fd5740eb806bc9b5d8335a17",
+                "device_class": null,
+                "device_id": "163c8ff435ad4fd192d1f0bd14113e04",
+                "disabled_by": null,
+                "entity_id": "sensor.epson_xp_830_series_magenta_ink",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:water",
+                "original_name": "EPSON XP-830 Series Magenta ink",
+                "platform": "ipp",
+                "supported_features": 0,
+                "unique_id": "cfe92100-67c4-11d4-a45f-9caed37faece_marker_2",
+                "unit_of_measurement": "%"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "025daa77fd5740eb806bc9b5d8335a17",
+                "device_class": null,
+                "device_id": "163c8ff435ad4fd192d1f0bd14113e04",
+                "disabled_by": null,
+                "entity_id": "sensor.epson_xp_830_series_photo_black_ink",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:water",
+                "original_name": "EPSON XP-830 Series Photo Black ink",
+                "platform": "ipp",
+                "supported_features": 0,
+                "unique_id": "cfe92100-67c4-11d4-a45f-9caed37faece_marker_3",
+                "unit_of_measurement": "%"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "025daa77fd5740eb806bc9b5d8335a17",
+                "device_class": null,
+                "device_id": "163c8ff435ad4fd192d1f0bd14113e04",
+                "disabled_by": null,
+                "entity_id": "sensor.epson_xp_830_series_yellow_ink",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:water",
+                "original_name": "EPSON XP-830 Series Yellow ink",
+                "platform": "ipp",
+                "supported_features": 0,
+                "unique_id": "cfe92100-67c4-11d4-a45f-9caed37faece_marker_4",
+                "unit_of_measurement": "%"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "025daa77fd5740eb806bc9b5d8335a17",
+                "device_class": null,
+                "device_id": "163c8ff435ad4fd192d1f0bd14113e04",
+                "disabled_by": null,
+                "entity_id": "sensor.epson_xp_830_series",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:printer",
+                "original_name": "EPSON XP-830 Series",
+                "platform": "ipp",
+                "supported_features": 0,
+                "unique_id": "cfe92100-67c4-11d4-a45f-9caed37faece_printer",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "ee6e501aadd546ad833f017dd778fc94",
+                "device_class": null,
+                "device_id": "f667a6dbb7cc41c3aedd5cc05b743de7",
+                "disabled_by": null,
+                "entity_id": "sensor.c7000v2_gateway_b_sent",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:server-network",
+                "original_name": "C7000v2 (Gateway) B sent",
+                "platform": "upnp",
+                "supported_features": 0,
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-0836c9ae738a_bytes_sent",
+                "unit_of_measurement": "B"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "ee6e501aadd546ad833f017dd778fc94",
+                "device_class": null,
+                "device_id": "f667a6dbb7cc41c3aedd5cc05b743de7",
+                "disabled_by": null,
+                "entity_id": "sensor.c7000v2_gateway_packets_received",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:server-network",
+                "original_name": "C7000v2 (Gateway) packets received",
+                "platform": "upnp",
+                "supported_features": 0,
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-0836c9ae738a_packets_received",
+                "unit_of_measurement": "packets"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "ee6e501aadd546ad833f017dd778fc94",
+                "device_class": null,
+                "device_id": "f667a6dbb7cc41c3aedd5cc05b743de7",
+                "disabled_by": null,
+                "entity_id": "sensor.c7000v2_gateway_packets_sent",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:server-network",
+                "original_name": "C7000v2 (Gateway) packets sent",
+                "platform": "upnp",
+                "supported_features": 0,
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-0836c9ae738a_packets_sent",
+                "unit_of_measurement": "packets"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "ee6e501aadd546ad833f017dd778fc94",
+                "device_class": null,
+                "device_id": "f667a6dbb7cc41c3aedd5cc05b743de7",
+                "disabled_by": null,
+                "entity_id": "sensor.c7000v2_gateway_kib_s_received",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:server-network",
+                "original_name": "C7000v2 (Gateway) KiB/s received",
+                "platform": "upnp",
+                "supported_features": 0,
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-0836c9ae738a_KiB/sec_received",
+                "unit_of_measurement": "KiB/s"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "ee6e501aadd546ad833f017dd778fc94",
+                "device_class": null,
+                "device_id": "f667a6dbb7cc41c3aedd5cc05b743de7",
+                "disabled_by": null,
+                "entity_id": "sensor.c7000v2_gateway_kib_s_sent",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:server-network",
+                "original_name": "C7000v2 (Gateway) KiB/s sent",
+                "platform": "upnp",
+                "supported_features": 0,
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-0836c9ae738a_KiB/sec_sent",
+                "unit_of_measurement": "KiB/s"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "ee6e501aadd546ad833f017dd778fc94",
+                "device_class": null,
+                "device_id": "f667a6dbb7cc41c3aedd5cc05b743de7",
+                "disabled_by": null,
+                "entity_id": "sensor.c7000v2_gateway_packets_s_received",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:server-network",
+                "original_name": "C7000v2 (Gateway) packets/s received",
+                "platform": "upnp",
+                "supported_features": 0,
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-0836c9ae738a_packets/sec_received",
+                "unit_of_measurement": "packets/s"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "ee6e501aadd546ad833f017dd778fc94",
+                "device_class": null,
+                "device_id": "f667a6dbb7cc41c3aedd5cc05b743de7",
+                "disabled_by": null,
+                "entity_id": "sensor.c7000v2_gateway_packets_s_sent",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:server-network",
+                "original_name": "C7000v2 (Gateway) packets/s sent",
+                "platform": "upnp",
+                "supported_features": 0,
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-0836c9ae738a_packets/sec_sent",
+                "unit_of_measurement": "packets/s"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "ee6e501aadd546ad833f017dd778fc94",
+                "device_class": null,
+                "device_id": "f667a6dbb7cc41c3aedd5cc05b743de7",
+                "disabled_by": null,
+                "entity_id": "sensor.c7000v2_gateway_b_received",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:server-network",
+                "original_name": "C7000v2 (Gateway) B received",
+                "platform": "upnp",
+                "supported_features": 0,
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-0836c9ae738a_bytes_received",
+                "unit_of_measurement": "B"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "automation.water_main_shut_off",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Water Main Shut Off",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "water_shutoff",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "automation.emergency_water_shutoff_button_pressed",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Emergency Water Shutoff Button Pressed",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "emergency_water_button",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "abe93caf03b54d34a5665c411bb240f2",
+                "device_class": null,
+                "device_id": "1d2787cdb7084452a9f1edcd617214ca",
+                "disabled_by": null,
+                "entity_id": "sensor.six50joe_sim_2",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:sim",
+                "original_name": "six50joe SIM 2",
+                "platform": "mobile_app",
+                "supported_features": 0,
+                "unique_id": "aa6a29eb7f01c1a991628736f90402abd3bc827c0846262fec0c4714fbf91de0_connectivity_sim_2",
                 "unit_of_measurement": null
             }
         ]

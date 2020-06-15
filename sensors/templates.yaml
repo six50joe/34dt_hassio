@@ -125,3 +125,19 @@
       unit_of_measurement: 'gpm'
       value_template: "{{ states('variable.water_usage_rate') }}"
 
+    water_shutoff:
+      friendly_name: "Water Main Shutoff"
+      value_template: >-
+        {% if is_state("switch.water_shutoff_switch", "off")%}
+          open
+        {% else %}
+          closed
+        {% endif %}
+      icon_template: >-
+        {% if is_state("switch.water_shutoff_switch", "off")%}
+          mdi:valve-open
+        {% else %}
+          mdi:valve-closed
+        {% endif %}
+        
+
