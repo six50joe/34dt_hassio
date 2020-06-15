@@ -1,0 +1,376 @@
+Per
+
+https://community.home-assistant.io/t/guide-connecting-pi-with-home-assistant-os-to-wifi-or-other-networking-changes/98768
+
+
+Home Assistant Community
+Guide: Connecting Pi with Home Assistant OS to wifi (or other networking changes)
+Home Assistant
+hassos wifi
+Log In
+Guide: Connecting Pi with Home Assistant OS to wifi (or other networking changes)
+Home Assistant
+hassos wifi
+Feb 2019
+1 / 78
+Feb 2019
+5d ago
+ 
+cogneato
+15 
+Feb '19
+Easiest method for Wifi (or setting Static IP) on HassOS
+If you are having problems creating a working network keyfile or importing the keyfile, this alternate method might work for you.
+It could also be that you have some other problem so this is not a “cure-all” for your wifi/network issues.
+
+NOTE: This method assumes you already have a working ethernet connection. Also, wifi is much more unreliable than ethernet and not recommended at all, but if you have no other choice…
+
+The short version:
+
+Install the SSH & Web Terminal Addon from the Community Repo (thanks, @frenck! 189)
+Turn off protected mode for the addon.
+Open a connection to it and use nmcli to connect to your SSID.
+1. Install the SSH & Web Terminal Addon from the Community Repo (this will NOT work with the official SSH Server addon)
+
+Set “Protection Mode” to off for the addon (you can set this back on when you are done using nmcli). You can also set “Show in sidebar” to on if you want a link to the web terminal in your side panel.
+
+image
+
+Create a good username and password or use a public and private key pair.
+
+If you choose to use a username and password, save some time by coming up with something unique since the addon will check against the haveibeenpwned database. If your password choice is found you’ll have to come up with a new one.
+
+The ssl option is set to “true” by default. Change it to “false” if you aren’t using ssl.
+
+Save and start the addon. It can take a minute to get going. Watch the addons logs below for any errors.
+
+Connect with your prefered ssh client or click on Open Web UI to use the web terminal.
+
+2. Connect to wifi using nmcli instead of importing your own profile. If you only want to set a static ip for your current connection, skip to Setting Static IP further below.
+
+First, confirm that your wifi is enabled using:
+
+nmcli radio
+
+radio
+
+Now scan and list available wifi access:
+
+nmcli device wifi rescan
+
+nmcli device wifi
+
+wifi list
+
+Connect to wifi:
+
+Use quotes around your ssid and password:
+
+nmcli device wifi connect "YOUR_SSID" password "YOUR_WIFI_PASSWORD"
+
+This will try to connect to your SSID and will generate a network profile for you if successfull.
+The output will be similar to
+"Device 'wlan0' successfully activated with...."
+
+Then check your connections again:
+
+nmcli con show
+
+con show
+
+You should be seeing at least two profiles and both green.
+
+If you are seeing some profiles you’d like to get rid of you can remove them using:
+
+nmcli connection delete CONNECTION_NAME
+
+delete con
+
+These may have two separate ip addresses on your network: one for ethernet, one for wifi.
+You can check the ip addresses using:
+
+ip addr show
+
+Now connect to http(s)://your_wifi_ip:8123 in your browser.
+
+That’s it! Now you have two connections which are properly formatted. You can edit them interactively with further use of nmcli (for setting static ip, for example).
+
+3. Set a Static IP with nmcli (optional) :
+
+nmcli connection show to list your connections
+
+nmcli con show "Your Connection Name" to list the current properties of that connection
+
+nmcli con edit "Your Connection Name" to enter edit mode for that connection
+
+nmcli> print ipv4 will show you the ipv4 properties of that connection
+
+To add your static IP address (select ‘yes’ for manual method);
+
+Copy to clipboard
+nmcli> set ipv4.addresses 192.168.1.10/24
+Do you also want to set 'ipv4.method' to 'manual'? [yes]:
+If you like, you can also edit set the dns server and local gateway while you’re here:
+
+Copy to clipboard
+nmcli> set ipv4.dns 1.1.1.1
+nmcli> set ipv4.gateway 192.168.1.1
+nmcli> save
+nmcli> quit
+Finally, you should follow this with a full reboot using
+
+hassio ho reboot
+
+https://github.com/home-assistant/hassos/blob/dev/Documentation/network.md#using-nmcli-to-set-a-static-ipv4-address 602
+
+1 Reply32
+
+
+Hassio instalaltion Wifi configuration
+224
+How To: Set a Static IP on Hass.io/HassOS
+76
+Wifi issues on HassOS
+57
+PSA: HassOS does not use the SD card for wifi settings or authorized_keys. [UPDATE: Now it can!]
+35
+Wlan0: link is not ready
+25
+21 more
+
+created
+Feb '19
+last reply
+5d
+77
+replies
+47.9k
+views
+35
+users
+47
+likes
+17
+links
+Frequent Posters
+131076433
+Popular Links
+602	hassos/network.md at dev · home-assistant/hassos · GitHub github.com
+224	Hassio instalaltion Wifi configuration home-assistant.io
+189	Franck Nijhof (@Frenck) | Twitter twitter.com
+150	hassos/network.md at dev · home-assistant/hassos · GitHub github.com
+129	Connecting to wifi from command line - Raspberry Pi Forums raspberrypi.org
+
+There are 77 replies with an estimated read time of 10 minutes.
+
+Summarize This Topic
+15 DAYS LATER
+
+Anymal
+Yvo Putter
+Feb '19
+In my case using a Raspberry Pi Zero W with Hassio image 2.10, my wifi access point or SSID was not showing up in the list created by nmcli device wifi.
+
+A few google searches later, I found a raspberry pi forum post 129 hinting that the SSID that you’re trying to connect to with your Hassio install and CONFIG USB method, must have a channel<=10 on your Router.
+
+I reflashed my SD card, plugged in the CONFIG USB, booted up and waited around 2 min and was then able to connect to hassio.local:8123. This finally solved my wifi connection setup problem!
+
+2 Replies3
+
+
+HASS.IO - Wifi setup config file
+83
+Raspi 3b+ - Wifi (wlan) doesnt work, lan does
+20
+Hassio instalaltion Wifi configuration
+20
+
+cogneato
+Feb '19
+This guide won’t work on a pi zero w obviously, since it requires ethernet.
+But you have shared some good info I hadn’t seen yet.
+
+Also, Hassio on a pi zero w is going to be a miserable experience. I tried it out.
+
+1 Reply
+
+
+aepp
+Aleksandr Epp
+Feb '19
+Doesn’t work for me. The first part with the add-on already. It just doesn’t start an ssh server. Here is what’s in the log after starting the add-on:
+
+Copy to clipboard
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] 10-hassio: applying... 
+[fix-attrs.d] 10-hassio: exited 0.
+[fix-attrs.d] 50-ssh: applying... 
+[fix-attrs.d] 50-ssh: exited 0.
+[fix-attrs.d] 51-sudoers: applying... 
+[fix-attrs.d] 51-sudoers: exited 0.
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] 00-banner.sh: executing... 
+-----------------------------------------------------------
+Any idea what could be the reason? The original ssh add-on was not installed.
+
+
+
+
+cogneato
+Feb '19
+That’s only the beginning of the log. Are you hitting refresh? Are you saying it hangs at that point?
+
+2 Replies
+
+
+Anymal
+Yvo Putter
+1 
+
+cogneato
+Feb '19
+I don’t understand your claim that it obviously won’t work on a Pi Zero W, because in my case I had no ethernet and still managed to connect to wifi and get up and running.
+
+However, I think that my remark is more pointed towards people trying get wifi working from the start. But also to point out that your router settings are important (it can work by just adjusting that alone, without doing anything on the Pi or CONFIG USB).
+
+Just to elaborate:
+
+First had the 2.10 Pi Zero W Hassio image flashed to my SD card and setup the CONFIG USB stick (FAT32 formatted with diskpart 5, and followed the HassOS network manual 150, specifically the WPA/PSK).
+Connected a monitor and booted the pi, waited but failed to connect via hassio.local.
+Found out it didn’t even show up in my Router’s connections (which can also be checked with Fing 5 on your smartphone by scanning the same wifi network the CONFIG USB is trying to connect to).
+Plugged the USB CONFIG stick out, and inserted a keyboard in.
+Pressed Enter to log into Hassio with root
+Typed in login to enter the core-shell, from which I was able to perform your nmcli commands
+From there on followed my original post.
+1 Reply
+
+
+aepp
+Aleksandr Epp
+1 
+
+cogneato
+Feb '19
+Ah, ok, sorry, didn’t know I could see more by pressing refresh. Ok, now I saw at the end of the log FATAL: You need to set a password! -
+
+EDIT: ok nevermind, I forgot to set the password for the web terminal. And now it actually works - I probably had to wait longer for the startup. Thanks for the refresh hint!
+
+
+
+
+cogneato
+
+Anymal
+Feb '19
+I meant this guide in particular, the way I wrote it. Without any internet connection you wouldn’t be able to download and install addons in the first place.
+
+On a pi zero, you could directly access the host and use nmcli using a keyboard and monitor of course.
+
+1
+
+
+
+aepp
+Aleksandr Epp
+
+cogneato
+Feb '19
+Thank you for the guide, it worked!
+
+
+
+
+cogneato
+Feb '19
+excellent! :tada:
+
+
+
+
+ashfaaaa
+Feb '19
+im getting error when i try to connect my SSID
+error: connection activation failed: (7) Secrets were required, but not provided.
+
+2 Replies1
+
+
+
+cogneato
+Feb '19
+Not sure what that is about. Have you tried a full reboot?
+
+
+
+
+ashfaaaa
+Feb '19
+yes also tried with different sd card i get same error
+
+
+
+
+Illes_Eszterhas
+Illés Eszterhás
+Mar '19
+Worked like a charm. Great thanks
+If you set up your system as recommended you have to disable the default SSH server that listens on the same port.
+
+
+
+
+huckabeec
+Mar '19
+Anyone with a Pi 3B+ have luck getting 802.11ac enabled with HassOS ?
+
+1 Reply1
+
+
+2 MONTHS LATER
+
+ashmckenzie
+Apr '19
+Has anyone had any luck with getting their WIFI to reconnect for scenarios where the SSID went away for a few moments? The only solution I have so far is a reboot :frowning:
+
+
+
+15 DAYS LATER
+
+benmprojects
+May '19
+Thank you this is heaps easier than using a USB import
+
+2
+
+
+2 MONTHS LATER
+
+tmb123
+Thomas Mifsud Bonnici
+Jun '19
+Holy SHI******************** finally i got wifi working you’re a genius thanks!!!
+
+2
+
+
+25 DAYS LATER
+
+travis
+Jul '19
+Thanks for the guide :+1:t3:
+
+
+
+8 DAYS LATER
+
+Siggy101
+
+Anymal
+Aug '19
+THIS RIGHT HERE IS THE ANSWER!!!
+WiFi channel must be 10 or under on your router. Thank you @Anymal
+
+1 Reply1
