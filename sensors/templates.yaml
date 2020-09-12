@@ -1,4 +1,16 @@
 #
+# TCP sensors
+#
+# Example configuration.yaml entry
+- platform: command_line
+  name: Netgear Router Admin
+  command: /bin/bash -c "(echo > /dev/tcp/192.168.0.1/80) > /dev/null 2>&1 && echo Up || echo Down"
+- platform: command_line
+  name: Netgear Spectrum Analyzer
+  command: /bin/bash -c "(echo > /dev/tcp/192.168.0.1/8080) > /dev/null 2>&1 && echo Up || echo Down"
+
+
+#
 # Motion sensors
 #
 - platform: mqtt

@@ -21,10 +21,10 @@
   - condition: and
     conditions:
     - condition: state
-      entity_id: person.joseph_thomas
+      entity_id: person.joe
       state: not_home
     - condition: state
-      entity_id: person.jamie_thomas
+      entity_id: person.jamie
       state: not_home
   action:
   - data:
@@ -42,12 +42,12 @@
   - condition: and
     conditions:
     - condition: state
-      entity_id: person.joseph_thomas
+      entity_id: person.joe
       state: not_home
     - condition: and
       conditions:
       - condition: state
-        entity_id: person.jamie_thomas
+        entity_id: person.jamie
         state: not_home
   action:
   - data:
@@ -65,12 +65,12 @@
   - condition: and
     conditions:
     - condition: state
-      entity_id: person.jamie_thomas
+      entity_id: person.jamie
       state: not_home
     - condition: and
       conditions:
       - condition: state
-        entity_id: person.joseph_thomas
+        entity_id: person.joe
         state: not_home
   action:
   - data:
@@ -88,10 +88,10 @@
   - condition: and
     conditions:
     - condition: state
-      entity_id: person.joseph_thomas
+      entity_id: person.joe
       state: not_home
     - condition: state
-      entity_id: person.jamie_thomas
+      entity_id: person.jamie
       state: not_home
   action:
   - data:
@@ -109,10 +109,10 @@
   - condition: and
     conditions:
     - condition: state
-      entity_id: person.joseph_thomas
+      entity_id: person.joe
       state: not_home
     - condition: state
-      entity_id: person.jamie_thomas
+      entity_id: person.jamie
       state: not_home
   action:
   - data:
@@ -122,7 +122,7 @@
   alias: Joe Left Home
   description: ''
   trigger:
-  - entity_id: person.joseph_thomas
+  - entity_id: person.joe
     from: home
     platform: state
     to: not_home
@@ -135,7 +135,7 @@
   alias: Jamie Left Home
   description: ''
   trigger:
-  - entity_id: person.jamie_thomas
+  - entity_id: person.jamie
     from: home
     platform: state
     to: not_home
@@ -148,7 +148,7 @@
   alias: Joe Arrived Home
   description: ''
   trigger:
-  - entity_id: person.joseph_thomas
+  - entity_id: person.joe
     from: not_home
     platform: state
     to: home
@@ -161,7 +161,7 @@
   alias: Jamie Arrived Home
   description: ''
   trigger:
-  - entity_id: person.jamie_thomas
+  - entity_id: person.jamie
     from: not_home
     platform: state
     to: home
@@ -182,10 +182,10 @@
   - condition: and
     conditions:
     - condition: state
-      entity_id: person.joseph_thomas
+      entity_id: person.joe
       state: not_home
     - condition: state
-      entity_id: person.jamie_thomas
+      entity_id: person.jamie
       state: not_home
   action:
   - data:
@@ -203,12 +203,12 @@
   - condition: and
     conditions:
     - condition: state
-      entity_id: person.joseph_thomas
+      entity_id: person.joe
       state: not_home
     - condition: and
       conditions:
       - condition: state
-        entity_id: person.jamie_thomas
+        entity_id: person.jamie
         state: not_home
   action:
   - data:
@@ -219,9 +219,9 @@
   description: ''
   trigger:
   - entity_id: binary_sensor.lake_house
-    from: Connected
+    from: 'on'
     platform: state
-    to: Disconnected
+    to: 'off'
   condition: []
   action:
   - data:
@@ -232,9 +232,9 @@
   description: ''
   trigger:
   - entity_id: binary_sensor.lake_house
-    from: Diaconnected
+    from: 'off'
     platform: state
-    to: Connected
+    to: 'on'
   condition: []
   action:
   - data:
@@ -311,12 +311,12 @@
   - condition: and
     conditions:
     - condition: state
-      entity_id: person.joseph_thomas
+      entity_id: person.joe
       state: not_home
     - condition: and
       conditions:
       - condition: state
-        entity_id: person.jamie_thomas
+        entity_id: person.jamie
         state: not_home
   action:
   - data:
@@ -447,11 +447,17 @@
   - above: '79'
     entity_id: sensor.air_conditioning_temperature
     platform: numeric_state
-  condition: []
+  condition:
+  - condition: state
+    entity_id: input_boolean.air_cond_warn_triggered
+    state: 'off'
   action:
   - data:
       message: Air conditioning imminent; close windows
     service: notify.34dt_hassio
+  - data: {}
+    entity_id: input_boolean.air_cond_warn_triggered
+    service: input_boolean.turn_on
 - id: water_shutoff
   alias: Water Main Shut Off
   description: Water main has been closed manually or leak detected
@@ -465,15 +471,38 @@
   - data:
       message: Basement leak detected or main manually shut off
     service: notify.34dt_hassio
-- id: emergency_water_button
-  alias: Emergency Water Shutoff Button Pressed
+- id: '1594236029982'
+  alias: Reset Air Conditioning Warning
   description: ''
   trigger:
-  - entity_id: switch.emergency_water_shutoff_switch
-    from: 'off'
-    platform: state
-    to: 'on'
+  - event: sunrise
+    platform: sun
   condition: []
   action:
-    service: homeassistant.toggle
-    entity_id: switch.water_shutoff_switch
+  - data: {}
+    entity_id: input_boolean.air_cond_warn_triggered
+    service: input_boolean.turn_off
+- id: '1599530976085'
+  alias: Router Admin Page Hung
+  description: ''
+  trigger:
+  - entity_id: sensor.netgear_router_admin
+    for: 00:00:30
+    from: Up
+    platform: state
+    to: Unknown
+  condition: []
+  action:
+  - device_id: f38d9a61965c4082a22992ded90eddfb
+    domain: switch
+    entity_id: switch.modem_reset_switch
+    type: turn_off
+  - delay: '20'
+  - device_id: f38d9a61965c4082a22992ded90eddfb
+    domain: switch
+    entity_id: switch.modem_reset_switch
+    type: turn_on
+  - data:
+      message: 34DT Router Was Rebooted due to Admin Page Hung
+    service: notify.34dt_hassio
+  mode: single
