@@ -1017,14 +1017,14 @@
             {
                 "capabilities": {
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ],
                     "hvac_modes": [
-                        "heat_cool",
+                        "heat",
                         "off",
-                        "cool",
-                        "heat"
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -1094,14 +1094,14 @@
             {
                 "capabilities": {
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ],
                     "hvac_modes": [
-                        "heat_cool",
+                        "heat",
                         "off",
-                        "cool",
-                        "heat"
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -1171,14 +1171,14 @@
             {
                 "capabilities": {
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ],
                     "hvac_modes": [
-                        "heat_cool",
+                        "heat",
                         "off",
-                        "cool",
-                        "heat"
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -1248,14 +1248,14 @@
             {
                 "capabilities": {
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ],
                     "hvac_modes": [
-                        "heat_cool",
+                        "heat",
                         "off",
-                        "cool",
-                        "heat"
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -1309,14 +1309,14 @@
             {
                 "capabilities": {
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ],
                     "hvac_modes": [
-                        "heat_cool",
+                        "heat",
                         "off",
-                        "cool",
-                        "heat"
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -1370,14 +1370,14 @@
             {
                 "capabilities": {
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ],
                     "hvac_modes": [
-                        "heat_cool",
+                        "heat",
                         "off",
-                        "cool",
-                        "heat"
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
@@ -2055,14 +2055,14 @@
             {
                 "capabilities": {
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ],
                     "hvac_modes": [
-                        "heat_cool",
+                        "heat",
                         "off",
-                        "cool",
-                        "heat"
+                        "heat_cool",
+                        "cool"
                     ],
                     "max_temp": 95,
                     "min_temp": 45
