@@ -19,6 +19,19 @@ binary_sensor: !include binary_sensor.yaml
 frontend:
   themes: !include frontend.yaml
 
+device_tracker:
+  - platform: nmap_tracker
+    hosts:
+      - 192.168.0.70
+      - 192.168.0.71
+  - platform: icloud
+    username: jamiedylana@gmail.com
+    password: !secret jamie_icloud
+  - platform: icloud
+    username: six50joe@icloud.com
+    password: !secret joe_icloud
+
+  
 homeassistant:
   customize: !include customize.yaml
 
@@ -40,6 +53,10 @@ logger:
     # log level for remote rpio override
     custom_components.remote_rpi_gpio: info
        
+input_boolean:
+  air_cond_warn_triggered:
+    name: Set to true if air cond warning made
+    
 variable:
   water_usage_rate:
     value: 0
@@ -55,17 +72,17 @@ variable:
     name: PrevWaterTime
 
 amcrest:
-  - host: 192.168.1.54
+  - host: 192.168.0.54
     username: six50joe
     password: unbelief-ramp-best
     name: Living Room
 
-  - host: 192.168.1.13
+  - host: 192.168.0.58
     username: six50joe
     password: unbelief-ramp-best
     name: Driveway
 
-  - host: 192.168.1.56
+  - host: 192.168.0.56
     username: six50joe
     password: unbelief-ramp-best
     name: Piano Room
@@ -76,7 +93,7 @@ camera:
 sonos:
   media_player:
     hosts:
-      192.168.1.12
+      192.168.0.58
     
 media_player:
   platform: sonos
