@@ -24,12 +24,20 @@ device_tracker:
     hosts:
       - 192.168.0.70
       - 192.168.0.71
-  - platform: icloud
+
+device_tracker:
+  - platform: icloud3
     username: jamiedylana@gmail.com
     password: !secret jamie_icloud
-  - platform: icloud
+    track_devices:
+      - jamie_iphone > gjamiedylana@gmail.com, JamieBadge.jpg
+
+device_tracker:
+  - platform: icloud3
     username: six50joe@icloud.com
     password: !secret joe_icloud
+    track_devices:
+      - joe_iphone > six50joe@icloud.com, JoeBadge2.jpg
 
   
 homeassistant:
