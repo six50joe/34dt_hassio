@@ -19,6 +19,12 @@ binary_sensor: !include binary_sensor.yaml
 frontend:
   themes: !include frontend.yaml
 
+apple_tv:
+
+hue:
+  bridges:
+    - host: 192.168.0.35
+
 device_tracker:
   - platform: nmap_tracker
     hosts:
@@ -60,6 +66,9 @@ logger:
 
     # log level for remote rpio override
     custom_components.remote_rpi_gpio: info
+
+    pyatv: debug
+    custom_components.apple_tv: debug
        
 input_boolean:
   air_cond_warn_triggered:
@@ -95,13 +104,18 @@ amcrest:
     password: unbelief-ramp-best
     name: Piano Room
 
+  - host: 192.168.0.60
+    username: six50joe
+    password: unbelief-ramp-best
+    name: Exercise Room
+
 camera:
   - platform: amcrest
   
 sonos:
   media_player:
     hosts:
-      192.168.0.58
+      192.168.0.12
     
 media_player:
   platform: sonos
@@ -120,3 +134,22 @@ light:
           data:
             entity_id: switch.path_lights_switch_switch
 
+input_select:
+  living_room_scene:
+    name: Living Room Scene
+    options:
+      - Read
+      - Night show
+      - Relax
+      - Energize
+      - Concentrate
+      - Bright
+      - Nightlight
+      - Spring blossom
+      - Tropical twilight
+      - Arctic aurora
+      - Savanna sunset
+      - Game Night
+      - Dance Party
+    initial: Read
+    icon: mdi:lightbulb-multiple

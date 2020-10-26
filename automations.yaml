@@ -506,3 +506,39 @@
       message: 34DT Router Was Rebooted due to Admin Page Hung
     service: notify.34dt_hassio
   mode: single
+- id: Living Room Lights On
+  alias: Living Room Lights On
+  trigger:
+  - event_data:
+      entity_id: zwave.living_room_light_scene
+      scene_id: 1
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - service: input_select.select_next
+    entity_id: input_select.living_room_scene
+  - service: hue.hue_activate_scene
+    data_template:
+      group_name: Living room
+      scene_name: '{{ states.input_select.living_room_scene.state }}'
+- id: Living Room Lights Off
+  alias: Living Room Lights Off
+  trigger:
+  - event_data:
+      entity_id: zwave.living_room_light_scene
+      scene_id: 2
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - service: homeassistant.turn_off
+    entity_id: light.hue_color_lamp_1
+  - service: homeassistant.turn_off
+    entity_id: light.hue_color_downlight_1
+  - service: homeassistant.turn_off
+    entity_id: light.hue_color_downlight_2
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.living_room_scene
+      option: Dance Party
