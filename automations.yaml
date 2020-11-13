@@ -218,28 +218,30 @@
   alias: Check Lakehouse Disconnected
   description: ''
   trigger:
-  - entity_id: binary_sensor.lake_house
-    from: 'on'
+  - entity_id: sensor.lakehouse_hassio
+    from: Up
     platform: state
-    to: 'off'
+    to: Down
   condition: []
   action:
   - data:
       message: Lakehouse had been reachable but is now not
     service: notify.34dt_hassio
+  mode: single
 - id: '1585017089811'
   alias: Check Lakehouse Connected
   description: ''
   trigger:
-  - entity_id: binary_sensor.lake_house
-    from: 'off'
+  - entity_id: sensor.lakehouse_hassio
+    from: Down
     platform: state
-    to: 'on'
+    to: Up
   condition: []
   action:
   - data:
       message: Lakehouse had not been reachable, but is now
     service: notify.34dt_hassio
+  mode: single
 - id: '1585054962692'
   alias: Store Kitchen Motion Time
   description: ''
@@ -487,10 +489,9 @@
   description: ''
   trigger:
   - entity_id: sensor.netgear_router_admin
-    for: 00:00:30
     from: Up
     platform: state
-    to: Unknown
+    to: Down
   condition: []
   action:
   - device_id: f38d9a61965c4082a22992ded90eddfb
@@ -498,10 +499,10 @@
     entity_id: switch.modem_reset_switch
     type: turn_off
   - delay: '20'
-  - device_id: f38d9a61965c4082a22992ded90eddfb
-    domain: switch
+  - type: turn_on
+    device_id: f38d9a61965c4082a22992ded90eddfb
     entity_id: switch.modem_reset_switch
-    type: turn_on
+    domain: switch
   - data:
       message: 34DT Router Was Rebooted due to Admin Page Hung
     service: notify.34dt_hassio

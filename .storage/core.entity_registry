@@ -38,7 +38,7 @@
             {
                 "entity_id": "weather.34_deer_track_lane",
                 "config_entry_id": "2fc7b2ba8bb74f21b120ed61fa56b8ee",
-                "device_id": null,
+                "device_id": "f60bb121957c5335f3053b6860bb4b8b",
                 "unique_id": "home",
                 "platform": "met",
                 "name": null,
@@ -1027,16 +1027,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
-                        "heat_cool",
-                        "cool"
+                        "heat",
+                        "cool",
+                        "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1104,16 +1104,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
-                        "heat_cool",
-                        "cool"
+                        "heat",
+                        "cool",
+                        "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1181,16 +1181,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
-                        "heat_cool",
-                        "cool"
+                        "heat",
+                        "cool",
+                        "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1258,16 +1258,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
-                        "heat_cool",
-                        "cool"
+                        "heat",
+                        "cool",
+                        "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1319,16 +1319,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
-                        "heat_cool",
-                        "cool"
+                        "heat",
+                        "cool",
+                        "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1380,16 +1380,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
-                        "heat_cool",
-                        "cool"
+                        "heat",
+                        "cool",
+                        "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -2065,16 +2065,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
-                        "heat_cool",
-                        "cool"
+                        "heat",
+                        "cool",
+                        "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -2914,7 +2914,7 @@
                         "TV"
                     ]
                 },
-                "supported_features": 195135,
+                "supported_features": 457279,
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "TV Room",
@@ -3398,7 +3398,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "six50joe-iphone Activity",
-                "original_icon": "mdi:walk"
+                "original_icon": "mdi:human-male"
             },
             {
                 "entity_id": "sensor.six50joe_distance",
@@ -3494,7 +3494,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "six50joe-iphone Battery Level",
-                "original_icon": "mdi:battery-50"
+                "original_icon": "mdi:battery-80"
             },
             {
                 "entity_id": "sensor.six50joe_battery_state",
@@ -3510,7 +3510,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": null,
                 "original_name": "six50joe-iphone Battery State",
-                "original_icon": "mdi:battery-50"
+                "original_icon": "mdi:battery-80"
             },
             {
                 "entity_id": "sensor.six50joe_storage",
@@ -3707,7 +3707,7 @@
             {
                 "entity_id": "weather.34dt_hourly",
                 "config_entry_id": "2fc7b2ba8bb74f21b120ed61fa56b8ee",
-                "device_id": null,
+                "device_id": "f60bb121957c5335f3053b6860bb4b8b",
                 "unique_id": "home-hourly",
                 "platform": "met",
                 "name": null,
@@ -3830,6 +3830,214 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Living Room Lights On",
+                "original_icon": null
+            },
+            {
+                "entity_id": "binary_sensor.sensative_strips_comfort_sensor",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594613334016",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Sensative Strips Comfort Sensor",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_temperature",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594613350418",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "\u00b0C",
+                "original_name": "Sensative Strips Comfort Temperature",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_luminance",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594613350450",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "lux",
+                "original_name": "Sensative Strips Comfort Luminance",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_moisture",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594613350898",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "%",
+                "original_name": "Sensative Strips Comfort Moisture",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_sourcenodeid",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594614399009",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "",
+                "original_name": "Sensative Strips Comfort SourceNodeId",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_heat",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594614399089",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "",
+                "original_name": "Sensative Strips Comfort Heat",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_flood",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594614399105",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "",
+                "original_name": "Sensative Strips Comfort Flood",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_burglar",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594614399137",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "",
+                "original_name": "Sensative Strips Comfort Burglar",
+                "original_icon": null
+            },
+            {
+                "entity_id": "zwave.sensative_strips_comfort",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "node-34",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Sensative Strips Comfort",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_alarm_type",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594614398977",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "",
+                "original_name": "Sensative Strips Comfort Alarm Type",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_alarm_level",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594614398993",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "",
+                "original_name": "Sensative Strips Comfort Alarm Level",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.sensative_strips_comfort_battery_level",
+                "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
+                "device_id": "82786e4a99ad2de6ee3de93da40f5c63",
+                "unique_id": "34-72057594614644737",
+                "platform": "zwave",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "battery",
+                "unit_of_measurement": "%",
+                "original_name": "Sensative Strips Comfort Battery Level",
+                "original_icon": null
+            },
+            {
+                "entity_id": "automation.automation_33",
+                "config_entry_id": null,
+                "device_id": null,
+                "unique_id": "Netgear Router Page Hung",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Netgear Router Page Hung",
                 "original_icon": null
             }
         ]
