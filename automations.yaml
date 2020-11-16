@@ -543,3 +543,15 @@
     data:
       entity_id: input_select.living_room_scene
       option: Dance Party
+- id: '1605561802870'
+  alias: Daily Device Batteries Check
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition: []
+  action:
+  - event: scan_device_batteries
+    event_data:
+      state: 'on'
+  mode: single

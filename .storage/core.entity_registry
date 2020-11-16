@@ -1027,16 +1027,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
+                        "off",
                         "cool",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1104,16 +1104,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
+                        "off",
                         "cool",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1181,16 +1181,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
+                        "off",
                         "cool",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1258,16 +1258,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
+                        "off",
                         "cool",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1319,16 +1319,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
+                        "off",
                         "cool",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1380,19 +1380,15 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
+                        "off",
                         "cool",
                         "heat_cool"
                     ],
                     "min_temp": 45,
-                    "max_temp": 95,
-                    "fan_modes": [
-                        "On Low",
-                        "Auto Low"
-                    ]
+                    "max_temp": 95
                 },
-                "supported_features": 75,
+                "supported_features": 67,
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Linear (Nortek Security Control LLC) GC-TBZ48 Battery Powered Z-Wave Thermostat Mode",
@@ -2065,16 +2061,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "heat",
+                        "off",
                         "cool",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -3494,7 +3490,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "six50joe-iphone Battery Level",
-                "original_icon": "mdi:battery-80"
+                "original_icon": "mdi:battery-outline"
             },
             {
                 "entity_id": "sensor.six50joe_battery_state",
@@ -3510,7 +3506,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": null,
                 "original_name": "six50joe-iphone Battery State",
-                "original_icon": "mdi:battery-80"
+                "original_icon": "mdi:battery-outline"
             },
             {
                 "entity_id": "sensor.six50joe_storage",
@@ -4038,6 +4034,22 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Netgear Router Page Hung",
+                "original_icon": null
+            },
+            {
+                "entity_id": "automation.daily_device_batteries_check",
+                "config_entry_id": null,
+                "device_id": null,
+                "unique_id": "1605561802870",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Daily Device Batteries Check",
                 "original_icon": null
             }
         ]

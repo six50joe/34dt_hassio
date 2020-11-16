@@ -154,3 +154,16 @@
         {% endif %}
         
 
+    zwave_failures:
+      value_template: >
+        {% macro is_failed() %}
+        {%- set value = true -%}
+        {%- set domains = ['zwave'] -%}
+        {%- for domain in domains -%}
+        {%- for item in states[domain] if ((item.attributes.is_failed is defined and item.attributes['is_failed'] == value))-%}
+        {% if (item.attributes.is_failed is defined and item.attributes['is_failed'] == value) -%}
+        {{ item.name }}{% endif -%}
+        {%- endfor -%}
+        {%- endfor -%}
+        {% endmacro %}
+        {{ is_failed() |trim != "" }}
