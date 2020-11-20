@@ -405,7 +405,11 @@
 - id: sonos_volume_mute
   alias: Sonos Volume Mute
   description: ''
-  trigger: []
+  trigger:
+    - platform: event
+      event_type: ios.action_fired
+      event_data:
+        actionName: 'Living Room Mute'
   condition: []
   action:
   - service: media_player.volume_set
@@ -415,7 +419,11 @@
 - id: sonos_volume_low
   alias: Sonos Volume Low
   description: ''
-  trigger: []
+  trigger:
+    - platform: event
+      event_type: ios.action_fired
+      event_data:
+        actionName: 'Living Room Volume Low'
   condition: []
   action:
   - service: media_player.volume_set
@@ -425,7 +433,11 @@
 - id: sonos_volume_mid
   alias: Sonos Volume Mid
   description: ''
-  trigger: []
+  trigger:
+    - platform: event
+      event_type: ios.action_fired
+      event_data:
+        actionName: 'Living Room Volume Mid'
   condition: []
   action:
   - service: media_player.volume_set
@@ -435,13 +447,17 @@
 - id: sonos_volume_high
   alias: Sonos Volume High
   description: ''
-  trigger: []
+  trigger:
+    - platform: event
+      event_type: ios.action_fired
+      event_data:
+        actionName: 'Living Room Volume High'
   condition: []
   action:
   - service: media_player.volume_set
     data_template:
       entity_id: media_player.tv_room
-      volume_level: 0.48
+      volume_level: 0.60
 - id: ac_imminent
   alias: Air Conditioning Imminent
   description: ''

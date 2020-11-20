@@ -115,10 +115,45 @@ camera:
 sonos:
   media_player:
     hosts:
-      192.168.0.12
+      192.168.0.18
     
 media_player:
   platform: sonos
+
+ios:
+  actions:
+    - name: Living Room Mute
+      background_color: "#000000"
+      label:
+        text: "Living Room Mute"
+        color: "#808080"
+      icon:
+        icon: volume-variant-off
+        color: "#ffffff"
+    - name: Living Room Volume Mid
+      background_color: "#000000"
+      label:
+        text: "Living Room Volume Mid"
+        color: "#ffa700"
+      icon:
+        icon: volume-medium
+        color: "#ffffff"
+    - name: Living Room Volume Low
+      background_color: "#000000"
+      label:
+        text: "Living Room Volume Low"
+        color: "#fff400"
+      icon:
+        icon: volume-low
+        color: "#ffffff"
+    - name: Living Room Volume High
+      background_color: "#000000"
+      label:
+        text: "Living Room Volume High"
+        color: "#ff0000"
+      icon:
+        icon: volume-high
+        color: "#ffffff"
 
 light:
   - platform: template

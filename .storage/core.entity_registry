@@ -1027,16 +1027,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
                         "cool",
+                        "heat",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1104,16 +1104,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
                         "cool",
+                        "heat",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1181,16 +1181,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
                         "cool",
+                        "heat",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1258,16 +1258,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
                         "cool",
+                        "heat",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1319,16 +1319,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
                         "cool",
+                        "heat",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1380,15 +1380,19 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
                         "cool",
+                        "heat",
                         "heat_cool"
                     ],
                     "min_temp": 45,
-                    "max_temp": 95
+                    "max_temp": 95,
+                    "fan_modes": [
+                        "On Low",
+                        "Auto Low"
+                    ]
                 },
-                "supported_features": 67,
+                "supported_features": 75,
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Linear (Nortek Security Control LLC) GC-TBZ48 Battery Powered Z-Wave Thermostat Mode",
@@ -2061,16 +2065,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
                         "cool",
+                        "heat",
                         "heat_cool"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "Auto Low",
-                        "On Low"
+                        "On Low",
+                        "Auto Low"
                     ]
                 },
                 "supported_features": 75,
@@ -3394,7 +3398,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "six50joe-iphone Activity",
-                "original_icon": "mdi:human-male"
+                "original_icon": "mdi:help-circle"
             },
             {
                 "entity_id": "sensor.six50joe_distance",
@@ -3490,7 +3494,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "six50joe-iphone Battery Level",
-                "original_icon": "mdi:battery-outline"
+                "original_icon": "mdi:battery-70"
             },
             {
                 "entity_id": "sensor.six50joe_battery_state",
@@ -3506,7 +3510,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": null,
                 "original_name": "six50joe-iphone Battery State",
-                "original_icon": "mdi:battery-outline"
+                "original_icon": "mdi:battery-70"
             },
             {
                 "entity_id": "sensor.six50joe_storage",
@@ -4045,11 +4049,27 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": null,
+                "capabilities": {},
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Daily Device Batteries Check",
+                "original_icon": null
+            },
+            {
+                "entity_id": "device_tracker.iphone_joe",
+                "config_entry_id": "427e1ce367d94fd16f5e5b7c83a7a169",
+                "device_id": "5123a4c9d72aef94d325ba06fdebdb61",
+                "unique_id": "e13a4deadda04a8db23d8257a3437b00",
+                "platform": "mobile_app",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "IPhone-Joe",
                 "original_icon": null
             }
         ]
