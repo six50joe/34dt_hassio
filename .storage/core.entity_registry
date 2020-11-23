@@ -1027,10 +1027,10 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "cool",
                         "heat",
-                        "heat_cool"
+                        "heat_cool",
+                        "off"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
@@ -1062,12 +1062,12 @@
                 "original_icon": null
             },
             {
-                "entity_id": "zwave.thermostat_piano_room",
+                "entity_id": "zwave.thermostat_den_emmetts_room",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "53ea69f94282464dbbf6a3b475a7983e",
                 "unique_id": "node-16",
                 "platform": "zwave",
-                "name": "Thermostat Kitchen Living Room",
+                "name": "Thermostat Den and Emmetts Room",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {},
@@ -1104,10 +1104,10 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "cool",
                         "heat",
-                        "heat_cool"
+                        "heat_cool",
+                        "off"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
@@ -1123,7 +1123,7 @@
                 "original_icon": null
             },
             {
-                "entity_id": "sensor.thermostat_kitchen_livingroom_battery_level",
+                "entity_id": "sensor.den_emmetts_room_battery_level",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "53ea69f94282464dbbf6a3b475a7983e",
                 "unique_id": "16-72057594312654849",
@@ -1139,7 +1139,7 @@
                 "original_icon": null
             },
             {
-                "entity_id": "zwave.thermostat_exercise_room",
+                "entity_id": "zwave.kitchen_livingroom",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "becedab4e2a147919ec77a5443b68387",
                 "unique_id": "node-17",
@@ -1181,10 +1181,10 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "cool",
                         "heat",
-                        "heat_cool"
+                        "heat_cool",
+                        "off"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
@@ -1200,7 +1200,7 @@
                 "original_icon": null
             },
             {
-                "entity_id": "sensor.thermostat_piano_room_battery_level",
+                "entity_id": "sensor.kitchen_livingroom_battery_level",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "becedab4e2a147919ec77a5443b68387",
                 "unique_id": "17-72057594329432065",
@@ -1258,10 +1258,10 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "cool",
                         "heat",
-                        "heat_cool"
+                        "heat_cool",
+                        "off"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
@@ -1277,7 +1277,7 @@
                 "original_icon": null
             },
             {
-                "entity_id": "sensor.thermostat_exercise_room_battery_level",
+                "entity_id": "sensor.thermostat_piano_room_battery_level",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "f165603f278c4c18b6fc9fe999953fbb",
                 "unique_id": "18-72057594346209281",
@@ -1319,10 +1319,10 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "cool",
                         "heat",
-                        "heat_cool"
+                        "heat_cool",
+                        "off"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
@@ -1338,7 +1338,7 @@
                 "original_icon": null
             },
             {
-                "entity_id": "sensor.thermostat_air_conditioning_battery_level",
+                "entity_id": "sensor.thermostat_exercise_room_battery_level",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "a74a63e3718a42fb9ad14b1feac67233",
                 "unique_id": "19-72057594362986497",
@@ -1380,10 +1380,10 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "cool",
                         "heat",
-                        "heat_cool"
+                        "heat_cool",
+                        "off"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
@@ -1399,7 +1399,7 @@
                 "original_icon": null
             },
             {
-                "entity_id": "sensor.unknown_therm_battery_level",
+                "entity_id": "sensor.thermostat_air_conditioning_battery_level",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "25365ac0430c4964885bbb01ac11527c",
                 "unique_id": "20-72057594379763713",
@@ -2023,7 +2023,7 @@
                 "original_icon": null
             },
             {
-                "entity_id": "zwave.linear_nortek_security_control_llc_gc_tbz48_battery_powered_z_wave_thermostat",
+                "entity_id": "zwave.thermostat_piano_room",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "f165603f278c4c18b6fc9fe999953fbb",
                 "unique_id": "node-18",
@@ -2065,10 +2065,10 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "off",
                         "cool",
                         "heat",
-                        "heat_cool"
+                        "heat_cool",
+                        "off"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
@@ -2116,7 +2116,7 @@
                 "original_icon": null
             },
             {
-                "entity_id": "zwave.linear_nortek_security_control_llc_gc_tbz48_battery_powered_z_wave_thermostat_2",
+                "entity_id": "zwave.thermostat_exercise_room",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "a74a63e3718a42fb9ad14b1feac67233",
                 "unique_id": "node-19",
@@ -3494,7 +3494,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "six50joe-iphone Battery Level",
-                "original_icon": "mdi:battery-70"
+                "original_icon": "mdi:battery-30"
             },
             {
                 "entity_id": "sensor.six50joe_battery_state",
@@ -3510,7 +3510,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": null,
                 "original_name": "six50joe-iphone Battery State",
-                "original_icon": "mdi:battery-70"
+                "original_icon": "mdi:battery-30"
             },
             {
                 "entity_id": "sensor.six50joe_storage",
