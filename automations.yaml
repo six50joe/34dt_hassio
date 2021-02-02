@@ -8,6 +8,8 @@
   action:
   - data:
       message: 34DT Hassio Rebooted
+      data:
+        priority: -1
     service: notify.34dt_hassio
 - id: '1583167744310'
   alias: Front Door Opened
@@ -29,6 +31,10 @@
   action:
   - data:
       message: 34DT Front Door Opened
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
     service: notify.34dt_hassio
 - id: '1583167835627'
   alias: Garage Door Entry Opened
@@ -52,6 +58,10 @@
   action:
   - data:
       message: 34DT Garage Entry Opened
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
     service: notify.34dt_hassio
 - id: '1583283013697'
   alias: Piano Room Motion Detected
@@ -75,6 +85,10 @@
   action:
   - data:
       message: Piano Room Motion Detected
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
     service: notify.34dt_hassio
 - id: '1583283118831'
   alias: Exercise Room Motion Detected
@@ -96,6 +110,10 @@
   action:
   - data:
       message: Exercise Room Motion Detected
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
     service: notify.34dt_hassio
 - id: '1583838999172'
   alias: Kitchen Motion Detected
@@ -117,6 +135,10 @@
   action:
   - data:
       message: Kitchen Area Motion Detected
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
     service: notify.34dt_hassio
 - id: '1583840584254'
   alias: Joe Left Home
@@ -130,6 +152,8 @@
   action:
   - data:
       message: Joe Left Home
+      data:
+        priority: -1
     service: notify.34dt_hassio
 - id: '1583840738068'
   alias: Jamie Left Home
@@ -143,6 +167,8 @@
   action:
   - data:
       message: Jamie Left Home
+      data:
+        priority: -1
     service: notify.34dt_hassio
 - id: '1583840787571'
   alias: Joe Arrived Home
@@ -156,6 +182,8 @@
   action:
   - data:
       message: Joe Arrived Home
+      data:
+        priority: -1
     service: notify.34dt_hassio
 - id: '1583840831037'
   alias: Jamie Arrived Home
@@ -169,6 +197,8 @@
   action:
   - data:
       message: Jamie Arrived Home
+      data:
+        priority: -1
     service: notify.34dt_hassio
 - id: '1583884186260'
   alias: Kitchen Sliding Door Openend
@@ -190,6 +220,10 @@
   action:
   - data:
       message: Kitchen Sliding Door Opened
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
     service: notify.34dt_hassio
 - id: '1583970826722'
   alias: Family Room Sliding Doors Opened
@@ -213,6 +247,10 @@
   action:
   - data:
       message: Family Room sliding door opened
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
     service: notify.34dt_hassio
 - id: '1585016862253'
   alias: Check Lakehouse Disconnected
@@ -323,6 +361,10 @@
   action:
   - data:
       message: Motion detected in 34DT Driveway while away
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
     service: notify.34dt_hassio
 - id: 34dt_upstairs_smoke
   alias: Upstairs Smoke
@@ -336,6 +378,10 @@
   action:
   - data:
       message: Smoke detected upstairs at 34DT!
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
     service: notify.34dt_hassio
 - id: 34dt_upstairs_co
   alias: Upstairs Carbon Monoxide
@@ -349,6 +395,10 @@
   action:
   - data:
       message: Carbon Monoxide detected upstairs at 34DT!
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
     service: notify.34dt_hassio
 - id: 34dt_main_level_smoke
   alias: Main Floor Smoke
@@ -362,6 +412,10 @@
   action:
   - data:
       message: Smoke detected main floor at 34DT!
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
     service: notify.34dt_hassio
 - id: 34dt_main_level_co
   alias: Main Floor Carbon Monoxide
@@ -375,6 +429,10 @@
   action:
   - data:
       message: Carbon Monoxide detected main floor at 34DT!
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
     service: notify.34dt_hassio
 - id: 34dt_downstairs_smoke
   alias: Downstairs Smoke
@@ -388,6 +446,10 @@
   action:
   - data:
       message: Smoke detected downstairs at 34DT!
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
     service: notify.34dt_hassio
 - id: 34dt_downstairs_co
   alias: Downstairs Carbon Monoxide
@@ -401,15 +463,19 @@
   action:
   - data:
       message: Carbon Monoxide detected downstairs at 34DT!
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
     service: notify.34dt_hassio
 - id: sonos_volume_mute
   alias: Sonos Volume Mute
   description: ''
   trigger:
-    - platform: event
-      event_type: ios.action_fired
-      event_data:
-        actionName: 'Living Room Mute'
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Mute
   condition: []
   action:
   - service: media_player.volume_set
@@ -420,10 +486,10 @@
   alias: Sonos Volume Low
   description: ''
   trigger:
-    - platform: event
-      event_type: ios.action_fired
-      event_data:
-        actionName: 'Living Room Volume Low'
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Volume Low
   condition: []
   action:
   - service: media_player.volume_set
@@ -434,10 +500,10 @@
   alias: Sonos Volume Mid
   description: ''
   trigger:
-    - platform: event
-      event_type: ios.action_fired
-      event_data:
-        actionName: 'Living Room Volume Mid'
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Volume Mid
   condition: []
   action:
   - service: media_player.volume_set
@@ -448,16 +514,16 @@
   alias: Sonos Volume High
   description: ''
   trigger:
-    - platform: event
-      event_type: ios.action_fired
-      event_data:
-        actionName: 'Living Room Volume High'
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Volume High
   condition: []
   action:
   - service: media_player.volume_set
     data_template:
       entity_id: media_player.tv_room
-      volume_level: 0.60
+      volume_level: 0.6
 - id: ac_imminent
   alias: Air Conditioning Imminent
   description: ''
@@ -488,6 +554,11 @@
   action:
   - data:
       message: Basement leak detected or main manually shut off
+      data:
+        priority: 2
+        retry: 900
+        expire: 7200
+        sound: mechanical
     service: notify.34dt_hassio
 - id: '1594236029982'
   alias: Reset Air Conditioning Warning
@@ -570,4 +641,48 @@
   - event: scan_device_batteries
     event_data:
       state: 'on'
+  mode: single
+- id: '1607037712815'
+  alias: Path Lights On
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 6fc6b06a95454f1a8e9068bbe8c0a584
+    entity_id: switch.path_lights_switch_switch
+    domain: switch
+  mode: single
+- id: '1607037786126'
+  alias: Path Lights Off
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:30
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 6fc6b06a95454f1a8e9068bbe8c0a584
+    entity_id: switch.path_lights_switch_switch
+    domain: switch
+  mode: single
+- id: 34dt_low_temperature
+  alias: 34DT Low Temperature
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.thermostat_piano_room_temperature
+    below: '55'
+  condition: []
+  action:
+  - service: notify.lakehouse_hassio
+    data:
+      message: 34 Deer Track temperature dangerously low!
+      data:
+        priority: 2
+        retry: 900
+        expire: 7200
+        sound: climb
   mode: single
