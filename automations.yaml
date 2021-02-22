@@ -686,3 +686,55 @@
         expire: 7200
         sound: climb
   mode: single
+- id: set_joe_home_state
+  alias: Set Joe Home State
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - event: update_home_state
+    event_data:
+      person: joe
+      state: home
+  mode: single
+- id: set_joe_not_home_state
+  alias: Set Joe Not Home State
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - event: update_home_state
+    event_data:
+      person: joe
+      state: not_home
+- id: set_jamie_home_state
+  alias: Set Jamie Home State
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - event: update_home_state
+    event_data:
+      person: jamie
+      state: home
+- id: set_jamie_not_home_state
+  alias: Set Jamie Not Home State
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - event: update_home_state
+    event_data:
+      person: jamie
+      state: not_home
+- id: '1614001081756'
+  alias: Set Joe Home State 2
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - event: update_home_state
+    event_data:
+      person: joe
+      state: home
+  mode: single

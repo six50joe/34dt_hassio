@@ -10,3 +10,7 @@ water_usage:
 batteries:
   module: batteries
   class: Batteries
+
+home_tracker:
+  module: home_tracker
+  class: HomeTracker
