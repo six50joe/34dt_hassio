@@ -1090,16 +1090,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
+                        "heat_cool",
                         "cool",
-                        "heat_cool"
+                        "heat"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1171,16 +1171,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
+                        "heat_cool",
                         "cool",
-                        "heat_cool"
+                        "heat"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1252,16 +1252,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
+                        "heat_cool",
                         "cool",
-                        "heat_cool"
+                        "heat"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1333,16 +1333,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
+                        "heat_cool",
                         "cool",
-                        "heat_cool"
+                        "heat"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1397,16 +1397,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
+                        "heat_cool",
                         "cool",
-                        "heat_cool"
+                        "heat"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -1461,16 +1461,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
+                        "heat_cool",
                         "cool",
-                        "heat_cool"
+                        "heat"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -2188,16 +2188,16 @@
                 "disabled_by": null,
                 "capabilities": {
                     "hvac_modes": [
-                        "heat",
                         "off",
+                        "heat_cool",
                         "cool",
-                        "heat_cool"
+                        "heat"
                     ],
                     "min_temp": 45,
                     "max_temp": 95,
                     "fan_modes": [
-                        "On Low",
-                        "Auto Low"
+                        "Auto Low",
+                        "On Low"
                     ]
                 },
                 "supported_features": 75,
@@ -3057,23 +3057,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "device_tracker.jamie",
-                "config_entry_id": "eb522336fa7c4b858cc7b0890e82e192",
-                "device_id": "3e7e5da9ccf34524b01509143e29adc0",
-                "area_id": null,
-                "unique_id": "ac55102b_b381_4861_93b7_2dacab7ea673",
-                "platform": "geofency",
-                "name": "device_tracker.jamie",
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "ac55102b_b381_4861_93b7_2dacab7ea673",
-                "original_icon": null
-            },
-            {
                 "entity_id": "media_player.tv_room",
                 "config_entry_id": "925b01131792483aacd6f192a435b8d4",
                 "device_id": "98395da503ab46cda9d10680aae701b5",
@@ -3521,23 +3504,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "device_tracker.joe_geofency",
-                "config_entry_id": "eb522336fa7c4b858cc7b0890e82e192",
-                "device_id": "95bbcf0a354b4c309a29a944ef189fe4",
-                "area_id": null,
-                "unique_id": "0b4f48ce_3093_4e48_bea6_0ca240086686",
-                "platform": "geofency",
-                "name": "device_tracker.joe_geofency",
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "0b4f48ce_3093_4e48_bea6_0ca240086686",
-                "original_icon": null
-            },
-            {
                 "entity_id": "zwave.modem_reset_switch",
                 "config_entry_id": "8803f683bf8744069aeadc0526e4c944",
                 "device_id": "f38d9a61965c4082a22992ded90eddfb",
@@ -3589,278 +3555,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "sensor.six50joe_activity",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_activity",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone Activity",
-                "original_icon": "mdi:human-male"
-            },
-            {
-                "entity_id": "sensor.six50joe_distance",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_pedometer_distance",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "m",
-                "original_name": "six50joe-iphone Distance",
-                "original_icon": "mdi:hiking"
-            },
-            {
-                "entity_id": "sensor.six50joe_floors_ascended",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_pedometer_floors_ascended",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "floors",
-                "original_name": "six50joe-iphone Floors Ascended",
-                "original_icon": "mdi:stairs-up"
-            },
-            {
-                "entity_id": "sensor.six50joe_floors_descended",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_pedometer_floors_descended",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "floors",
-                "original_name": "six50joe-iphone Floors Descended",
-                "original_icon": "mdi:stairs-down"
-            },
-            {
-                "entity_id": "sensor.six50joe_steps",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_pedometer_steps",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "steps",
-                "original_name": "six50joe-iphone Steps",
-                "original_icon": "mdi:walk"
-            },
-            {
-                "entity_id": "sensor.six50joe_average_active_pace",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_pedometer_avg_active_pace",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "m/s",
-                "original_name": "six50joe-iphone Average Active Pace",
-                "original_icon": "mdi:speedometer"
-            },
-            {
-                "entity_id": "sensor.six50joe_battery_level",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_battery_level",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": "battery",
-                "unit_of_measurement": "%",
-                "original_name": "six50joe-iphone Battery Level",
-                "original_icon": "mdi:battery-charging-80"
-            },
-            {
-                "entity_id": "sensor.six50joe_battery_state",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_battery_state",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": "battery",
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone Battery State",
-                "original_icon": "mdi:battery-charging-80"
-            },
-            {
-                "entity_id": "sensor.six50joe_storage",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_storage",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "% available",
-                "original_name": "six50joe-iphone Storage",
-                "original_icon": "mdi:database"
-            },
-            {
-                "entity_id": "sensor.six50joe_ssid",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_connectivity_ssid",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone SSID",
-                "original_icon": "mdi:wifi"
-            },
-            {
-                "entity_id": "sensor.six50joe_bssid",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_connectivity_bssid",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone BSSID",
-                "original_icon": "mdi:wifi-star"
-            },
-            {
-                "entity_id": "sensor.six50joe_connection_type",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_connectivity_connection_type",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone Connection Type",
-                "original_icon": "mdi:wifi"
-            },
-            {
-                "entity_id": "sensor.six50joe_sim_2",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_connectivity_sim_2",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone SIM 2",
-                "original_icon": "mdi:sim"
-            },
-            {
-                "entity_id": "sensor.six50joe_sim_1",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_connectivity_sim_1",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone SIM 1",
-                "original_icon": "mdi:sim"
-            },
-            {
-                "entity_id": "sensor.six50joe_last_update_trigger",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_last_update_trigger",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone Last Update Trigger",
-                "original_icon": "mdi:cellphone-wireless"
-            },
-            {
-                "entity_id": "sensor.six50joe_geocoded_location",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "98d38832f7cbff52a0ca5d672db069c617a2d85d1a6eb77b54f5520d120a6855_geocoded_location",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone Geocoded Location",
-                "original_icon": "mdi:map"
-            },
-            {
                 "entity_id": "sensor.hacs",
                 "config_entry_id": "d143e213f1dd455db5e131f5f7dd1cb1",
                 "device_id": "b7b7c1827c0f4793ba77696167c51be2",
@@ -3876,23 +3570,6 @@
                 "unit_of_measurement": "pending update(s)",
                 "original_name": "hacs",
                 "original_icon": "hacs:hacs"
-            },
-            {
-                "entity_id": "device_tracker.six50joe_ma",
-                "config_entry_id": "1de3478defa44c2fbf18a4274ba3fa6a",
-                "device_id": "265589377959401c8b014a26af43bd25",
-                "area_id": null,
-                "unique_id": "4FC92F8F-2F65-49CF-B256-C576153D6A1E",
-                "platform": "mobile_app",
-                "name": "six50joe_ma",
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "six50joe-iphone",
-                "original_icon": null
             },
             {
                 "entity_id": "zone.home_2",
@@ -4303,23 +3980,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "device_tracker.iphone_joe",
-                "config_entry_id": "427e1ce367d94fd16f5e5b7c83a7a169",
-                "device_id": "5123a4c9d72aef94d325ba06fdebdb61",
-                "area_id": null,
-                "unique_id": "e13a4deadda04a8db23d8257a3437b00",
-                "platform": "mobile_app",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "IPhone-Joe",
-                "original_icon": null
-            },
-            {
                 "entity_id": "automation.path_lights_on",
                 "config_entry_id": null,
                 "device_id": null,
@@ -4499,11 +4159,45 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": null,
+                "capabilities": {},
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Set Joe Home State 2",
+                "original_icon": null
+            },
+            {
+                "entity_id": "device_tracker.six50joe_joes_iphone",
+                "config_entry_id": "72a796ae0cd1af5545dd37dc2653ede4",
+                "device_id": "8bc727541c1d80c93da53aa3a9871a5d",
+                "area_id": null,
+                "unique_id": "six50joe_joes_iphone",
+                "platform": "owntracks",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "six50joe",
+                "original_icon": null
+            },
+            {
+                "entity_id": "device_tracker.joe_joes_iphone",
+                "config_entry_id": "72a796ae0cd1af5545dd37dc2653ede4",
+                "device_id": "54b9d927a861f20f16d783f091c70b71",
+                "area_id": null,
+                "unique_id": "joe_joes_iphone",
+                "platform": "owntracks",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": null,
                 "original_icon": null
             }
         ]

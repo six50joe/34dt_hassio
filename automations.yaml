@@ -22,12 +22,16 @@
   condition:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: person.joe
-      state: not_home
-    - condition: state
-      entity_id: person.jamie
-      state: not_home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.joe_thomas
+        state: home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: home
   action:
   - data:
       message: 34DT Front Door Opened
@@ -47,14 +51,16 @@
   condition:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: person.joe
-      state: not_home
-    - condition: and
+    - condition: not
       conditions:
       - condition: state
-        entity_id: person.jamie
-        state: not_home
+        entity_id: person.joe_thomas
+        state: home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: home
   action:
   - data:
       message: 34DT Garage Entry Opened
@@ -74,14 +80,16 @@
   condition:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: person.jamie
-      state: not_home
-    - condition: and
+    - condition: not
       conditions:
       - condition: state
-        entity_id: person.joe
-        state: not_home
+        entity_id: person.joe_thomas
+        state: home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: home
   action:
   - data:
       message: Piano Room Motion Detected
@@ -101,12 +109,16 @@
   condition:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: person.joe
-      state: not_home
-    - condition: state
-      entity_id: person.jamie
-      state: not_home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.joe_thomas
+        state: home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: home
   action:
   - data:
       message: Exercise Room Motion Detected
@@ -126,12 +138,16 @@
   condition:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: person.joe
-      state: not_home
-    - condition: state
-      entity_id: person.jamie
-      state: not_home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.joe_thomas
+        state: home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: home
   action:
   - data:
       message: Kitchen Area Motion Detected
@@ -211,12 +227,16 @@
   condition:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: person.joe
-      state: not_home
-    - condition: state
-      entity_id: person.jamie
-      state: not_home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.joe_thomas
+        state: home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: home
   action:
   - data:
       message: Kitchen Sliding Door Opened
@@ -236,14 +256,16 @@
   condition:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: person.joe
-      state: not_home
-    - condition: and
+    - condition: not
       conditions:
       - condition: state
-        entity_id: person.jamie
-        state: not_home
+        entity_id: person.joe_thomas
+        state: home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: home
   action:
   - data:
       message: Family Room sliding door opened
@@ -350,14 +372,16 @@
   condition:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: person.joe
-      state: not_home
-    - condition: and
+    - condition: not
       conditions:
       - condition: state
-        entity_id: person.jamie
-        state: not_home
+        entity_id: person.joe_thomas
+        state: home
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: person.jamie_thomas
+        state: home
   action:
   - data:
       message: Motion detected in 34DT Driveway while away
