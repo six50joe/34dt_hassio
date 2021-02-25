@@ -24,27 +24,6 @@ apple_tv:
 hue:
   bridges:
     - host: 192.168.0.35
-
-device_tracker:
-  - platform: nmap_tracker
-    hosts:
-      - 192.168.0.70
-      - 192.168.0.71
-  - platform: icloud3
-    username: !secret fmf_icloud
-    password: !secret fmf_icloud_pw
-    track_devices:
-      - six50joe_iphone > six50joe@icloud.com, JoeBadge2.jpg
-      - jamies_iphonex > jamiedylana@gmail.com, JamieBadge.jpg
-
-#  - platform: icloud3
-#    username: six50joe@mac.com
-#    password: !secret joe_icloud
-#    tracking_method: famshr
-#    group: family
-#    track_devices:
-#      - jamies_iphonex > jamiedylana@gmail.com, JamieBadge.jpg
-
   
 homeassistant:
   customize: !include customize.yaml
@@ -70,10 +49,21 @@ logger:
     pyatv: debug
     custom_components.apple_tv: debug
        
+owntracks:
+  max_gps_accuracy: 200
+  waypoints: false
+  mqtt_topic: "owntracks/#"
+  events_only: false
+  waypoint_whitelist:
+    - six50joe
+#  region_mapping:
+#    cabin: home
+#    office: work
+
 input_boolean:
   air_cond_warn_triggered:
     name: Set to true if air cond warning made
-    
+   
 variable:
   water_usage_rate:
     value: 0
