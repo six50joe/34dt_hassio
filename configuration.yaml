@@ -32,10 +32,19 @@ shopping_list:
 
 # Notifications
 notify:
-  - name: 34DT Hassio
+  - name: 34dt_hassio_joe
     platform: pushover
     api_key:  aiqsstb3fdzjfiufhry3sxp8i7tw4f
     user_key: utevcgmbad4mq263sto1k6sfw5bq45
+  - name: 34dt_hassio_jamie
+    platform: pushover
+    api_key:  aae9b85uhv9qmzjgjfa4tzaxxjzo1h
+    user_key: u9dikpjkyenayozh68ni42x8qbrv39
+  - name: all
+    platform: group
+    services:
+      - service: 34dt_hassio_joe
+      - service: 34dt_hassio_jamie
 
 logger:
   default: info
