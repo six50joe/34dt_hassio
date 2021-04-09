@@ -20,11 +20,11 @@
     platform: state
     to: 'on'
   condition:
-    - condition: not
-      conditions:
-        - condition: template
-          value_template: >-
-            {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
   action:
   - data:
       message: 34DT Front Door Opened
@@ -42,11 +42,11 @@
     platform: state
     to: 'on'
   condition:
-    - condition: not
-      conditions:
-        - condition: template
-          value_template: >-
-            {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
   action:
   - data:
       message: 34DT Garage Entry Opened
@@ -59,16 +59,16 @@
   alias: Piano Room Motion Detected
   description: ''
   trigger:
-  - entity_id: binary_sensor.piano_room_motion_sensor
+  - entity_id: binary_sensor.piano_room_motion_home_security_motion_detection
     from: 'off'
     platform: state
     to: 'on'
   condition:
-    - condition: not
-      conditions:
-        - condition: template
-          value_template: >-
-            {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
   action:
   - data:
       message: Piano Room Motion Detected
@@ -81,16 +81,16 @@
   alias: Exercise Room Motion Detected
   description: ''
   trigger:
-  - entity_id: binary_sensor.exercise_room_motion_sensor
+  - entity_id: binary_sensor.exercise_room_motion_home_security_motion_detection
     from: 'off'
     platform: state
     to: 'on'
   condition:
-    - condition: not
-      conditions:
-        - condition: template
-          value_template: >-
-            {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
   action:
   - data:
       message: Exercise Room Motion Detected
@@ -103,16 +103,16 @@
   alias: Kitchen Motion Detected
   description: ''
   trigger:
-  - entity_id: binary_sensor.kitchen_motion_sensor
+  - entity_id: binary_sensor.kitchen_motion_home_security_motion_detection
     from: 'off'
     platform: state
     to: 'on'
   condition:
-    - condition: not
-      conditions:
-        - condition: template
-          value_template: >-
-            {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
   action:
   - data:
       message: Kitchen Area Motion Detected
@@ -190,11 +190,11 @@
     platform: state
     to: 'on'
   condition:
-    - condition: not
-      conditions:
-        - condition: template
-          value_template: >-
-            {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
   action:
   - data:
       message: Kitchen Sliding Door Opened
@@ -212,11 +212,11 @@
     platform: state
     to: 'on'
   condition:
-    - condition: not
-      conditions:
-        - condition: template
-          value_template: >-
-            {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
   action:
   - data:
       message: Family Room sliding door opened
@@ -257,14 +257,14 @@
   alias: Store Kitchen Motion Time
   description: ''
   trigger:
-  - entity_id: binary_sensor.kitchen_motion_sensor
+  - entity_id: binary_sensor.kitchen_motion_home_security_motion_detection
     from: 'off'
     platform: state
     to: 'on'
   condition: []
   action:
   - data:
-      payload_template: '{{ as_timestamp(states.binary_sensor.kitchen_motion_sensor.last_changed)
+      payload_template: '{{ as_timestamp(now())
         | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
       topic: hass/storage/motion/on_time/kitchenmotion
     service: mqtt.publish
@@ -272,14 +272,14 @@
   alias: Store Piano Room Motion Time
   description: ''
   trigger:
-  - entity_id: binary_sensor.piano_room_motion_sensor
+  - entity_id: binary_sensor.piano_room_motion_home_security_motion_detection
     from: 'off'
     platform: state
     to: 'on'
   condition: []
   action:
   - data:
-      payload_template: '{{ as_timestamp(states.binary_sensor.piano_room_motion_sensor.last_changed)
+      payload_template: '{{ as_timestamp(now())
         | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
       topic: hass/storage/motion/on_time/pianoroommotion
     service: mqtt.publish
@@ -287,14 +287,14 @@
   alias: Store Exercise Room Motion Time
   description: ''
   trigger:
-  - entity_id: binary_sensor.exercise_room_motion_sensor
+  - entity_id: binary_sensor.exercise_room_motion_home_security_motion_detection
     from: 'off'
     platform: state
     to: 'on'
   condition: []
   action:
   - data:
-      payload_template: '{{ as_timestamp(states.binary_sensor.exercise_room_motion_sensor.last_changed)
+      payload_template: '{{ as_timestamp(now())
         | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
       topic: hass/storage/motion/on_time/exerciseroommotion
     service: mqtt.publish
@@ -302,35 +302,36 @@
   alias: Store Driveway Motion Time
   description: ''
   trigger:
-  - above: '0'
-    below: '10'
-    entity_id: sensor.driveway_floodlight_sensor_burglar
-    platform: numeric_state
+  - entity_id: binary_sensor.driveway_floodlight_sensor_home_security_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
   action:
   - data:
-      payload_template: '{{ as_timestamp(states.sensor.driveway_floodlight_sensor_burglar.last_updated)
+      payload_template: '{{ as_timestamp(now())
         | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
       topic: hass/storage/motion/on_time/drivewaymotion
     service: mqtt.publish
+  mode: single
 - id: driveway_motion_while_away
   alias: Motion in driveway while away
   description: ''
   trigger:
-  - entity_id: sensor.driveway_floodlight_sensor_burglar
-    from: '0'
+  - entity_id: binary_sensor.driveway_floodlight_sensor_home_security_motion_detection
+    from: 'off'
     platform: state
-    to: '8'
+    to: 'on'
   condition:
-    - condition: not
-      conditions:
-        - condition: template
-          value_template: >-
-            {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
   action:
   - data:
       message: Motion detected in 34DT Driveway while away
       data:
-        priority: 2
+        priority: -1
         retry: 1800
         expire: 3600
     service: notify.all
@@ -514,7 +515,7 @@
   alias: Water Main Shut Off
   description: Water main has been closed manually or leak detected
   trigger:
-  - entity_id: switch.water_shutoff_switch
+  - entity_id: switch.basement_water_main_current_value
     from: 'off'
     platform: state
     to: 'on'
@@ -565,11 +566,11 @@
 - id: Living Room Lights On
   alias: Living Room Lights On
   trigger:
-  - event_data:
-      entity_id: zwave.living_room_light_scene
-      scene_id: 1
-    event_type: zwave.scene_activated
-    platform: event
+  - platform: event
+    event_type: zwave_js_event
+    event_data:
+      node_id: 35
+      property_key: '001'
   condition: []
   action:
   - service: input_select.select_next
@@ -578,13 +579,14 @@
     data_template:
       group_name: Living room
       scene_name: '{{ states.input_select.living_room_scene.state }}'
+  mode: single
 - id: Living Room Lights Off
   alias: Living Room Lights Off
   trigger:
   - event_data:
-      entity_id: zwave.living_room_light_scene
-      scene_id: 2
-    event_type: zwave.scene_activated
+      node_id: 35
+      property_key: '002'
+    event_type: zwave_js_event
     platform: event
   condition: []
   action:
@@ -598,6 +600,7 @@
     data:
       entity_id: input_select.living_room_scene
       option: Dance Party
+  mode: single
 - id: '1605561802870'
   alias: Daily Device Batteries Check
   description: ''
@@ -706,7 +709,7 @@
       person: joe
       state: home
   mode: single
-- id: 'notify_jamie_zone_change'
+- id: notify_jamie_zone_change
   alias: Notify when jamie enters or leaves a zone
   description: ''
   trigger:
@@ -714,13 +717,16 @@
     entity_id: person.jamie
   condition:
     condition: template
-    value_template: "{{ trigger.from_state.state != trigger.to_state.state }}"
+    value_template: '{{ trigger.from_state.state != trigger.to_state.state }}'
   action:
-    - service: notify.34dt_hassio_joe
-      data_template:
-        title: 'Jamie Location update {{ states.sensor.time.state }}'
-        message: "{{ trigger.to_state.attributes.friendly_name }} {% if trigger.to_state.state == 'not_home' %}has left {{ trigger.from_state.state }}{% endif %}{% if trigger.from_state.state == 'not_home' %}arrived at {{ trigger.to_state.state }}{% endif %}"
-- id: 'notify_joe_zone_change'
+  - service: notify.34dt_hassio_joe
+    data_template:
+      title: Jamie Location update {{ states.sensor.time.state }}
+      message: '{{ trigger.to_state.attributes.friendly_name }} {% if trigger.to_state.state
+        == ''not_home'' %}has left {{ trigger.from_state.state }}{% endif %}{% if
+        trigger.from_state.state == ''not_home'' %}arrived at {{ trigger.to_state.state
+        }}{% endif %}'
+- id: notify_joe_zone_change
   alias: Notify when joe enters or leaves a zone
   description: ''
   trigger:
@@ -728,10 +734,12 @@
     entity_id: person.joe
   condition:
     condition: template
-    value_template: "{{ trigger.from_state.state != trigger.to_state.state }}"
+    value_template: '{{ trigger.from_state.state != trigger.to_state.state }}'
   action:
-    - service: notify.34dt_hassio_jamie
-      data_template:
-        title: 'Joe Location update {{ states.sensor.time.state }}'
-        message: "{{ trigger.to_state.attributes.friendly_name }} {% if trigger.to_state.state == 'not_home' %}has left {{ trigger.from_state.state }}{% endif %}{% if trigger.from_state.state == 'not_home' %}arrived at {{ trigger.to_state.state }}{% endif %}"
- 
+  - service: notify.34dt_hassio_jamie
+    data_template:
+      title: Joe Location update {{ states.sensor.time.state }}
+      message: '{{ trigger.to_state.attributes.friendly_name }} {% if trigger.to_state.state
+        == ''not_home'' %}has left {{ trigger.from_state.state }}{% endif %}{% if
+        trigger.from_state.state == ''not_home'' %}arrived at {{ trigger.to_state.state
+        }}{% endif %}'
