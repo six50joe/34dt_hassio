@@ -36,19 +36,28 @@ class WaterUsage(hass.Hass):
         #self.log("ENTITY: %s DATA: %s ARG1: %s ARG2: %s ARG3: %s" \
         #         % (entity, data, arg1, arg2, arg3))
 
-        prev_water_time = float(self.get_state("variable.prev_water_time", "state"))
-        prev_water_usage = float(self.get_state("variable.prev_water_usage", "state"))
-        
         water_usage = float(arg2)
         now  = time.time()
 
+        var_prev_water_time = self.get_state("variable.prev_water_time", "state")
+        if var_prev_water_time:
+            prev_water_time = float(self.get_state("variable.prev_water_time", "state"))
+        else:
+            prev_water_time = now - (16 * 60)
+        
+        var_prev_water_usage = self.get_state("variable.prev_water_usage", "state")
+        if var_prev_water_usage:
+            prev_water_usage = float(var_prev_water_usage)
+        else:
+            prev_water_usage = water_usage
+        
         minutes_passed = self.minutes_passed(prev_water_time, now)
         if minutes_passed < 15:
             return
 
         rate = float((water_usage - prev_water_usage) / minutes_passed)
         rate = round(rate, 3)
-        self.log("USAGE RATE: %f" % rate)
+        self.log("USAGE RATE: %f (reading=%f)" % (rate, water_usage))
 
         if rate > 1:
             if self.not_home():
@@ -73,3 +82,4 @@ class WaterUsage(hass.Hass):
         self.log("Alerting: %s" % alert)
         self.call_service("notify/34dt_hassio", message=alert)
         
+

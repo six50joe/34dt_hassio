@@ -264,8 +264,8 @@
   condition: []
   action:
   - data:
-      payload_template: '{{ as_timestamp(now())
-        | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
       topic: hass/storage/motion/on_time/kitchenmotion
     service: mqtt.publish
 - id: piano_room_motion
@@ -279,8 +279,8 @@
   condition: []
   action:
   - data:
-      payload_template: '{{ as_timestamp(now())
-        | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
       topic: hass/storage/motion/on_time/pianoroommotion
     service: mqtt.publish
 - id: exercise_room_motion
@@ -294,8 +294,8 @@
   condition: []
   action:
   - data:
-      payload_template: '{{ as_timestamp(now())
-        | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
       topic: hass/storage/motion/on_time/exerciseroommotion
     service: mqtt.publish
 - id: driveway_motion
@@ -308,8 +308,8 @@
     to: 'on'
   action:
   - data:
-      payload_template: '{{ as_timestamp(now())
-        | timestamp_custom(''%m-%d-%y %H:%M:%S'') }}'
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
       topic: hass/storage/motion/on_time/drivewaymotion
     service: mqtt.publish
   mode: single
@@ -449,7 +449,7 @@
   action:
   - service: media_player.volume_set
     data_template:
-      entity_id: media_player.tv_room
+      entity_id: media_player.living_room
       volume_level: 0
 - id: sonos_volume_low
   alias: Sonos Volume Low
@@ -463,7 +463,7 @@
   action:
   - service: media_player.volume_set
     data_template:
-      entity_id: media_player.tv_room
+      entity_id: media_player.living_room
       volume_level: 0.1
 - id: sonos_volume_mid
   alias: Sonos Volume Mid
@@ -477,7 +477,7 @@
   action:
   - service: media_player.volume_set
     data_template:
-      entity_id: media_player.tv_room
+      entity_id: media_player.living_room
       volume_level: 0.26
 - id: sonos_volume_high
   alias: Sonos Volume High
@@ -491,7 +491,7 @@
   action:
   - service: media_player.volume_set
     data_template:
-      entity_id: media_player.tv_room
+      entity_id: media_player.living_room
       volume_level: 0.6
 - id: ac_imminent
   alias: Air Conditioning Imminent
@@ -567,9 +567,9 @@
   alias: Living Room Lights On
   trigger:
   - platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
-      node_id: 35
+      node_id: 51
       property_key: '001'
   condition: []
   action:
@@ -584,9 +584,9 @@
   alias: Living Room Lights Off
   trigger:
   - event_data:
-      node_id: 35
+      node_id: 51
       property_key: '002'
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     platform: event
   condition: []
   action:
@@ -743,3 +743,23 @@
         == ''not_home'' %}has left {{ trigger.from_state.state }}{% endif %}{% if
         trigger.from_state.state == ''not_home'' %}arrived at {{ trigger.to_state.state
         }}{% endif %}'
+- id: 'water_flowing'
+  alias: Water Flowing While Away
+  description: ''
+  trigger:
+  - entity_id: sensor.fortrezz_fmi_flow_meter_water
+    platform: state
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
+  action:
+  - data:
+      message: Water flowing while away
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+    service: notify.all

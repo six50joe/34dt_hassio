@@ -115,6 +115,9 @@ sonos:
   media_player:
     hosts:
       192.168.0.18
+
+tts:
+  - platform: google_translate
     
 ios:
   actions:

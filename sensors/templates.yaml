@@ -31,7 +31,6 @@
     #
     # Smoke and Carbon Monixide Detectors
     #
-    # Note- alarm type does not 
     smoke_upstairs_status:
       friendly_name: "Smoke Upstairs Status"
       value_template: >-
