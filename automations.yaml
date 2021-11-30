@@ -23,8 +23,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
+      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: 34DT Front Door Opened
@@ -45,8 +44,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
+      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: 34DT Garage Entry Opened
@@ -67,8 +65,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
+      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Piano Room Motion Detected
@@ -89,8 +86,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
+      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Exercise Room Motion Detected
@@ -111,8 +107,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
+      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Kitchen Area Motion Detected
@@ -193,8 +188,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
+      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Kitchen Sliding Door Opened
@@ -215,8 +209,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
+      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Family Room sliding door opened
@@ -325,8 +318,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
+      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Motion detected in 34DT Driveway while away
@@ -743,18 +735,17 @@
         == ''not_home'' %}has left {{ trigger.from_state.state }}{% endif %}{% if
         trigger.from_state.state == ''not_home'' %}arrived at {{ trigger.to_state.state
         }}{% endif %}'
-- id: 'water_flowing'
+- id: water_flowing
   alias: Water Flowing While Away
   description: ''
   trigger:
-  - entity_id: sensor.fortrezz_fmi_flow_meter_water
-    platform: state
+  - platform: state
+    entity_id: variable.water_usage_rate
   condition:
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
+      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Water flowing while away
@@ -763,3 +754,102 @@
         retry: 1800
         expire: 3600
     service: notify.all
+  mode: single
+- id: set_trusted_home
+  alias: Set Trusted Home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.joe
+  - platform: state
+    entity_id: person.jamie
+  - platform: time
+    at: '07:00:00'
+  condition:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: person.jamie
+      state: home
+    - condition: state
+      entity_id: person.joe
+      state: home
+    - condition: time
+      after: '07:00:00'
+      before: '09:00:00'
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+  - service: variable.set_variable
+    data:
+      variable: trusted_home
+      value: true
+  mode: single
+- id: set_not_trusted_home
+  alias: Set Not Trusted Home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.joe
+  - platform: state
+    entity_id: person.jamie
+  - platform: time
+    at: '09:00:00'
+  condition:
+  - condition: not
+    conditions:
+    - condition: or
+      conditions:
+      - condition: state
+        entity_id: person.jamie
+        state: home
+      - condition: state
+        entity_id: person.joe
+        state: home
+      - condition: time
+        after: '07:00:00'
+        before: '09:00:00'
+        weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+  - service: variable.set_variable
+    data:
+      variable: trusted_home
+      value: false
+  mode: single
+- id: trust_home_test
+  alias: Testing
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: variable.trusted_home
+  condition:
+  - condition: template
+    value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+  action:
+  - service: variable.set_variable
+    data:
+      variable: test_variable
+      value: "TRUSTED HOME TRIGGERED"
+- id: trust_not_home_test
+  alias: Testing
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: variable.trusted_home
+  condition:
+  - condition: template
+    value_template: '{{ states(''variable.trusted_home'').lower()  != ''true'' }}'
+  action:
+  - service: variable.set_variable
+    data:
+      variable: test_variable
+      value: "TRUSTED *NOT* HOME TRIGGERED"

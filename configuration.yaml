@@ -74,6 +74,12 @@ input_boolean:
     name: Set to true if air cond warning made
    
 variable:
+  test_variable:
+    value: initialized
+    name: Testing Variable
+  trusted_home:
+    value: xyz
+    name: Trusted Home State
   water_usage_rate:
     value: 0
     name: WaterUsageRate
