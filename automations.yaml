@@ -713,7 +713,9 @@
   action:
   - service: notify.34dt_hassio_joe
     data_template:
-      title: Jamie Location update {{ states.sensor.time.state }}
+      data:
+        title: Jamie Location update {{ states.sensor.time.state }}
+        priority: -1
       message: '{{ trigger.to_state.attributes.friendly_name }} {% if trigger.to_state.state
         == ''not_home'' %}has left {{ trigger.from_state.state }}{% endif %}{% if
         trigger.from_state.state == ''not_home'' %}arrived at {{ trigger.to_state.state
@@ -730,7 +732,9 @@
   action:
   - service: notify.34dt_hassio_jamie
     data_template:
-      title: Joe Location update {{ states.sensor.time.state }}
+      data:
+        title: Joe Location update {{ states.sensor.time.state }}
+        priority: -1
       message: '{{ trigger.to_state.attributes.friendly_name }} {% if trigger.to_state.state
         == ''not_home'' %}has left {{ trigger.from_state.state }}{% endif %}{% if
         trigger.from_state.state == ''not_home'' %}arrived at {{ trigger.to_state.state
@@ -768,12 +772,9 @@
   condition:
   - condition: or
     conditions:
-    - condition: state
-      entity_id: person.jamie
-      state: home
-    - condition: state
-      entity_id: person.joe
-      state: home
+    - condition: template
+      value_template: >-
+        {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
     - condition: time
       after: '07:00:00'
       before: '09:00:00'
@@ -804,12 +805,9 @@
     conditions:
     - condition: or
       conditions:
-      - condition: state
-        entity_id: person.jamie
-        state: home
-      - condition: state
-        entity_id: person.joe
-        state: home
+      - condition: template
+        value_template: >-
+          {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
       - condition: time
         after: '07:00:00'
         before: '09:00:00'
