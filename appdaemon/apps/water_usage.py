@@ -15,7 +15,7 @@ now = None
 
 class WaterUsage(hass.Hass):
     def initialize(self):
-        self.listen_state(self.flow_detected, "sensor.fortrezz_fmi_flow_meter_water")
+        self.listen_state(self.flow_detected, "sensor.flow_meter_water_consumed_us_gallons")
 
     def not_home(self):
         joe_home = self.get_state("device_tracker.joe", attribute='name')

@@ -34,18 +34,14 @@
     smoke_upstairs_status:
       friendly_name: "Smoke Upstairs Status"
       value_template: >-
-        {% if is_state("sensor.upstairs_smoke_and_co_alarmlevel", "255") and is_state("sensor.upstairs_smoke_and_co_alarmtype", "1")%}
+        {% if is_state("binary_sensor.upstairs_smoke_smoke_alarm_smoke_detected", "on") %}
           smoke
-        {% elif is_state("sensor.upstairs_smoke_and_co_alarmlevel", "255") and is_state("sensor.upstairs_smoke_and_co_alarmtype", "2")%}
-          co
         {% else %}
           idle
         {% endif %}
       icon_template: >-
-        {% if is_state("sensor.upstairs_smoke_and_co_alarmlevel", "255") and is_state("sensor.upstairs_smoke_and_co_alarmtype", "1")%}
+        {% if is_state("binary_sensor.upstairs_smoke_smoke_alarm_smoke_detected", "on") %}
           mdi:fire
-        {% elif is_state("sensor.upstairs_smoke_and_co_alarmlevel", "255") and is_state("sensor.upstairs_smoke_and_co_alarmtype", "2")%}
-          mdi:cloud-outline
         {% else %}
           mdi:smoke-detector
         {% endif %}
@@ -53,18 +49,14 @@
     smoke_main_level_status:
       friendly_name: "Smoke Main Level Status"
       value_template: >-
-        {% if is_state("sensor.main_level_smoke_and_co_alarmlevel", "255") and is_state("sensor.main_level_smoke_and_co_alarmtype", "1")%}
+        {% if is_state("binary_sensor.main_level_smoke_smoke_alarm_smoke_detected", "on") %}
           smoke
-        {% elif is_state("sensor.main_level_smoke_and_co_alarmlevel", "255") and is_state("sensor.main_level_smoke_and_co_alarmtype", "2")%}
-          co
         {% else %}
           idle
         {% endif %}
       icon_template: >-
-        {% if is_state("sensor.main_level_smoke_and_co_alarmlevel", "255") and is_state("sensor.main_level_smoke_and_co_alarmtype", "1")%}
+        {% if is_state("binary_sensor.main_level_smoke_smoke_alarm_smoke_detected", "on") %}
           mdi:fire
-        {% elif is_state("sensor.main_level_smoke_and_co_alarmlevel", "255") and is_state("sensor.main_level_smoke_and_co_alarmtype", "2")%}
-          mdi:cloud-outline
         {% else %}
           mdi:smoke-detector
         {% endif %}
@@ -72,18 +64,14 @@
     smoke_downstairs_status:
       friendly_name: "Smoke Downstairs Status"
       value_template: >-
-        {% if is_state("sensor.sensor.downstairs_smoke_and_co_alarmlevel", "255") and is_state("sensor.sensor.downstairs_smoke_and_co_alarmtype", "1")%}
+        {% if is_state("binary_sensor.downstairs_smoke_smoke_alarm_smoke_detected", "on") %}
           smoke
-        {% elif is_state("sensor.sensor.downstairs_smoke_and_co_alarmlevel", "255") and is_state("sensor.sensor.downstairs_smoke_and_co_alarmtype", "2")%}
-          co
         {% else %}
           idle
         {% endif %}
       icon_template: >-
-        {% if is_state("sensor.sensor.downstairs_smoke_and_co_alarmlevel", "255") and is_state("sensor.sensor.downstairs_smoke_and_co_alarmtype", "1")%}
+        {% if is_state("binary_sensor.downstairs_smoke_smoke_alarm_smoke_detected", "on") %}
           mdi:fire
-        {% elif is_state("sensor.sensor.downstairs_smoke_and_co_alarmlevel", "255") and is_state("sensor.sensor.downstairs_smoke_and_co_alarmtype", "2")%}
-          mdi:cloud-outline
         {% else %}
           mdi:smoke-detector
         {% endif %}
