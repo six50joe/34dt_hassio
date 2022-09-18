@@ -23,7 +23,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: 34DT Front Door Opened
@@ -44,7 +44,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: 34DT Garage Entry Opened
@@ -65,7 +65,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Piano Room Motion Detected
@@ -86,7 +86,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Exercise Room Motion Detected
@@ -107,7 +107,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Kitchen Area Motion Detected
@@ -188,7 +188,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Kitchen Sliding Door Opened
@@ -209,7 +209,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Family Room sliding door opened
@@ -318,7 +318,7 @@
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Motion detected in 34DT Driveway while away
@@ -744,12 +744,12 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: variable.water_usage_rate
+    entity_id: var.water_usage_rate
   condition:
   - condition: not
     conditions:
     - condition: template
-      value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
   - data:
       message: Water flowing while away
@@ -785,9 +785,9 @@
       - thu
       - fri
   action:
-  - service: variable.set_variable
+  - service: var.set
     data:
-      variable: trusted_home
+      var.: trusted_home
       value: true
   mode: single
 - id: set_not_trusted_home
@@ -818,9 +818,9 @@
         - thu
         - fri
   action:
-  - service: variable.set_variable
+  - service: var.set
     data:
-      variable: trusted_home
+      var.: trusted_home
       value: false
   mode: single
 - id: trust_home_test
@@ -828,26 +828,26 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: variable.trusted_home
+    entity_id: var.trusted_home
   condition:
   - condition: template
-    value_template: '{{ states(''variable.trusted_home'').lower()  == ''true'' }}'
+    value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - service: variable.set_variable
+  - service: var.set
     data:
-      variable: test_variable
+      var.: test_var.
       value: "TRUSTED HOME TRIGGERED"
 - id: trust_not_home_test
   alias: Testing
   description: ''
   trigger:
   - platform: state
-    entity_id: variable.trusted_home
+    entity_id: var.trusted_home
   condition:
   - condition: template
-    value_template: '{{ states(''variable.trusted_home'').lower()  != ''true'' }}'
+    value_template: '{{ states(''var.trusted_home'').lower()  != ''true'' }}'
   action:
-  - service: variable.set_variable
+  - service: var.set
     data:
-      variable: test_variable
+      var.: test_var.
       value: "TRUSTED *NOT* HOME TRIGGERED"
