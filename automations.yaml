@@ -614,8 +614,8 @@
   condition: []
   action:
   - type: turn_on
-    device_id: 6fc6b06a95454f1a8e9068bbe8c0a584
-    entity_id: switch.path_lights_switch_switch
+    device_id: d5c9618bf075d4657def9c581c7aa9eb
+    entity_id: switch.front_path_lights
     domain: switch
   mode: single
 - id: '1607037786126'
@@ -623,12 +623,12 @@
   description: ''
   trigger:
   - platform: time
-    at: 00:30
+    at: '20:00:00'
   condition: []
   action:
   - type: turn_off
-    device_id: 6fc6b06a95454f1a8e9068bbe8c0a584
-    entity_id: switch.path_lights_switch_switch
+    device_id: d5c9618bf075d4657def9c581c7aa9eb
+    entity_id: switch.front_path_lights
     domain: switch
   mode: single
 - id: 34dt_low_temperature
@@ -768,16 +768,16 @@
   - platform: state
     entity_id: person.jamie
   - platform: time
-    at: '07:00:00'
+    at: 07:00:00
   condition:
   - condition: or
     conditions:
     - condition: template
-      value_template: >-
-        {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+        == ''home'' }}'
     - condition: time
-      after: '07:00:00'
-      before: '09:00:00'
+      after: 07:00:00
+      before: 09:00:00
       weekday:
       - mon
       - tue
@@ -787,7 +787,8 @@
   action:
   - service: var.set
     data:
-      var.: trusted_home
+      entity_id:
+      - var.trusted_home
       value: true
   mode: single
 - id: set_not_trusted_home
@@ -799,18 +800,18 @@
   - platform: state
     entity_id: person.jamie
   - platform: time
-    at: '09:00:00'
+    at: 09:00:00
   condition:
   - condition: not
     conditions:
     - condition: or
       conditions:
       - condition: template
-        value_template: >-
-          {{ states('person.joe').lower()  == 'home' or states('person.jamie').lower() == 'home' }}
+        value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
+          == ''home'' }}'
       - condition: time
-        after: '07:00:00'
-        before: '09:00:00'
+        after: 07:00:00
+        before: 09:00:00
         weekday:
         - mon
         - tue
@@ -820,7 +821,8 @@
   action:
   - service: var.set
     data:
-      var.: trusted_home
+      entity_id:
+      - var.trusted_home
       value: false
   mode: single
 - id: trust_home_test
@@ -835,8 +837,9 @@
   action:
   - service: var.set
     data:
-      var.: test_var.
-      value: "TRUSTED HOME TRIGGERED"
+      entity_id:
+      - var.test_var
+      value: TRUSTED HOME TRIGGERED
 - id: trust_not_home_test
   alias: Testing
   description: ''
@@ -849,5 +852,76 @@
   action:
   - service: var.set
     data:
-      var.: test_var.
-      value: "TRUSTED *NOT* HOME TRIGGERED"
+      entity_id:
+      - var.test_var
+      value: TRUSTED *NOT* HOME TRIGGERED
+- id: '1671150769271'
+  alias: Jemma's Xmas Lights On
+  description: ''
+  trigger:
+  - platform: time
+    at: '18:00:00'
+  condition:
+  - condition: time
+    before: '23:00:00'
+    after: 01:00:00
+    weekday:
+    - sun
+    - mon
+    - tue
+    - wed
+    - thu
+  action:
+  - type: turn_on
+    device_id: b68f96ed392414310918db90bc500a8d
+    entity_id: switch.christmas_light_cube_plug
+    domain: switch
+  mode: single
+- id: '1671150852845'
+  alias: Jemma's Xmas Lights Off
+  description: ''
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: b68f96ed392414310918db90bc500a8d
+    entity_id: switch.christmas_light_cube_plug
+    domain: switch
+  mode: single
+- id: '1671155957111'
+  alias: Turn Christmas Tree Lights ON
+  description: ''
+  trigger:
+  - platform: time
+    at: '18:00:00'
+  condition:
+  - condition: time
+    before: '22:00:00'
+    weekday:
+    - mon
+    - sun
+    - tue
+    - wed
+    - thu
+    after: 01:00:00
+  action:
+  - type: turn_on
+    device_id: bc9c95826d268e2d341a1a8d0e2727de
+    entity_id: switch.christmas_lights_outdoor_receptacle
+    domain: switch
+  mode: single
+- id: '1671156651114'
+  alias: Turn off Christmas Tree Lights
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: bc9c95826d268e2d341a1a8d0e2727de
+    entity_id: switch.christmas_lights_outdoor_receptacle
+    domain: switch
+  mode: single

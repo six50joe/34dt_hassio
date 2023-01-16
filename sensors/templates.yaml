@@ -11,21 +11,6 @@
   name: Lakehouse Hassio
   command: /usr/bin/nc -z -w7 12ridgegarden.dyndns.org 8123 && echo Up || echo Down
 
-#
-# Motion sensors
-#
-- platform: mqtt
-  name: "Kitchen Motion Detected"
-  state_topic: "hass/storage/motion/on_time/kitchenmotion"
-- platform: mqtt
-  name: "Piano Room Motion Detected"
-  state_topic: "hass/storage/motion/on_time/pianoroommotion"
-- platform: mqtt
-  name: "Exercise Room Motion Detected"
-  state_topic: "hass/storage/motion/on_time/exerciseroommotion"
-- platform: mqtt
-  name: "Driveway Motion Updated"
-  state_topic: "hass/storage/motion/on_time/drivewaymotion"
 - platform: template
   sensors:
     #
