@@ -6,11 +6,13 @@
     platform: homeassistant
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: 34DT Hassio Rebooted
+      target:
+        - six50joePhone
       data:
         priority: -1
-    service: notify.34dt_hassio_joe
 - id: '1583167744310'
   alias: Front Door Opened
   description: ''
@@ -25,13 +27,16 @@
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - data:
-      message: 34DT Front Door Opened
+  - service: notify.pushover
+    data:
+      message: The front Door at 34 Deer Track has opened without parents home.
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 1800
         expire: 3600
-    service: notify.all
 - id: '1583167835627'
   alias: Garage Door Entry Opened
   description: ''
@@ -46,13 +51,16 @@
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - data:
-      message: 34DT Garage Entry Opened
+  - service: notify.pushover
+    data:
+      message: 34DT Garage Entry Opened without parents home.
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 1800
         expire: 3600
-    service: notify.all
 - id: '1583283013697'
   alias: Piano Room Motion Detected
   description: ''
@@ -67,13 +75,16 @@
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - data:
-      message: Piano Room Motion Detected
+  - service: notify.pushover
+    data:
+      message: Piano Room Motion Detected without parents home.
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 1800
         expire: 3600
-    service: notify.all
 - id: '1583283118831'
   alias: Exercise Room Motion Detected
   description: ''
@@ -88,13 +99,16 @@
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - data:
-      message: Exercise Room Motion Detected
+  - service: notify.pushover
+    data:
+      message: Exercise Room Motion Detected without parents home.
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 1800
         expire: 3600
-    service: notify.all
 - id: '1583838999172'
   alias: Kitchen Motion Detected
   description: ''
@@ -109,13 +123,16 @@
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - data:
-      message: Kitchen Area Motion Detected
+  - service: notify.pushover
+    data:
+      message: Kitchen Area Motion Detected without parents home.
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 1800
         expire: 3600
-    service: notify.all
 - id: '1583840584254'
   alias: Joe Left Home
   description: ''
@@ -126,11 +143,14 @@
     to: not_home
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Joe Left Home
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
-        priority: -1
-    service: notify.all
+        priority: -2
 - id: '1583840738068'
   alias: Jamie Left Home
   description: ''
@@ -141,11 +161,13 @@
     to: not_home
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Jamie Left Home
+      target:
+        - six50joePhone
       data:
-        priority: -1
-    service: notify.all
+        priority: 0
 - id: '1583840787571'
   alias: Joe Arrived Home
   description: ''
@@ -156,11 +178,14 @@
     to: home
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Joe Arrived Home
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
-        priority: -1
-    service: notify.all
+        priority: -2
 - id: '1583840831037'
   alias: Jamie Arrived Home
   description: ''
@@ -171,11 +196,13 @@
     to: home
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Jamie Arrived Home
+      target:
+        - six50joePhone
       data:
-        priority: -1
-    service: notify.all
+        priority: 0
 - id: '1583884186260'
   alias: Kitchen Sliding Door Openend
   description: ''
@@ -190,13 +217,16 @@
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - data:
-      message: Kitchen Sliding Door Opened
+  - service: notify.pushover
+    data:
+      message: Kitchen Sliding Door Opened while parents not home.
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 1800
         expire: 3600
-    service: notify.all
 - id: '1583970826722'
   alias: Family Room Sliding Doors Opened
   description: ''
@@ -211,13 +241,16 @@
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - data:
-      message: Family Room sliding door opened
+  - service: notify.pushover
+    data:
+      message: Family Room sliding door opened while parents not home.
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 1800
         expire: 3600
-    service: notify.all
 - id: '1585016862253'
   alias: Check Lakehouse Disconnected
   description: ''
@@ -228,9 +261,11 @@
     to: Down
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Lakehouse had been reachable but is now not
-    service: notify.34dt_hassio_joe
+      target:
+        - six50joePhone
   mode: single
 - id: '1585017089811'
   alias: Check Lakehouse Connected
@@ -242,9 +277,11 @@
     to: Up
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Lakehouse had not been reachable, but is now
-    service: notify.34dt_hassio_joe
+      target:
+        - six50joePhone
   mode: single
 - id: '1585054962692'
   alias: Store Kitchen Motion Time
@@ -320,13 +357,16 @@
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Motion detected in 34DT Driveway while away
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: -1
         retry: 1800
         expire: 3600
-    service: notify.all
 - id: 34dt_upstairs_smoke
   alias: Upstairs Smoke
   description: ''
@@ -337,13 +377,16 @@
     to: smoke
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Smoke detected upstairs at 34DT!
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 500
         expire: 7200
-    service: notify.all
 - id: 34dt_upstairs_co
   alias: Upstairs Carbon Monoxide
   description: ''
@@ -354,13 +397,16 @@
     to: co
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Carbon Monoxide detected upstairs at 34DT!
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 500
         expire: 7200
-    service: notify.all
 - id: 34dt_main_level_smoke
   alias: Main Floor Smoke
   description: ''
@@ -371,13 +417,16 @@
     to: smoke
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Smoke detected main floor at 34DT!
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 500
         expire: 7200
-    service: notify.all
 - id: 34dt_main_level_co
   alias: Main Floor Carbon Monoxide
   description: ''
@@ -388,13 +437,16 @@
     to: co
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Carbon Monoxide detected main floor at 34DT!
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 500
         expire: 7200
-    service: notify.all
 - id: 34dt_downstairs_smoke
   alias: Downstairs Smoke
   description: ''
@@ -405,13 +457,16 @@
     to: smoke
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Smoke detected downstairs at 34DT!
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 500
         expire: 7200
-    service: notify.all
 - id: 34dt_downstairs_co
   alias: Downstairs Carbon Monoxide
   description: ''
@@ -422,13 +477,16 @@
     to: co
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Carbon Monoxide detected downstairs at 34DT!
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 500
         expire: 7200
-    service: notify.all
 - id: sonos_volume_mute
   alias: Sonos Volume Mute
   description: ''
@@ -497,9 +555,12 @@
     entity_id: input_boolean.air_cond_warn_triggered
     state: 'off'
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Air conditioning imminent; close windows
-    service: notify.all
+      target:
+        - six50joePhone
+        - JamieIPhone
   - data: {}
     entity_id: input_boolean.air_cond_warn_triggered
     service: input_boolean.turn_on
@@ -513,14 +574,17 @@
     to: 'on'
   condition: []
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Basement leak detected or main manually shut off
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 900
         expire: 7200
         sound: mechanical
-    service: notify.all
 - id: '1594236029982'
   alias: Reset Air Conditioning Warning
   description: ''
@@ -551,9 +615,9 @@
     device_id: f38d9a61965c4082a22992ded90eddfb
     entity_id: switch.modem_reset_switch
     domain: switch
-  - data:
+  - service: notify.pushover
+    data:
       message: 34DT Router Was Rebooted due to Admin Page Hung
-    service: notify.34dt_hassio_joe
   mode: single
 - id: Living Room Lights On
   alias: Living Room Lights On
@@ -640,9 +704,12 @@
     below: '55'
   condition: []
   action:
-  - service: notify.all
+  - service: notify.pushover
     data:
       message: 34 Deer Track temperature dangerously low!
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 900
@@ -711,7 +778,7 @@
     condition: template
     value_template: '{{ trigger.from_state.state != trigger.to_state.state }}'
   action:
-  - service: notify.34dt_hassio_joe
+  - service: notify.pushover
     data_template:
       data:
         title: Jamie Location update {{ states.sensor.time.state }}
@@ -720,6 +787,8 @@
         == ''not_home'' %}has left {{ trigger.from_state.state }}{% endif %}{% if
         trigger.from_state.state == ''not_home'' %}arrived at {{ trigger.to_state.state
         }}{% endif %}'
+      target:
+        - six50joePhone
 - id: notify_joe_zone_change
   alias: Notify when joe enters or leaves a zone
   description: ''
@@ -730,7 +799,7 @@
     condition: template
     value_template: '{{ trigger.from_state.state != trigger.to_state.state }}'
   action:
-  - service: notify.34dt_hassio_jamie
+  - service: notify.pushover
     data_template:
       data:
         title: Joe Location update {{ states.sensor.time.state }}
@@ -739,6 +808,8 @@
         == ''not_home'' %}has left {{ trigger.from_state.state }}{% endif %}{% if
         trigger.from_state.state == ''not_home'' %}arrived at {{ trigger.to_state.state
         }}{% endif %}'
+      target:
+        - six50joePhone
 - id: water_flowing
   alias: Water Flowing While Away
   description: ''
@@ -751,13 +822,16 @@
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   action:
-  - data:
+  - service: notify.pushover
+    data:
       message: Water flowing while away
+      target:
+        - six50joePhone
+        - JamieIPhone
       data:
         priority: 2
         retry: 1800
         expire: 3600
-    service: notify.all
   mode: single
 - id: set_trusted_home
   alias: Set Trusted Home
