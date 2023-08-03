@@ -19,14 +19,25 @@ binary_sensor: !include binary_sensor.yaml
 frontend:
   themes: !include frontend.yaml
 
-apple_tv:
-
-hue:
-  bridges:
-    - host: 192.168.0.35
-  
 homeassistant:
   customize: !include customize.yaml
+
+
+#
+# TCP sensors
+#
+command_line:
+  - sensor:
+      name: Netgear Router Admin
+      command: /usr/bin/nc -z -w7 192.168.0.1 80 && echo Up || echo Down
+command_line:
+  - sensor:
+      name: Netgear Spectrum Analyzer
+      command: /usr/bin/nc -z -w7 192.168.0.1 8080 && echo Up || echo Down
+command_line:
+  - sensor:
+      name: Lakehouse Hassio
+      command: /usr/bin/nc -z -w7 12ridgegarden.dyndns.org 8123 && echo Up || echo Down
 
 shopping_list:
 

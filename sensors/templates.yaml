@@ -1,16 +1,3 @@
-#
-# TCP sensors
-#
-- platform: command_line
-  name: Netgear Router Admin
-  command: /usr/bin/nc -z -w7 192.168.0.1 80 && echo Up || echo Down
-- platform: command_line
-  name: Netgear Spectrum Analyzer
-  command: /usr/bin/nc -z -w7 192.168.0.1 8080 && echo Up || echo Down
-- platform: command_line
-  name: Lakehouse Hassio
-  command: /usr/bin/nc -z -w7 12ridgegarden.dyndns.org 8123 && echo Up || echo Down
-
 - platform: template
   sensors:
     #
