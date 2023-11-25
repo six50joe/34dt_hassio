@@ -1,0 +1,21 @@
+Testing:
+
+- [X] Before sitter, both leave home
+   False
+- [X] Before sitter, one comes home
+   True
+- [ ] Turns 7am wday, both not home
+   True
+- [X] During sitter, both leave home
+   True
+- [X] During sitter, one comes home
+   True
+- [ ] Turns 9am, both not nome
+   False
+- [X] After sitter, both leave home
+   False
+- [X] After sitter. one comes home
+   True
+
+* Add trusted home state to main screen
+* Add buttons to force trusted home state

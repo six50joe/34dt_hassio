@@ -1,0 +1,20 @@
+test_variable:
+  initial_value: test
+  unique_id: TestingVariable
+  friendly_name: TestingVariable
+trusted_home:
+  initial_value: xyz
+  unique_id: TrustedHome
+  friendly_name: TrustedHome
+water_usage_rate:
+  initial_value: 0
+  unique_id: WaterUsageRate
+  friendly_name: WaterUsageRate
+water_usage:
+  unique_id: WaterUsage
+  friendly_name: WaterUsage
+  initial_value: 0
+prev_water_time:
+  unique_id: PrevWaterTime
+  friendly_name: PrevWaterTime
+  initial_value: 0

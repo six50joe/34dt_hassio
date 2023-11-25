@@ -96,7 +96,7 @@
     water_gpm:
       friendly_name: "Water Usage Gallons Per Minute"
       unit_of_measurement: 'gpm'
-      value_template: "{{ states('variable.water_usage_rate') }}"
+      value_template: "{{ states('var.water_usage_rate') }}"
 
     water_shutoff:
       friendly_name: "Water Main Shutoff"
@@ -127,3 +127,10 @@
         {%- endfor -%}
         {% endmacro %}
         {{ is_failed() |trim != "" }}
+
+    failed_zwave:
+      value_template: >
+        {{ states | selectattr("entity_id", "search", "node_status") |
+           selectattr('state', 'in', 'dead, unavailable, unknown') |
+           map(attribute='entity_id') | list }}
+

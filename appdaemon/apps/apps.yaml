@@ -14,3 +14,7 @@ batteries:
 home_tracker:
   module: home_tracker
   class: HomeTracker
+
+device_responsive_state:
+  module: device_responsive_state
+  class: DeviceResponsiveState

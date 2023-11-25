@@ -1,0 +1,6 @@
+{% macro entity_days_elapsed(var_entity_id) %}
+{% set var_upd_date = as_datetime(float(states(var_entity_id))) %}
+{% set var_datetime = var_upd_date - timedelta( days = 7) %}
+{% set days_elapsed = (now() - var_datetime).days %}
+{{ days_elapsed }}
+{% endmacro %}

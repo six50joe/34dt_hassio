@@ -1,0 +1,36 @@
+thermo_exercise_room_lupd:
+  initial_value: 0
+  unique_id: thermo_exercise_room_lupd
+  friendly_name: ExerciseRoom
+thermo_den_emmett_lupd:
+  initial_value: 0
+  unique_id: thermo_den_emmett_lupd
+  friendly_name: DenEmmettsRoom
+thermo_kitchen_living_lupd:
+  initial_value: 0
+  unique_id: thermo_kitchen_living_lupd
+  friendly_name: KitchenLivingRoom
+thermo_master_bath_lupd:
+  initial_value: 0
+  unique_id: thermo_master_bath_lupd
+  friendly_name: MasterBath
+thermo_piano_room_lupd:
+  initial_value: 0
+  unique_id: thermo_piano_room_lupd
+  friendly_name: PianoRoom
+thermo_master_bedroom_lupd:
+  initial_value: 0
+  unique_id: thermo_master_bedroom_lupd
+  friendly_name: MasterBedRoom
+front_path_lights_lupd:
+  initial_value: 0
+  unique_id: front_path_lights_lupd
+  friendly_name: PathLights
+driveway_light_upd:
+  initial_value: 0
+  unique_id: driveway_light_upd
+  friendly_name: DrivewayLight
+kitchen_motion_lupd:
+  initial_value: 0
+  unique_id: kitchen_motion_lupd
+  friendly_name: KitchenMotion

@@ -1,0 +1,14 @@
+{% macro entity_responsive_color(var_entity_id) %}
+{% set var_upd_date = as_datetime(float(states(var_entity_id))) %}
+{% set var_datetime = var_upd_date - timedelta( days = 7) %}
+{% set days_elapsed = (now() - var_datetime).days %}
+{{ 
+{% if days_elapsed >= 30 %}
+ "#AAFFAA"
+{% elif days_elapsed <= 1 %} 
+ "#efedea"
+{% else %} 
+ "#ffca4a"
+{% endif %}
+}}
+{% endmacro %}

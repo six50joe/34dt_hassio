@@ -39,13 +39,13 @@ class WaterUsage(hass.Hass):
         water_usage = float(arg2)
         now  = time.time()
 
-        var_prev_water_time = self.get_state("variable.prev_water_time", "state")
+        var_prev_water_time = self.get_state("var.prev_water_time", "state")
         if var_prev_water_time:
-            prev_water_time = float(self.get_state("variable.prev_water_time", "state"))
+            prev_water_time = float(self.get_state("var.prev_water_time", "state"))
         else:
             prev_water_time = now - (16 * 60)
         
-        var_prev_water_usage = self.get_state("variable.prev_water_usage", "state")
+        var_prev_water_usage = self.get_state("var.prev_water_usage", "state")
         if var_prev_water_usage:
             prev_water_usage = float(var_prev_water_usage)
         else:
@@ -72,10 +72,10 @@ class WaterUsage(hass.Hass):
         #     % (now, ts))
         
         
-        self.call_service("variable/set_variable", variable='water_usage_rate', value=rate)
+        self.call_service("var/set", entity_id='var.water_usage_rate', value=rate)
 
-        self.call_service("variable/set_variable", variable='prev_water_usage', value=water_usage)
-        self.call_service("variable/set_variable", variable='prev_water_time', value=now)
+        self.call_service("var/set", entity_id='var.prev_water_usage', value=water_usage)
+        self.call_service("var/set", entity_id='var.prev_water_time', value=now)
         
 
     def send_notification(self, alert):

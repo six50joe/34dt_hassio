@@ -687,7 +687,7 @@
   description: ''
   trigger:
   - platform: time
-    at: '21:30:00'
+    at: '20:00:00'
   condition: []
   action:
   - type: turn_off
@@ -998,4 +998,31 @@
     device_id: bc9c95826d268e2d341a1a8d0e2727de
     entity_id: switch.christmas_lights_outdoor_receptacle
     domain: switch
+  mode: single
+- id: '1700344410607'
+  alias: Ping Wave Device Test
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - device_id: 93ffc0d5c56d124c808cbb60db7e6fc9
+    domain: zwave_js
+    entity_id: 6e8302ce6d3209adcec921d5d7ef27d9
+    type: refresh_value
+    refresh_all_values: true
+  mode: single
+- id: '1700346127425'
+  alias: Test Wave Device Updated
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 93ffc0d5c56d124c808cbb60db7e6fc9
+    domain: button
+    entity_id: 6e8302ce6d3209adcec921d5d7ef27d9
+    type: pressed
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Test ZWave updated
   mode: single

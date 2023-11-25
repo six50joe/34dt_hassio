@@ -1,0 +1,6 @@
+#
+# <track indicator> | <entity> | <last sent timestamp> | <last received timestamp>
+# indicator:
+#   - : enable alerts for this device (default)
+#   X : do NOT enable alerts for this device
+# --------------------------------------------------------------------------------

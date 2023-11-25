@@ -2,4 +2,6 @@ person.joe:
   entity_picture: /local/JoeBadge2.jpg
 person.jamie:
   entity_picture: /local/JamieBadge.jpg
+person.jemma:
+  entity_picture: /local/JemmaBadge.jpg
 zone.home: {}
