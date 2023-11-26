@@ -422,7 +422,7 @@ views:
           card_mod:
             style: >
               {% from 'device_updated_days.jinja' import entity_responsive_color
-              %} 
+              %} '
                ha-card {background-color: {{ entity_responsive_color('var.driveway_light_upd') }};}
       - type: custom:config-template-card
         variables:

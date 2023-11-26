@@ -1,6 +1,16 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+#lovelace:
+#  mode: yaml
+
+#
+# Add-On for lovelace
+#
+#  resources:
+#    - url: /local/config-template-card/config-template-card.js
+#      type: module
+
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
