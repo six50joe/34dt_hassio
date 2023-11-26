@@ -8547,7 +8547,7 @@
           }
         },
         "original_device_class": null,
-        "original_icon": "mdi:sleep",
+        "original_icon": "mdi:eye",
         "original_name": "Node status",
         "platform": "zwave_js",
         "supported_features": 0,
@@ -11041,7 +11041,7 @@
           }
         },
         "original_device_class": null,
-        "original_icon": "mdi:sleep",
+        "original_icon": "mdi:eye",
         "original_name": "Node status",
         "platform": "zwave_js",
         "supported_features": 0,
@@ -14003,7 +14003,7 @@
         "capabilities": null,
         "config_entry_id": "7d31cc7153c9069c2407f3d87587caa2",
         "device_class": null,
-        "device_id": null,
+        "device_id": "54b9d927a861f20f16d783f091c70b71",
         "disabled_by": null,
         "entity_category": "diagnostic",
         "entity_id": "device_tracker.joe_joes_iphone",
@@ -14093,7 +14093,7 @@
         "capabilities": null,
         "config_entry_id": "7d31cc7153c9069c2407f3d87587caa2",
         "device_class": null,
-        "device_id": null,
+        "device_id": "4807685042b7a3ad309ec3424ee93b4a",
         "disabled_by": null,
         "entity_category": "diagnostic",
         "entity_id": "device_tracker.jamie_jamies_iphone",
@@ -20631,7 +20631,7 @@
         "capabilities": null,
         "config_entry_id": "7d31cc7153c9069c2407f3d87587caa2",
         "device_class": null,
-        "device_id": null,
+        "device_id": "ceac14c92b1f266baeb039b33eca8676",
         "disabled_by": null,
         "entity_category": "diagnostic",
         "entity_id": "device_tracker.user_be2582f9_05c2_4af9_ae0c_7e8053f679f2",
@@ -39718,6 +39718,190 @@
         "supported_features": 0,
         "translation_key": null,
         "unique_id": "driveway_light_upd",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "device_class": null,
+        "device_id": "8eb2047f7f962bcdc107983f70c2298b",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "binary_sensor.file_editor_running",
+        "hidden_by": null,
+        "icon": null,
+        "id": "26e246f9eb369c6128dd7872458001c9",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "running",
+        "original_icon": null,
+        "original_name": "Running",
+        "platform": "hassio",
+        "supported_features": 0,
+        "translation_key": "state",
+        "unique_id": "core_configurator_state",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "device_class": null,
+        "device_id": "8eb2047f7f962bcdc107983f70c2298b",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.file_editor_version",
+        "hidden_by": null,
+        "icon": null,
+        "id": "995f780e80237f085b562be1bbce78ef",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Version",
+        "platform": "hassio",
+        "supported_features": 0,
+        "translation_key": "version",
+        "unique_id": "core_configurator_version",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "device_class": null,
+        "device_id": "8eb2047f7f962bcdc107983f70c2298b",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.file_editor_newest_version",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8856e338cc1ef6dc4c665ed858b3035d",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Newest version",
+        "platform": "hassio",
+        "supported_features": 0,
+        "translation_key": "version_latest",
+        "unique_id": "core_configurator_version_latest",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "device_class": null,
+        "device_id": "8eb2047f7f962bcdc107983f70c2298b",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.file_editor_cpu_percent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "9b3a1328436512fafb56721c278a914a",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:cpu-64-bit",
+        "original_name": "CPU percent",
+        "platform": "hassio",
+        "supported_features": 0,
+        "translation_key": "cpu_percent",
+        "unique_id": "core_configurator_cpu_percent",
+        "previous_unique_id": null,
+        "unit_of_measurement": "%"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "device_class": null,
+        "device_id": "8eb2047f7f962bcdc107983f70c2298b",
+        "disabled_by": "integration",
+        "entity_category": null,
+        "entity_id": "sensor.file_editor_memory_percent",
+        "hidden_by": null,
+        "icon": null,
+        "id": "3cdb5317fc9cacfb58a92554d5937091",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:memory",
+        "original_name": "Memory percent",
+        "platform": "hassio",
+        "supported_features": 0,
+        "translation_key": "memory_percent",
+        "unique_id": "core_configurator_memory_percent",
+        "previous_unique_id": null,
+        "unit_of_measurement": "%"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "device_class": null,
+        "device_id": "8eb2047f7f962bcdc107983f70c2298b",
+        "disabled_by": null,
+        "entity_category": "config",
+        "entity_id": "update.file_editor_update",
+        "hidden_by": null,
+        "icon": null,
+        "id": "973ec385e51d124d664f410e52d786a7",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Update",
+        "platform": "hassio",
+        "supported_features": 25,
+        "translation_key": null,
+        "unique_id": "core_configurator_version_latest",
         "previous_unique_id": null,
         "unit_of_measurement": null
       }

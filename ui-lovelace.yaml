@@ -1,0 +1,450 @@
+title: 34DT
+views:
+  - badges:
+      - entity: person.joe
+      - entity: person.jamie
+      - entity: person.jemma
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                icon: mdi:face-man
+                show_icon: true
+                show_name: true
+                tap_action:
+                  action: call-service
+                  service: automation.trigger
+                  service_data:
+                    entity_id: automation.set_joe_home_state_2
+              - type: button
+                icon: mdi:face-man-outline
+                show_icon: true
+                show_name: true
+                tap_action:
+                  action: call-service
+                  service: automation.trigger
+                  service_data:
+                    entity_id: automation.set_joe_not_home_state
+              - type: button
+                icon: mdi:face-woman
+                show_icon: true
+                show_name: true
+                tap_action:
+                  action: call-service
+                  service: automation.trigger
+                  service_data:
+                    entity_id: automation.set_jamie_home_state
+              - type: button
+                icon: mdi:face-woman-outline
+                show_icon: true
+                show_name: true
+                tap_action:
+                  action: call-service
+                  service: automation.trigger
+                  service_data:
+                    entity_id: automation.set_jamie_not_home_state
+          - type: horizontal-stack
+            cards:
+              - type: button
+                icon: mdi:home-variant
+                show_icon: true
+                show_name: true
+                tap_action:
+                  action: call-service
+                  service: var.set
+                  service_data:
+                    entity_id: var.trusted_home
+                    value: true
+              - type: button
+                icon: mdi:home-variant-outline
+                show_icon: true
+                show_name: true
+                tap_action:
+                  action: call-service
+                  service: var.set
+                  service_data:
+                    entity_id: var.trusted_home
+                    value: false
+          - type: horizontal-stack
+            cards:
+              - type: markdown
+                content: |
+                  Trusted Home:  {{ states('var.trusted_home') }}
+      - type: markdown
+        content: '# 34 Deer Track Lane'
+      - entity: weather.34_deer_track_lane
+        type: weather-forecast
+      - type: entities
+        entities:
+          - entity: sensor.outside_environment_air_temperature
+          - entity: binary_sensor.outside_environment_low_battery_level
+          - entity: sensor.outside_environment_illuminance
+          - entity: binary_sensor.outside_environment_water_alarm_water_leak_detected
+      - entity: sensor.lakehouse_hassio
+        type: entity
+      - entities:
+          - icon: mdi:check-outline
+            name: Winter
+            type: weblink
+            url: >-
+              https://script.google.com/macros/s/AKfycbxSPfMDEIXLrmla0YtvBuHPNxkX3fejZ5ZdcbQGT6I-eOFWexA/exec?context=34DTLeavingHouse_Summer
+          - icon: mdi:check-outline
+            name: Summer
+            type: weblink
+            url: >-
+              https://script.google.com/macros/s/AKfycbxSPfMDEIXLrmla0YtvBuHPNxkX3fejZ5ZdcbQGT6I-eOFWexA/exec?context=34DTLeavingHouse_Winter
+        title: Reset Leaving House Checklist
+        type: entities
+      - title: Pack to Leave House
+        type: shopping-list
+      - entity: light.path_lights
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: true
+        tap_action:
+          action: toggle
+        type: button
+      - type: map
+        entities:
+          - entity: person.joe
+          - entity: person.jamie
+        hours_to_show: 0
+        title: Location
+      - type: horizontal-stack
+        cards:
+          - type: markdown
+            content: |
+              _Switch on = water main shut off_
+            title: Water
+          - type: entities
+            entities:
+              - entity: switch.basement_water_main
+              - entity: sensor.flow_meter_air_temperature
+              - entity: sensor.water_gpm
+              - entity: sensor.flow_meter_water_consumed_us_gallons
+      - type: entities
+        entities:
+          - entity: light.driveway_flood_light
+          - entity: light.path_lights
+      - type: entities
+        entities:
+          - entity: automation.sonos_volume_high
+          - entity: automation.sonos_volume_mid
+          - entity: automation.sonos_volume_low
+          - entity: automation.sonos_volume_mute
+      - type: entities
+        entities:
+          - entity: update.hacs_update
+            name: Update
+        title: HACS
+    icon: mdi:home
+    path: home
+    title: Home
+  - title: Sonos
+    path: Sonos
+    icon: mdi:music
+    theme: darkblue
+    badges: []
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: button
+            tap_action:
+              action: call-service
+              service: media_player.volume_set
+              service_data:
+                volume_level: 0
+              target:
+                entity_id: media_player.living_room
+            icon: mdi:volume-variant-off
+          - type: button
+            tap_action:
+              action: call-service
+              service: media_player.volume_set
+              service_data:
+                volume_level: 0.1
+              target:
+                entity_id: media_player.living_room
+            icon: mdi:volume-low
+          - type: button
+            tap_action:
+              action: call-service
+              service: media_player.volume_set
+              service_data:
+                volume_level: 0.26
+              target:
+                entity_id: media_player.living_room
+            icon: mdi:volume-medium
+          - type: button
+            tap_action:
+              action: call-service
+              service: media_player.volume_set
+              service_data:
+                volume_level: 0.6
+              target:
+                entity_id: media_player.living_room
+            icon: mdi:volume-high
+      - type: history-graph
+        entities:
+          - entity: media_player.living_room
+        hours_to_show: 24
+        refresh_interval: 0
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: automation.trigger
+          service_data: {}
+          target:
+            entity_id: automation.living_room_lights_on
+        entity: automation.living_room_lights_on
+        icon: mdi:light-switch
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: automation.trigger
+          service_data: {}
+          target:
+            entity_id: automation.living_room_lights_off
+        entity: automation.living_room_lights_off
+        icon: mdi:light-switch-off
+      - type: entity
+        entity: switch.christmas_lights_outdoor_receptacle
+  - badges: []
+    cards:
+      - entities:
+          - entity: climate.air_conditioning
+          - entity: climate.den_emmetts_room
+          - entity: climate.exercise_room
+          - entity: climate.kitchen_living_room
+          - entity: climate.master_bath
+          - entity: climate.piano_room
+          - entity: climate.master_bedroom
+        title: My Title
+        type: entities
+      - type: thermostat
+        entity: climate.air_conditioning
+      - entity: climate.den_emmetts_room
+        type: thermostat
+      - entity: climate.exercise_room
+        type: thermostat
+      - entity: climate.kitchen_living_room
+        type: thermostat
+      - entity: climate.master_bath
+        type: thermostat
+      - entity: climate.master_bedroom
+        type: thermostat
+      - type: thermostat
+        entity: climate.piano_room
+    icon: mdi:thermostat
+    path: thermostats
+    title: Thermostats
+  - badges:
+      - entity: person.joe
+      - entity: person.jamie
+    cards:
+      - entities:
+          - entity: binary_sensor.piano_room_motion_home_security_motion_detection
+          - entity: binary_sensor.kitchen_motion_home_security_motion_detection
+          - entity: binary_sensor.exercise_room_motion_home_security_motion_detection
+        title: Motion Detection
+        type: entities
+      - entities:
+          - entity: binary_sensor.front_door_status
+          - entity: binary_sensor.garage_entry_status
+          - entity: binary_sensor.kitchen_sliding_doors_status
+          - entity: binary_sensor.family_room_sliding_door_status
+          - entity: binary_sensor.dining_room_windows_status
+          - entity: binary_sensor.door_to_downstairs_status
+          - entity: binary_sensor.downstairs_sliding_door_status
+          - entity: binary_sensor.kitchen_windows_status
+          - entity: binary_sensor.laundry_room_window_status
+        title: Entrances
+        type: entities
+      - entities:
+          - entity: sensor.smoke_upstairs_status
+          - entity: sensor.smoke_main_level_status
+          - entity: sensor.smoke_downstairs_status
+        title: Fire / Carbon Monoxide
+        type: entities
+      - entities:
+          - entity: sensor.driveway_motion_detected
+        title: Driveway Area Motion
+        type: entities
+      - entities:
+          - entity: sensor.inner_garage_status
+          - entity: sensor.outer_garage_status
+        title: My Title
+        type: entities
+    icon: mdi:security
+    path: securiy
+    title: Securiy
+  - badges: []
+    cards:
+      - entities:
+          - entity: camera.driveway
+          - entity: camera.living_room
+          - entity: camera.piano_room
+          - entity: camera.exercise_room
+        title: My Title
+        type: entities
+    icon: mdi:camera
+    path: cameras
+    title: Cameras
+  - badges: []
+    cards:
+      - cards:
+          - min: 0
+            type: gauge
+            entity: sensor.home_energy_meter_gen5_electric_consumed_w
+            name: Power 1
+            max: 1500
+          - max: 1500
+            min: 0
+            name: Power 2
+            type: gauge
+            entity: sensor.home_energy_meter_gen5_electric_consumed_w_2
+        type: horizontal-stack
+      - type: vertical-stack
+        cards:
+          - type: history-graph
+            entities:
+              - entity: sensor.home_energy_meter_gen5_electric_consumed_w
+            hours_to_show: 4
+            refresh_interval: 0
+            title: Power Usage 1 (4 hours)
+          - type: history-graph
+            entities:
+              - entity: sensor.home_energy_meter_gen5_electric_consumed_w_2
+            hours_to_show: 4
+            refresh_interval: 0
+            title: Power Usage 2 (4 hours)
+          - type: history-graph
+            entities:
+              - entity: sensor.home_energy_meter_gen5_electric_consumed_w
+            hours_to_show: 24
+            refresh_interval: 0
+            title: Power Usage 1 (24 hours)
+          - type: history-graph
+            entities:
+              - entity: sensor.home_energy_meter_gen5_electric_consumed_w_2
+            hours_to_show: 24
+            refresh_interval: 0
+            title: Power Usage 2 (24 hours)
+      - type: history-graph
+        entities:
+          - entity: sensor.fortrezz_fmi_flow_meter_water
+          - entity: sensor.flow_meter_water_unknown_0x03_us_gallons
+          - entity: sensor.water_gpm
+        hours_to_show: 24
+        refresh_interval: 0
+      - type: entities
+        entities:
+          - entity: sensor.home_energy_meter_gen5_electric_consumed_a
+          - entity: sensor.home_energy_meter_gen5_electric_consumed_kwh
+          - entity: sensor.home_energy_meter_gen5_electric_consumed_kwh_2
+          - entity: sensor.home_energy_meter_gen5_electric_consumed_kwh_2_2
+          - entity: sensor.home_energy_meter_gen5_electric_consumed_v
+          - entity: var.water_usage_rate
+    icon: mdi:flash
+    path: electric
+    title: Electric
+  - badges: []
+    cards:
+      - type: entity
+        entity: sensor.zwave_failures
+      - type: markdown
+        content: >
+          Smoke test: {{
+          states('binary_sensor.downstairs_smoke_smoke_alarm_test') }}
+
+          Smoke detected: {{
+          states('binary_sensor.downstairs_smoke_smoke_alarm_smoke_detected') }}
+
+          Joe:  {{ states('person.joe') }}
+
+          Jamie:  {{ states('person.jamie') }}
+
+          Jamie Lower:   {{ states('person.jamie').lower() }}  
+
+          Trusted validation:  {{ states('person.joe_thomas').lower()  == 'home'
+          or states('person.jamie_thomas').lower() == 'home' }}
+
+          Motion Piano:  {{
+          states('binary_sensor.piano_room_motion_home_security_motion_detection')
+          }} 
+      - type: entities
+        entities:
+          - entity: binary_sensor.exercise_room_low_battery_level
+          - entity: binary_sensor.exercise_room_motion_home_security_motion_detection
+          - entity: >-
+              binary_sensor.exercise_room_motion_home_security_tampering_product_cover_removed
+          - entity: binary_sensor.exercise_room_motion_low_battery_level
+          - entity: >-
+              binary_sensor.exercise_room_motion_power_management_replace_battery_now
+      - type: entity
+        entity: sensor.thermo_piano_room_lupd
+        theme: darkred
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.path_lights'].state
+        entities:
+          - light.path_lights
+        card:
+          type: entities
+          entities:
+            - light.path_lights
+          card_mod:
+            style: |-
+              ${ if (LIGHT_STATE === 'on') {
+                    'ha-card {background-color: #AAFFAA;}'
+              } else {
+                    'ha-card {background-color: #FFAAAA;}'
+              }}
+      - type: markdown
+        content: stuff here
+        title: Last update test
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.path_lights'].state
+        entities:
+          - light.path_lights
+        card:
+          type: markdown
+          content: Returned color working!!!!!
+          title: Return color code
+          card_mod:
+            style: >
+              {% from 'device_updated_days.jinja' import entity_responsive_color
+              %} 
+               ha-card {background-color: {{ entity_responsive_color('var.driveway_light_upd') }};}
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.path_lights'].state
+        entities:
+          - light.path_lights
+        card:
+          type: markdown
+          content: stuff here
+          title: Works!
+          card_mod:
+            style: |
+              {% set var_datetime = 7 %}
+              {% from 'device_rm_this.jinja' import entity_days_elapsed %}
+              {% set xyz = int(entity_days_elapsed('var.driveway_light_upd')) %}
+              {% if xyz == 7 %} 
+               ha-card {background-color: #AAFFAA;}
+              {% endif %}
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: stuff here
+            title: Verti card impl
+    path: sandbox
+    title: Sandbox
