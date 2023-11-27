@@ -1,36 +1,48 @@
 thermo_exercise_room_lupd:
   initial_value: 0
   unique_id: thermo_exercise_room_lupd
-  friendly_name: ExerciseRoom
+  friendly_name: Exercise Room
 thermo_den_emmett_lupd:
   initial_value: 0
   unique_id: thermo_den_emmett_lupd
-  friendly_name: DenEmmettsRoom
+  friendly_name: Den/Emmetts Room
 thermo_kitchen_living_lupd:
   initial_value: 0
   unique_id: thermo_kitchen_living_lupd
-  friendly_name: KitchenLivingRoom
+  friendly_name: Kitchen/Living Room
 thermo_master_bath_lupd:
   initial_value: 0
   unique_id: thermo_master_bath_lupd
-  friendly_name: MasterBath
+  friendly_name: Master Bath
 thermo_piano_room_lupd:
   initial_value: 0
   unique_id: thermo_piano_room_lupd
-  friendly_name: PianoRoom
+  friendly_name: Piano Room
 thermo_master_bedroom_lupd:
   initial_value: 0
   unique_id: thermo_master_bedroom_lupd
-  friendly_name: MasterBedRoom
+  friendly_name: Master BedRoom
 front_path_lights_lupd:
   initial_value: 0
   unique_id: front_path_lights_lupd
-  friendly_name: PathLights
-driveway_light_upd:
+  friendly_name: Path Lights
+driveway_light_lupd:
   initial_value: 0
-  unique_id: driveway_light_upd
-  friendly_name: DrivewayLight
+  unique_id: driveway_light_lupd
+  friendly_name: Driveway Light
 kitchen_motion_lupd:
   initial_value: 0
   unique_id: kitchen_motion_lupd
-  friendly_name: KitchenMotion
+  friendly_name: Kitche nMotion
+apple_tv_lupd:
+  initial_value: 0
+  unique_id: apple_tv_lupd
+  friendly_name: Apple TV
+media_remote_lupd:
+  initial_value: 0
+  unique_id: media_remote_lupd
+  friendly_name: Media Remote
+archer_wifi_lupd:
+  initial_value: 0
+  unique_id: archer_wifi_lupd
+  friendly_name: Archer AX6000 Modem

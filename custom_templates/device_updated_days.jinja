@@ -12,3 +12,11 @@
 {% endif %}
 {{ color }}
 {% endmacro %}
+
+
+{% macro last_updated(var_entity_id) %}
+{% set var_upd_date = as_local(as_datetime(float(states(var_entity_id)))) %}
+{% set last_updated = var_upd_date.strftime('%Y-%m-%d %H:%M:%S %Z') %}
+{{ last_updated }}
+{% endmacro %}
+

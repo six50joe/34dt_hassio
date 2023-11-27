@@ -21,10 +21,14 @@ class DeviceType(Enum):
     THERMOSTAT = 1
     MOTION_DETECTOR = 2
     LIGHT = 3
-
+    MEDIA = 4
+    NETWORK = 5
+    
 DeviceTypeToName = {DeviceType.THERMOSTAT: "Thermostats",
                     DeviceType.MOTION_DETECTOR: "Motion Detectors",
-                    DeviceType.LIGHT: "Lights"
+                    DeviceType.LIGHT: "Lights",
+                    DeviceType.MEDIA: "Media",
+                    DeviceType.NETWORK: "Networking",
                     }
 
 now = None
@@ -64,15 +68,8 @@ class DeviceResponsiveState(hass.Hass):
 
     def indented_line(self, input_string, num_spaces):
         padded_string = input_string.rjust(len(input_string) + num_spaces)
-        self.log(f"ilevel={num_spaces}   out_line: {padded_string}")
         return padded_string + "\n"
         
-#        out_line = wline.rjust(indent, ' ')
- #        line = f": >{indent}"
-#        out_line = line.format('{' + wline + '}') + "\n"
-#        self.log(f"ilevel={indent}   out_line: {out_line}")
-        
-#        return out_line
 
     def generate_lovelace_cards(self):
         path = LOVELACE_FILE_DIR + "/" + DEVICE_STATE_CARDS_FILE
@@ -117,21 +114,28 @@ class DeviceResponsiveState(hass.Hass):
                     outputFile.write(self.indented_line(f"- type: vertical-stack", ilevel));
                     outputFile.write(self.indented_line(f"  cards:", ilevel));
                     ilevel += 4
-                    
+
+                lupd_varname = f"var.{device['var_name']}"
+                lupd_timestamp = self.get_state(lupd_varname, "state")
+                if lupd_timestamp and float(lupd_timestamp) > 0:
+                    last_updated = datetime.datetime.fromtimestamp(float(lupd_timestamp)).strftime('%Y-%m-%d %H:%M:%S')
+                else:
+                    last_updated = "????"
+
                 outputFile.write(self.indented_line(f"- type: custom:config-template-card", ilevel));
                 outputFile.write(self.indented_line(f"  entities:", ilevel));
                 outputFile.write(self.indented_line(f"    - {device['entity_id']}", ilevel));
                 outputFile.write(self.indented_line(f"  card:", ilevel));
                 outputFile.write(self.indented_line(f"    type: markdown", ilevel));
-                outputFile.write(self.indented_line(f"    content: Returned color working!!!!!", ilevel));
+                outputFile.write(self.indented_line(f"    content: |", ilevel));
+                outputFile.write(self.indented_line(f"        Last updated at {{% from 'device_updated_days.jinja' import last_updated %}} {{{{ last_updated('{lupd_varname}') }}}}", ilevel));
                 outputFile.write(self.indented_line(f"    title: {device['name']}", ilevel));
                 outputFile.write(self.indented_line(f"    card_mod:", ilevel));
                 outputFile.write(self.indented_line(f"      style: |", ilevel));
 
                 outputFile.write(self.indented_line(f"    {{% from 'device_updated_days.jinja' import entity_responsive_color %}}", ilevel + 4));
-                outputFile.write(self.indented_line(f"     ha-card {{background-color: {{{{ entity_responsive_color('var.driveway_light_upd') }}}};}}", ilevel + 4));
+                outputFile.write(self.indented_line(f"     ha-card {{background-color: {{{{ entity_responsive_color('{lupd_varname}') }}}};}}", ilevel + 4));
                 col = col + 1
-                self.log(f"COL LEN IS: {col} len {col_length}")
                 if col >= col_length:
                     col = 0
                     
