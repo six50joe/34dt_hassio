@@ -90,16 +90,18 @@ class DeviceResponsiveState(hass.Hass):
             col = 0
             ilevel = 2
 
-                outputFile.write(self.indented_line(f"- type: custom:config-template-card", ilevel));
-                outputFile.write(self.indented_line(f"  entities:", ilevel));
+            outputFile.write(self.indented_line(f"- type: custom:config-template-card", ilevel));
+            outputFile.write(self.indented_line(f"  entities:", ilevel));
+            outputFile.write(self.indented_line(f"    zone.home:", ilevel));
 
-                outputFile.write(self.indented_line(f"  card:", ilevel));
-                outputFile.write(self.indented_line(f"    type: markdown", ilevel));
-                outputFile.write(self.indented_line(f"    content: {DeviceTypeToName[dtype]}", ilevel));
+            outputFile.write(self.indented_line(f"  card:", ilevel));
+            outputFile.write(self.indented_line(f"    type: markdown", ilevel));
+            outputFile.write(self.indented_line(f"    content: {DeviceTypeToName[dtype]}", ilevel));
 
-                outputFile.write(self.indented_line(f"    card_mod:", ilevel));
-                outputFile.write(self.indented_line(f"      style: |", ilevel));
-            outputFile.write(self.indented_line(f"       ha-card {{background-color:  '#17202A') ;}}", ilevel));
+            outputFile.write(self.indented_line(f"    card_mod:", ilevel));
+            outputFile.write(self.indented_line(f"      style: |", ilevel));
+            outputFile.write(self.indented_line("       ha-card {background-color:  #000000 ;}", ilevel));
+            outputFile.write(self.indented_line("       ha-card {color:  #FFFFFF ;}", ilevel));
                              
             
             outputFile.write(self.indented_line(f"- type: horizontal-stack", ilevel));
