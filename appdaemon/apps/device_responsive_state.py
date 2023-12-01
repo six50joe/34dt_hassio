@@ -23,12 +23,20 @@ class DeviceType(Enum):
     LIGHT = 3
     MEDIA = 4
     NETWORK = 5
+    UTILITIES = 6
+    SMOKE = 7
+    ENTRY = 8
+    LOCATION = 9
     
 DeviceTypeToName = {DeviceType.THERMOSTAT: "Thermostats",
                     DeviceType.MOTION_DETECTOR: "Motion Detectors",
                     DeviceType.LIGHT: "Lights",
                     DeviceType.MEDIA: "Media",
                     DeviceType.NETWORK: "Networking",
+                    DeviceType.UTILITIES: "Utilities",
+                    DeviceType.SMOKE: "Smoke and CO2 Detectors",
+                    DeviceType.ENTRY: "Doors and Windows",
+                    DeviceType.LOCATION: "People and Item Locations"
                     }
 
 now = None

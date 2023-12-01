@@ -30,10 +30,30 @@ driveway_light_lupd:
   initial_value: 0
   unique_id: driveway_light_lupd
   friendly_name: Driveway Light
-kitchen_motion_lupd:
+christmas_light_plug_lupd:
   initial_value: 0
-  unique_id: kitchen_motion_lupd
-  friendly_name: Kitche nMotion
+  unique_id: christmas_light_plug_lupd
+  friendly_name: Christmas Light Cube Plug
+hue_color_lamp_lupd:
+  initial_value: 0
+  unique_id: hue_color_lamp_lupd
+  friendly_name: Hue Living Room Lamp
+hue_color_downlight_1_lupd:
+  initial_value: 0
+  unique_id: hue_color_downlight_1_lupd
+  friendly_name: Hue Living Room Downlight 1
+hue_color_downlight_2_lupd:
+  initial_value: 0
+  unique_id: hue_color_downlight_2_lupd
+  friendly_name: Hue Living Room Downlight 2
+liv_room_light_upd:
+  initial_value: 0
+  unique_id: liv_room_light_upd
+  friendly_name: Liv Room Light Switch On
+liv_room_light_upd:
+  initial_value: 0
+  unique_id: liv_room_light_upd
+  friendly_name: Liv Room Light Switch Off
 apple_tv_lupd:
   initial_value: 0
   unique_id: apple_tv_lupd
@@ -46,3 +66,63 @@ archer_wifi_lupd:
   initial_value: 0
   unique_id: archer_wifi_lupd
   friendly_name: Archer AX6000 Modem
+water_main_lupd:
+  initial_value: 0
+  unique_id: water_main_lupd
+  friendly_name: Water Main Switch
+water_flow_meter_lupd:
+  initial_value: 0
+  unique_id: water_flow_meter_lupd
+  friendly_name: Water Flow Meter
+electricity_meter_lupd:
+  initial_value: 0
+  unique_id: electricity_meter_lupd
+  friendly_name: Electricity Meter
+downstairs_smoke_lupd:
+  initial_value: 0
+  unique_id: downstairs_smoke_lupd
+  friendly_name: Downstairs Smoke Detector
+main_smoke_lupd:
+  initial_value: 0
+  unique_id: main_smoke_lupd
+  friendly_name: Main Level Smoke Detector
+upstairs_smoke_lupd:
+  initial_value: 0
+  unique_id: upstairs_smoke_lupd
+  friendly_name: Upstairs Smoke Detector
+kitchen_motion_lupd:
+  initial_value: 0
+  unique_id: kitchen_motion_lupd
+  friendly_name: Kitchen Motion
+piano_room_motion_lupd:
+  initial_value: 0
+  unique_id: piano_room_motion_lupd
+  friendly_name: Piano Room Motion
+exercise_room_motion_lupd:
+  initial_value: 0
+  unique_id: exercise_room_motion_lupd
+  friendly_name: Exercise Room Motion
+inner_garage_door_lupd:
+  initial_value: 0
+  unique_id: inner_garage_door_lupd
+  friendly_name: Inner Garage Door
+outer_garage_door_lupd:
+  initial_value: 0
+  unique_id: outer_garage_door_lupd
+  friendly_name: Outer Garage Door
+joe_lupd:
+  initial_value: 0
+  unique_id: joe_lupd
+  friendly_name: Life360 Joe
+jamie_lupd:
+  initial_value: 0
+  unique_id: jamie_lupd
+  friendly_name: Life360 Jamie
+jemma_lupd:
+  initial_value: 0
+  unique_id: jemma_lupd
+  friendly_name: Life360 Jemma
+trusted_home_lupd:
+  initial_value: 0
+  unique_id: trusted_home_lupd
+  friendly_name: Trusted Home
