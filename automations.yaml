@@ -4,7 +4,10 @@
   trigger:
   - event: start
     platform: homeassistant
-  condition: []
+  condition:
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -26,6 +29,9 @@
     conditions:
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -50,6 +56,9 @@
     conditions:
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -74,6 +83,9 @@
     conditions:
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -98,6 +110,9 @@
     conditions:
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -122,6 +137,9 @@
     conditions:
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -216,6 +234,9 @@
     conditions:
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -240,6 +261,9 @@
     conditions:
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -356,6 +380,9 @@
     conditions:
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -821,6 +848,9 @@
     conditions:
     - condition: template
       value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
   action:
   - service: notify.pushover
     data:
@@ -969,7 +999,7 @@
   description: ''
   trigger:
   - platform: time
-    at: '18:00:00'
+    at: '17:00:00'
   condition:
   - condition: time
     before: '22:00:00'
@@ -979,11 +1009,13 @@
     - tue
     - wed
     - thu
+    - fri
+    - sat
     after: 01:00:00
   action:
   - type: turn_on
-    device_id: bc9c95826d268e2d341a1a8d0e2727de
-    entity_id: switch.christmas_lights_outdoor_receptacle
+    device_id: fc4880b1bdb62d78e29098762238f05f
+    entity_id: 054ab60f7960515d6cf4f6847542e4eb
     domain: switch
   mode: single
 - id: '1671156651114'
@@ -995,8 +1027,8 @@
   condition: []
   action:
   - type: turn_off
-    device_id: bc9c95826d268e2d341a1a8d0e2727de
-    entity_id: switch.christmas_lights_outdoor_receptacle
+    device_id: fc4880b1bdb62d78e29098762238f05f
+    entity_id: 054ab60f7960515d6cf4f6847542e4eb
     domain: switch
   mode: single
 - id: '1700344410607'
@@ -1025,4 +1057,76 @@
   - service: notify.pushover
     data:
       message: Test ZWave updated
+  mode: single
+- id: enable_all_notifications
+  alias: enable_all_notifications
+  description: Disable all HA notifications
+  trigger: []
+  condition: []
+  action:
+  - service: var.set
+    data:
+      entity_id: var.disable_notifications
+      value: false
+  mode: single
+- id: '1704406845222'
+  alias: New automation
+  description: stop_notifications
+  trigger: []
+  condition: []
+  action:
+  - service: var.set
+    metadata: {}
+    data:
+      entity_id: var.disable_notifications
+      value: true
+  mode: single
+- id: '1704406913838'
+  alias: resume_notifications
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: var.set
+    metadata: {}
+    data:
+      entity_id: var.disable_notifications
+      value: false
+  mode: single
+- id: '1704407021473'
+  alias: stop_notifications
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: var.set
+    metadata: {}
+    data:
+      entity_id: var.disable_notifications
+      value: true
+  mode: single
+- id: '1704412552860'
+  alias: send_notification
+  description: Send a home alert
+  trigger: []
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: '{{ states(''var.notification_message'') }}'
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+      title: 34DT Home Alert
   mode: single

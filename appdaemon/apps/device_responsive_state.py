@@ -27,6 +27,7 @@ class DeviceType(Enum):
     SMOKE = 7
     ENTRY = 8
     LOCATION = 9
+    SENSOR = 10
     
 DeviceTypeToName = {DeviceType.THERMOSTAT: "Thermostats",
                     DeviceType.MOTION_DETECTOR: "Motion Detectors",
@@ -36,7 +37,8 @@ DeviceTypeToName = {DeviceType.THERMOSTAT: "Thermostats",
                     DeviceType.UTILITIES: "Utilities",
                     DeviceType.SMOKE: "Smoke and CO2 Detectors",
                     DeviceType.ENTRY: "Doors and Windows",
-                    DeviceType.LOCATION: "People and Item Locations"
+                    DeviceType.LOCATION: "People and Item Locations",
+                    DeviceType.SENSOR: "Temperature, light, etc."
                     }
 
 now = None

@@ -50,10 +50,6 @@ liv_room_light_upd:
   initial_value: 0
   unique_id: liv_room_light_upd
   friendly_name: Liv Room Light Switch On
-liv_room_light_upd:
-  initial_value: 0
-  unique_id: liv_room_light_upd
-  friendly_name: Liv Room Light Switch Off
 apple_tv_lupd:
   initial_value: 0
   unique_id: apple_tv_lupd
@@ -126,3 +122,7 @@ trusted_home_lupd:
   initial_value: 0
   unique_id: trusted_home_lupd
   friendly_name: Trusted Home
+outside_temp_lupd:
+  initial_value: 0
+  unique_id: outside_temp_lupd
+  friendly_name: Outside Temperature

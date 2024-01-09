@@ -123,7 +123,6 @@ views:
             entities:
               - entity: switch.basement_water_main
               - entity: sensor.flow_meter_air_temperature
-              - entity: sensor.water_gpm
               - entity: sensor.flow_meter_water_consumed_us_gallons
       - type: entities
         entities:
@@ -341,7 +340,6 @@ views:
         entities:
           - entity: sensor.fortrezz_fmi_flow_meter_water
           - entity: sensor.flow_meter_water_unknown_0x03_us_gallons
-          - entity: sensor.water_gpm
         hours_to_show: 24
         refresh_interval: 0
       - type: entities

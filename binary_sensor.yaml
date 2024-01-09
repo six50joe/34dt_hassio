@@ -1,13 +1,13 @@
 # Lakehouse ping
-- platform: ping
-  host: 12ridgegarden.dyndns.org
-  name: "Lake House"
-- platform: ping
-  host: 192.168.0.70
-  name: "joes_phone_ping"
-- platform: ping
-  host: 192.168.0.98
-  name: "Neg test"
+# - platform: ping
+#  host: 12ridgegarden.dyndns.org
+#  name: "Lake House"
+#- platform: ping
+#  host: 192.168.0.70
+#  name: "joes_phone_ping"
+#- platform: ping
+#  host: 192.168.0.98
+#  name: "Neg test"
 
 #
 # GPIOs

@@ -2,6 +2,14 @@ test_variable:
   initial_value: test
   unique_id: TestingVariable
   friendly_name: TestingVariable
+disable_notifications:
+  initial_value: false
+  unique_id: DisableNotifications
+  friendly_name: Disable Notifications
+notification_message:
+  initial_value: msg_here
+  unique_id: NotificationMessage
+  friendly_name: Notification Message
 trusted_home:
   initial_value: xyz
   unique_id: TrustedHome

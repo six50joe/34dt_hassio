@@ -35,16 +35,23 @@ homeassistant:
   customize: !include customize.yaml
 
 #
+# Device Tracking
+#
+device_tracker:
+   - platform: traccar
+     host: deerjoe.groks-the.info
+     port: 8082
+     username: six50joe@gmail.com
+     password: tuneless-bone-mash
+     monitored_conditions: ['all_events']
+     ssl: false
+     verify_ssl: false
+     new_device_defaults:
+       track_new_devices: true    
+
+#
 # TCP sensors
 #
-command_line:
-  - sensor:
-      name: Netgear Router Admin
-      command: /usr/bin/nc -z -w7 192.168.0.1 80 && echo Up || echo Down
-command_line:
-  - sensor:
-      name: Netgear Spectrum Analyzer
-      command: /usr/bin/nc -z -w7 192.168.0.1 8080 && echo Up || echo Down
 command_line:
   - sensor:
       name: Lakehouse Hassio
@@ -56,7 +63,7 @@ logger:
   default: info
   logs:
     # log level for HA core
-    homeassistant.core: fatal
+    homeassistant.core: info
 
     # log level for remote rpio override
     # custom_components.remote_rpi_gpio: info
@@ -107,10 +114,6 @@ sonos:
   media_player:
     hosts:
       192.168.0.18
-
-tts:
-  - platform: google_translate
-    
 ios:
   actions:
     - name: Living Room Mute

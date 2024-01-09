@@ -29,4 +29,4 @@ Life360 Jamie,jamie_lupd,person.jamie,LOCATION
 Life360 Jemma,jemma_lupd,person.jemma,LOCATION
 Trusted Home,trusted_home_lupd,trusted_home,LOCATION
 Liv Room Light Switch On,liv_room_light_upd,event.wall_mounted_switch_scene_001,LIGHT
-Liv Room Light Switch Off,liv_room_light_upd,event.wall_mounted_switch_scene_002,LIGHT
+Outside Temperature,outside_temp_lupd,sensor.outside_environment_air_temperature,SENSOR
