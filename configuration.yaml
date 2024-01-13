@@ -28,13 +28,13 @@ automation: !include automations.yaml
 # SUBM: REMOVE AND DELETE FILE script: !include scripts.yaml
 # SUBM: REMOVE AND DELETE FILE scene: !include scenes.yaml
 # Sensors- Monitoring entities
-sensor: !include_dir_merge_list sensors
+sensor: !include_dir_merge_list 34dt_local/sensors
 
 # Open / Close sensors
-binary_sensor: !include binary_sensor.yaml
-# SUBM: REMOVE AND DELETE FILE template: !include template.yaml
+binary_sensor: !include 34dt_local/binary_sensor.yaml
+# SUBM: REMOVE AND DELETE FILE template: !include 34dt_local/template.yaml
 
-var: !include_dir_merge_named variables/
+var: !include_dir_merge_named 34dt_local/variables/
 # var common: !include "ha_homes_common/config/common_variables.yaml"
 
 frontend:
@@ -81,29 +81,8 @@ input_boolean:
   air_cond_warn_triggered:
     name: Set to true if air cond warning made
 
-amcrest:
-  - host: 192.168.0.54
-    username: six50joe
-    password: unbelief-ramp-best
-    name: Living Room
-
-  - host: 192.168.0.58
-    username: six50joe
-    password: unbelief-ramp-best
-    name: Driveway
-
-  - host: 192.168.0.56
-    username: six50joe
-    password: unbelief-ramp-best
-    name: Piano Room
-
-  - host: 192.168.0.60
-    username: six50joe
-    password: unbelief-ramp-best
-    name: Exercise Room
-
-camera:
-  - platform: amcrest
+camera: !include cameras.yaml
+#  - platform: amcrest
 
 sonos:
   media_player:

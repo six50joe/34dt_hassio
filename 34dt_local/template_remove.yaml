@@ -1,0 +1,60 @@
+# SUBM: REMOVE IF NOT NEEDED
+
+- trigger:
+    - platform: state
+      entity:
+        - sensor.exercise_room_air_temperature
+  sensor:
+    - name: "thermo_exercise_room_lupd"
+#        state: "{{ now() }} "
+      state: >-
+        {{ now().hour + now().minute + now().second }}
+
+- trigger:
+    - platform: state
+      entity:
+        - sensor.den_emmetts_room_air_temperature
+  sensor:
+    - name: "thermo_den_emmetts_room_lupd"
+#        state: "{{ now() }} "
+      state: >-
+        {{ now().hour + now().minute + now().second }}
+
+- trigger:
+    - platform: state
+      entity:
+        - sensor.kitchen_living_room_air_temperature
+  sensor:
+    - name: "thermo_kitchen_living_room_lupd"
+#        state: "{{ now() }} "
+      state: >-
+        {{ now().hour + now().minute + now().second }}
+
+- trigger:
+    - platform: state
+      entity:
+        - sensor.master_bath_air_temperature
+  sensor:
+    - name: "thermo_master_bath_lupd"
+#        state: "{{ now() }} "
+      state: >-
+        {{ now().hour + now().minute + now().second }}
+
+- trigger:
+    - platform: time_pattern
+      minutes: "/1"
+  sensor:
+    - name: "thermo_piano_room_lupd"
+#        state: "{{ now() }} "
+      state: >-
+        {{ now().hour + now().minute + now().second }}
+
+- trigger:
+    - platform: state
+      entity:
+        - sensor.master_bedroom_air_temperature
+  sensor:
+    - name: "thermo_master_bedroom_lupd"
+#        state: "{{ now() }} "
+      state: >-
+        {{ now().hour + now().minute + now().second }}
