@@ -1,50 +1,13 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
-# Text to speech
-tts:
-  - platform: google_translate
-
-# SUBM: REMOVE AND DELETE FILE group: !include groups.yaml
-automation: !include automations.yaml
-# SUBM: REMOVE AND DELETE FILE script: !include scripts.yaml
-# SUBM: REMOVE AND DELETE FILE scene: !include scenes.yaml
-sensor: !include_dir_merge_list sensors
-binary_sensor: !include binary_sensor.yaml
-template: !include template.yaml 
-var: !include_dir_merge_named variables/
-
-frontend:
-  themes: !include frontend.yaml
-
 homeassistant:
   customize: !include customize.yaml
+  packages: !include_dir_merge_named ha_homes_common/config
 
 #
-# Device Tracking
+# Logging Levels
 #
-device_tracker:
-   - platform: traccar
-     host: deerjoe.groks-the.info
-     port: 8082
-     username: six50joe@gmail.com
-     password: tuneless-bone-mash
-     monitored_conditions: ['all_events']
-     ssl: false
-     verify_ssl: false
-     new_device_defaults:
-       track_new_devices: true    
-
-#
-# TCP sensors
-#
-command_line:
-  - sensor:
-      name: Lakehouse Hassio
-      command: /usr/bin/nc -z -w7 12ridgegarden.dyndns.org 8123 && echo Up || echo Down
-
-shopping_list:
-
 logger:
   default: info
   logs:
@@ -56,7 +19,53 @@ logger:
 
     pyatv: error
     custom_components.apple_tv: error
-       
+
+#
+# Main groups
+#
+# SUBM: REMOVE AND DELETE FILE group: !include groups.yaml
+automation: !include automations.yaml
+# SUBM: REMOVE AND DELETE FILE script: !include scripts.yaml
+# SUBM: REMOVE AND DELETE FILE scene: !include scenes.yaml
+# Sensors- Monitoring entities
+sensor: !include_dir_merge_list sensors
+
+# Open / Close sensors
+binary_sensor: !include binary_sensor.yaml
+# SUBM: REMOVE AND DELETE FILE template: !include template.yaml
+
+var: !include_dir_merge_named variables/
+# var common: !include "ha_homes_common/config/common_variables.yaml"
+
+frontend:
+  themes: !include frontend.yaml
+
+
+#
+# Device Tracking
+#
+device_tracker:
+  - platform: traccar
+    host: deerjoe.groks-the.info
+    port: 8082
+    username: six50joe@gmail.com
+    password: tuneless-bone-mash
+    monitored_conditions: ["all_events"]
+    ssl: false
+    verify_ssl: false
+    new_device_defaults:
+      track_new_devices: true
+
+#
+# TCP sensors
+#
+command_line:
+  - sensor:
+      name: Lakehouse Hassio
+      command: /usr/bin/nc -z -w7 12ridgegarden.dyndns.org 8123 && echo Up || echo Down
+
+shopping_list:
+
 owntracks:
   max_gps_accuracy: 200
   waypoints: false
@@ -71,7 +80,7 @@ owntracks:
 input_boolean:
   air_cond_warn_triggered:
     name: Set to true if air cond warning made
-   
+
 amcrest:
   - host: 192.168.0.54
     username: six50joe
@@ -95,11 +104,10 @@ amcrest:
 
 camera:
   - platform: amcrest
-  
+
 sonos:
   media_player:
-    hosts:
-      192.168.0.18
+    hosts: 192.168.0.18
 ios:
   actions:
     - name: Living Room Mute
@@ -137,7 +145,7 @@ ios:
 
 switch:
   - platform: broadlink
-    mac: '24:DF:A7:36:69:93'
+    mac: "24:DF:A7:36:69:93"
     switches:
       - name: TV
         command_on: JgBYAAABIJQVEBEUEjcUERMSERMTEhITEjgROBEUETgTNxE4EjcUNhQRERQTERM3FBERExUQEhMSNxI4ETgTEhI4ETgROBI4EwAFHgABJkoSAAxRAAElShIADQUAAAAAAAAAAAAAAAAAAA==

@@ -1,28 +1,15 @@
-test_variable:
-  initial_value: test
-  unique_id: TestingVariable
-  friendly_name: TestingVariable
-disable_notifications:
-  initial_value: false
-  unique_id: DisableNotifications
-  friendly_name: Disable Notifications
-notification_message:
-  initial_value: msg_here
-  unique_id: NotificationMessage
-  friendly_name: Notification Message
-trusted_home:
-  initial_value: xyz
-  unique_id: TrustedHome
-  friendly_name: TrustedHome
 water_usage_rate:
   initial_value: 0
   unique_id: WaterUsageRate
+  force_update: true
   friendly_name: WaterUsageRate
 water_usage:
   unique_id: WaterUsage
   friendly_name: WaterUsage
+  force_update: true
   initial_value: 0
 prev_water_time:
   unique_id: PrevWaterTime
   friendly_name: PrevWaterTime
+  force_update: true
   initial_value: 0

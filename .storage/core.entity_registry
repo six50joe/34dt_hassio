@@ -18774,7 +18774,7 @@
             "Pinball Party",
             "Podcasts",
             "Prime Video",
-            "Radio Paradise",
+            "Radio Paradise Mk2",
             "Sasquatch",
             "Search",
             "Settings",
@@ -41568,7 +41568,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-90",
+        "original_icon": "mdi:battery-70",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41598,7 +41598,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-60",
+        "original_icon": "mdi:battery-40",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41628,7 +41628,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-charging-20",
+        "original_icon": "mdi:battery-20",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41688,7 +41688,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-90",
+        "original_icon": "mdi:battery-charging-60",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41718,7 +41718,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-30",
+        "original_icon": "mdi:battery",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41808,7 +41808,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-charging-80",
+        "original_icon": "mdi:battery",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -42528,6 +42528,36 @@
         "supported_features": 0,
         "translation_key": null,
         "unique_id": "NotificationMessage",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "8c624129787b55bf9e738772ca3309fd",
+        "device_class": null,
+        "device_id": "610960e1476671daa75a3a35d6f2e601",
+        "disabled_by": null,
+        "entity_category": "config",
+        "entity_id": "update.variable_update",
+        "hidden_by": null,
+        "icon": null,
+        "id": "646837b14611f4a2c77c6fdbf1192370",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Variable update",
+        "platform": "hacs",
+        "supported_features": 21,
+        "translation_key": null,
+        "unique_id": "199332790",
         "previous_unique_id": null,
         "unit_of_measurement": null
       }

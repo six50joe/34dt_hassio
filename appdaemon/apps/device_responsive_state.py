@@ -72,6 +72,7 @@ class DeviceResponsiveState(hass.Hass):
                 outputFile.write(f"  initial_value: 0\n")
                 outputFile.write(f"  unique_id: {device['var_name']}\n")
                 outputFile.write(f"  friendly_name: {device['name']}\n")
+                outputFile.write(f"  force_update: true\n")
 
         outputFile.close()
 

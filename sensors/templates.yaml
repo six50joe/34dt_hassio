@@ -1,7 +1,4 @@
 - platform: template
-  sensors: !include "../ha_homes_common/config/common_sensor_templates.yaml"
-
-- platform: template
   sensors:
     #
     # Smoke and Carbon Monixide Detectors

@@ -2,127 +2,159 @@ thermo_exercise_room_lupd:
   initial_value: 0
   unique_id: thermo_exercise_room_lupd
   friendly_name: Exercise Room
+  force_update: true
 thermo_den_emmett_lupd:
   initial_value: 0
   unique_id: thermo_den_emmett_lupd
   friendly_name: Den/Emmetts Room
+  force_update: true
 thermo_kitchen_living_lupd:
   initial_value: 0
   unique_id: thermo_kitchen_living_lupd
   friendly_name: Kitchen/Living Room
+  force_update: true
 thermo_master_bath_lupd:
   initial_value: 0
   unique_id: thermo_master_bath_lupd
   friendly_name: Master Bath
+  force_update: true
 thermo_piano_room_lupd:
   initial_value: 0
   unique_id: thermo_piano_room_lupd
   friendly_name: Piano Room
+  force_update: true
 thermo_master_bedroom_lupd:
   initial_value: 0
   unique_id: thermo_master_bedroom_lupd
   friendly_name: Master BedRoom
+  force_update: true
 front_path_lights_lupd:
   initial_value: 0
   unique_id: front_path_lights_lupd
   friendly_name: Path Lights
+  force_update: true
 driveway_light_lupd:
   initial_value: 0
   unique_id: driveway_light_lupd
   friendly_name: Driveway Light
+  force_update: true
 christmas_light_plug_lupd:
   initial_value: 0
   unique_id: christmas_light_plug_lupd
   friendly_name: Christmas Light Cube Plug
+  force_update: true
 hue_color_lamp_lupd:
   initial_value: 0
   unique_id: hue_color_lamp_lupd
   friendly_name: Hue Living Room Lamp
+  force_update: true
 hue_color_downlight_1_lupd:
   initial_value: 0
   unique_id: hue_color_downlight_1_lupd
   friendly_name: Hue Living Room Downlight 1
+  force_update: true
 hue_color_downlight_2_lupd:
   initial_value: 0
   unique_id: hue_color_downlight_2_lupd
   friendly_name: Hue Living Room Downlight 2
+  force_update: true
 liv_room_light_upd:
   initial_value: 0
   unique_id: liv_room_light_upd
   friendly_name: Liv Room Light Switch On
+  force_update: true
 apple_tv_lupd:
   initial_value: 0
   unique_id: apple_tv_lupd
   friendly_name: Apple TV
+  force_update: true
 media_remote_lupd:
   initial_value: 0
   unique_id: media_remote_lupd
   friendly_name: Media Remote
+  force_update: true
 archer_wifi_lupd:
   initial_value: 0
   unique_id: archer_wifi_lupd
   friendly_name: Archer AX6000 Modem
+  force_update: true
 water_main_lupd:
   initial_value: 0
   unique_id: water_main_lupd
   friendly_name: Water Main Switch
+  force_update: true
 water_flow_meter_lupd:
   initial_value: 0
   unique_id: water_flow_meter_lupd
   friendly_name: Water Flow Meter
+  force_update: true
 electricity_meter_lupd:
   initial_value: 0
   unique_id: electricity_meter_lupd
   friendly_name: Electricity Meter
+  force_update: true
 downstairs_smoke_lupd:
   initial_value: 0
   unique_id: downstairs_smoke_lupd
   friendly_name: Downstairs Smoke Detector
+  force_update: true
 main_smoke_lupd:
   initial_value: 0
   unique_id: main_smoke_lupd
   friendly_name: Main Level Smoke Detector
+  force_update: true
 upstairs_smoke_lupd:
   initial_value: 0
   unique_id: upstairs_smoke_lupd
   friendly_name: Upstairs Smoke Detector
+  force_update: true
 kitchen_motion_lupd:
   initial_value: 0
   unique_id: kitchen_motion_lupd
   friendly_name: Kitchen Motion
+  force_update: true
 piano_room_motion_lupd:
   initial_value: 0
   unique_id: piano_room_motion_lupd
   friendly_name: Piano Room Motion
+  force_update: true
 exercise_room_motion_lupd:
   initial_value: 0
   unique_id: exercise_room_motion_lupd
   friendly_name: Exercise Room Motion
+  force_update: true
 inner_garage_door_lupd:
   initial_value: 0
   unique_id: inner_garage_door_lupd
   friendly_name: Inner Garage Door
+  force_update: true
 outer_garage_door_lupd:
   initial_value: 0
   unique_id: outer_garage_door_lupd
   friendly_name: Outer Garage Door
+  force_update: true
 joe_lupd:
   initial_value: 0
   unique_id: joe_lupd
   friendly_name: Life360 Joe
+  force_update: true
 jamie_lupd:
   initial_value: 0
   unique_id: jamie_lupd
   friendly_name: Life360 Jamie
+  force_update: true
 jemma_lupd:
   initial_value: 0
   unique_id: jemma_lupd
   friendly_name: Life360 Jemma
+  force_update: true
 trusted_home_lupd:
   initial_value: 0
   unique_id: trusted_home_lupd
   friendly_name: Trusted Home
+  force_update: true
 outside_temp_lupd:
   initial_value: 0
   unique_id: outside_temp_lupd
   friendly_name: Outside Temperature
+  force_update: true
