@@ -34,8 +34,11 @@ frontend:
 # All HA Variables
 var: !include_dir_merge_named 34dt_local/variables/
 
-# Automations
-automation: !include automations.yaml
+# Automations I create in the UI
+automation ui: !include automations.yaml
+
+# 34DT handmade automations
+automation manual: !include_dir_merge_list 34dt_local/automations/
 
 # Where we all are
 device_tracker: !include 34dt_local/device_trackers.yaml

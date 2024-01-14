@@ -20724,7 +20724,7 @@
         "capabilities": null,
         "config_entry_id": "7d31cc7153c9069c2407f3d87587caa2",
         "device_class": null,
-        "device_id": "ceac14c92b1f266baeb039b33eca8676",
+        "device_id": null,
         "disabled_by": null,
         "entity_category": "diagnostic",
         "entity_id": "device_tracker.user_be2582f9_05c2_4af9_ae0c_7e8053f679f2",
