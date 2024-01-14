@@ -1,0 +1,11 @@
+  - platform: traccar
+    host: deerjoe.groks-the.info
+    port: 8082
+    username: six50joe@gmail.com
+    password: tuneless-bone-mash
+    monitored_conditions: ["all_events"]
+    ssl: false
+    verify_ssl: false
+    new_device_defaults:
+      track_new_devices: true
+
