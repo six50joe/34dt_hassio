@@ -1,0 +1,290 @@
+- id: piano_room_motion
+  alias: Store Piano Room Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.piano_room_motion_home_security_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
+      topic: hass/storage/motion/on_time/pianoroommotion
+    service: mqtt.publish
+- id: exercise_room_motion
+  alias: Store Exercise Room Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.exercise_room_motion_home_security_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
+      topic: hass/storage/motion/on_time/exerciseroommotion
+    service: mqtt.publish
+- id: driveway_motion
+  alias: Store Driveway Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.driveway_floodlight_sensor_home_security_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
+      topic: hass/storage/motion/on_time/drivewaymotion
+    service: mqtt.publish
+  mode: single
+- id: driveway_motion_while_away
+  alias: Motion in driveway while away
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.driveway_floodlight_sensor_home_security_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: Motion detected in 34DT Driveway while away
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: -1
+        retry: 1800
+        expire: 3600
+- id: 34dt_upstairs_smoke
+  alias: Upstairs Smoke
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_upstairs_status
+    from: idle
+    platform: state
+    to: smoke
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Smoke detected upstairs at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_upstairs_co
+  alias: Upstairs Carbon Monoxide
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_upstairs_status
+    from: idle
+    platform: state
+    to: co
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Carbon Monoxide detected upstairs at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_main_level_smoke
+  alias: Main Floor Smoke
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_main_level_status
+    from: idle
+    platform: state
+    to: smoke
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Smoke detected main floor at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_main_level_co
+  alias: Main Floor Carbon Monoxide
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_main_level_status
+    from: idle
+    platform: state
+    to: co
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Carbon Monoxide detected main floor at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_downstairs_smoke
+  alias: Downstairs Smoke
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_downstairs_status
+    from: idle
+    platform: state
+    to: smoke
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Smoke detected downstairs at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_downstairs_co
+  alias: Downstairs Carbon Monoxide
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_downstairs_status
+    from: idle
+    platform: state
+    to: co
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Carbon Monoxide detected downstairs at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: sonos_volume_mute
+  alias: Sonos Volume Mute
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Mute
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room
+      volume_level: 0
+- id: sonos_volume_low
+  alias: Sonos Volume Low
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Volume Low
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room
+      volume_level: 0.1
+- id: sonos_volume_mid
+  alias: Sonos Volume Mid
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Volume Mid
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room
+      volume_level: 0.26
+- id: sonos_volume_high
+  alias: Sonos Volume High
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Volume High
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room
+      volume_level: 0.6
+- id: ac_imminent
+  alias: Air Conditioning Imminent
+  description: ''
+  trigger:
+  - above: '79'
+    entity_id: sensor.air_conditioning_temperature
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_boolean.air_cond_warn_triggered
+    state: 'off'
+  action:
+  - service: notify.pushover
+    data:
+      message: Air conditioning imminent; close windows
+      target:
+      - six50joePhone
+      - JamieIPhone
+  - data: {}
+    entity_id: input_boolean.air_cond_warn_triggered
+    service: input_boolean.turn_on
+- id: water_shutoff
+  alias: Water Main Shut Off
+  description: Water main has been closed manually or leak detected
+  trigger:
+  - entity_id: switch.basement_water_main_current_value
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Basement leak detected or main manually shut off
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 900
+        expire: 7200
+        sound: mechanical
