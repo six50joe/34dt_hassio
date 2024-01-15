@@ -1,3 +1,7 @@
+home_name:
+  initial_value: 34DT
+  unique_id: HomeName
+  friendly_name: HomeName
 water_usage_rate:
   initial_value: 0
   unique_id: WaterUsageRate

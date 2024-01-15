@@ -1,0 +1,108 @@
+- id: front_door_opened
+  alias: Front Door Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.front_door
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: The front Door at 34 Deer Track has opened without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: garage_door_opened
+  alias: Garage Door Entry Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.garage_entry
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: 34DT Garage Entry Opened without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: kitchen_sliding_door_opened
+  alias: Kitchen Sliding Door Openend
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.kitchen_sliding_doors_status
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: Kitchen Sliding Door Opened while parents not home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: family_room_sliding_doors_opened
+  alias: Family Room Sliding Doors Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.family_room_sliding_door_status
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: Family Room sliding door opened while parents not home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600

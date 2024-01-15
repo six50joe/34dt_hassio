@@ -6755,68 +6755,6 @@
       {
         "aliases": [],
         "area_id": null,
-        "capabilities": {},
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.set_trusted_home",
-        "hidden_by": null,
-        "icon": null,
-        "id": "57f261e4f36da17a25e0e7c0a39ffb73",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Set Trusted Home",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "1638284825567",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "set_trusted_home"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.set_trusted_home_2",
-        "hidden_by": null,
-        "icon": null,
-        "id": "30a0a4281daa0d58e6641a88adf80c9b",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Set Trusted Home",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "set_trusted_home",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
         "capabilities": {
           "id": "set_not_trusted_home"
         },
@@ -42409,70 +42347,6 @@
         "aliases": [],
         "area_id": null,
         "capabilities": {
-          "id": "1704406913838"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.resume_notifications",
-        "hidden_by": null,
-        "icon": null,
-        "id": "1297910dfe8376f4ae457d505c9b0f92",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "resume_notifications",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "1704406913838",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "1704407021473"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.stop_notifications",
-        "hidden_by": null,
-        "icon": null,
-        "id": "b2dc98c9a34312ad3345ece6b88cdb9e",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "stop_notifications",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "1704407021473",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
           "id": "1704412552860"
         },
         "config_entry_id": null,
@@ -42560,6 +42434,516 @@
         "unique_id": "199332790",
         "previous_unique_id": null,
         "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "front_door_opened"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.front_door_opened_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f73c81e57be2f31480b1de468cb4cb87",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Front Door Opened",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "front_door_opened",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "garage_door_opened"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.garage_door_entry_opened_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "ba4a84727dac7287054815fc2138791e",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Garage Door Entry Opened",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "garage_door_opened",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "store_piano_room_motion"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.store_piano_room_motion_time_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "55a007c672fd30c801c7274231c34af4",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Store Piano Room Motion Time",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "store_piano_room_motion",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "store_driveway_motion"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.store_driveway_motion_time_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f37919956c0949e2f48a5b32519feec0",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Store Driveway Motion Time",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "store_driveway_motion",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "reboot_noitification"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.reboot_notification_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "7720dadf10ebc7091c582b3ff6faddef",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Reboot notification",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "reboot_noitification",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "var.home_name",
+        "hidden_by": null,
+        "icon": null,
+        "id": "a9afbb48798892096c38183262205540",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "HomeName",
+        "platform": "var",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "HomeName",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "kitchen_sliding_door_opened"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.kitchen_sliding_door_openend_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "a3ad7c1d443005f4f076184545ee4408",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Kitchen Sliding Door Openend",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "kitchen_sliding_door_opened",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "family_room_sliding_doors_opened"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.family_room_sliding_doors_opened_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "0a06edcc5c47af6cb3a0141bf6605927",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Family Room Sliding Doors Opened",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "family_room_sliding_doors_opened",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "store_kitchen_motion"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.store_kitchen_motion_time",
+        "hidden_by": null,
+        "icon": null,
+        "id": "7b82898e697769cf9b7212909e13c118",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Store Kitchen Motion Time",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "store_kitchen_motion",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "store_exercise_room_motion"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.store_exercise_room_motion_time_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "77c56fe835126a2e3e84c6e32a95158b",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Store Exercise Room Motion Time",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "store_exercise_room_motion",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "lakebhouse_disconnected"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.check_lakehouse_disconnected_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "eec368babf956799039af9df705882fb",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Check Lakehouse Disconnected",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "lakebhouse_disconnected",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "lakebhouse_connected"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.check_lakehouse_connected_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "998982c86be72c13833f67d6821df2b0",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Check Lakehouse Connected",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "lakebhouse_connected",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "reset_air_cond_warning"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.reset_air_conditioning_warning_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "98670736332b6a1c4beaef396cdddf3d",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Reset Air Conditioning Warning",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "reset_air_cond_warning",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "resume_notifications"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.resume_notifications",
+        "hidden_by": null,
+        "icon": null,
+        "id": "07ed18fb02156f7748257a2b365363b0",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "resume_notifications",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "resume_notifications",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "stop_notifications"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.stop_notifications",
+        "hidden_by": null,
+        "icon": null,
+        "id": "436cd7e214c2f9898d90a6ca68073950",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "stop_notifications",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "stop_notifications",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "set_trusted_home"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.set_trusted_home",
+        "hidden_by": null,
+        "icon": null,
+        "id": "30a0a4281daa0d58e6641a88adf80c9b",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Set Trusted Home",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "set_trusted_home",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
       }
     ],
     "deleted_entities": [
@@ -42618,6 +43002,30 @@
         "orphaned_timestamp": 1704423544.7300372,
         "platform": "automation",
         "unique_id": "disable_all_notifications"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.resume_notifications",
+        "id": "1297910dfe8376f4ae457d505c9b0f92",
+        "orphaned_timestamp": 1705362121.1068823,
+        "platform": "automation",
+        "unique_id": "1704406913838"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.stop_notifications",
+        "id": "b2dc98c9a34312ad3345ece6b88cdb9e",
+        "orphaned_timestamp": 1705362132.5751143,
+        "platform": "automation",
+        "unique_id": "1704407021473"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.set_trusted_home",
+        "id": "57f261e4f36da17a25e0e7c0a39ffb73",
+        "orphaned_timestamp": 1705362252.5569587,
+        "platform": "automation",
+        "unique_id": "1638284825567"
       }
     ]
   }
