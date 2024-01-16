@@ -130,38 +130,6 @@
         "aliases": [],
         "area_id": null,
         "capabilities": {
-          "id": "1583283013697"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.kitchen_motion_detected",
-        "hidden_by": null,
-        "icon": null,
-        "id": "0db803b86436126ebca75705fc1031dc",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Piano Room Motion Detected",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "1583283013697",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
           "id": "1583167744310"
         },
         "config_entry_id": null,
@@ -42752,6 +42720,70 @@
         "unique_id": "store_piano_room_motion",
         "previous_unique_id": null,
         "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "piano_room_motion_detected"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.piano_room_motion_detected_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "5b7df648cd0067c5fea625edfdecfc32",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Piano Room Motion Detected",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "piano_room_motion_detected",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "kitchen_motion_detected"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.kitchen_motion_detected",
+        "hidden_by": null,
+        "icon": null,
+        "id": "b72e5d8cbd2e158dd6d3c0fc2d3e4cb8",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Kitchen Motion Detected",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "kitchen_motion_detected",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
       }
     ],
     "deleted_entities": [
@@ -42882,6 +42914,14 @@
         "orphaned_timestamp": 1705362657.761121,
         "platform": "automation",
         "unique_id": "driveway_motion"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.kitchen_motion_detected",
+        "id": "0db803b86436126ebca75705fc1031dc",
+        "orphaned_timestamp": 1705407920.1525526,
+        "platform": "automation",
+        "unique_id": "1583283013697"
       }
     ]
   }

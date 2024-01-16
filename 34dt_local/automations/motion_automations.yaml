@@ -1,3 +1,30 @@
+- id: piano_room_motion_detected
+  alias: Piano Room Motion Detected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.piano_room_motion_home_security_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: Piano Room Motion Detected without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
 - id: store_piano_room_motion
   alias: Store Piano Room Motion Time
   description: ''
@@ -13,6 +40,33 @@
         }}'
       topic: hass/storage/motion/on_time/pianoroommotion
     service: mqtt.publish
+- id: kitchen_motion_detected
+  alias: Kitchen Motion Detected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.kitchen_motion_home_security_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: Kitchen Area Motion Detected without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
 - id: store_kitchen_motion
   alias: Store Kitchen Motion Time
   description: ''
@@ -28,6 +82,33 @@
         }}'
       topic: hass/storage/motion/on_time/kitchenmotion
     service: mqtt.publish
+- id: '1583283118831'
+  alias: Exercise Room Motion Detected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.exercise_room_motion_home_security_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: Exercise Room Motion Detected without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
 - id: store_exercise_room_motion
   alias: Store Exercise Room Motion Time
   description: ''
