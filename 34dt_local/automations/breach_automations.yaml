@@ -106,3 +106,30 @@
         priority: 2
         retry: 1800
         expire: 3600
+- id: exercise_room_door_opened
+  alias: Exercise Room Door Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.downstairs_sliding_door
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: template
+      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
+  - condition: state
+    entity_id: var.disable_notifications
+    state: 'False'
+  action:
+  - service: notify.pushover
+    data:
+      message: Downstairs sliding door opened while parents not home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600

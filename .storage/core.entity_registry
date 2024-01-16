@@ -13723,7 +13723,7 @@
         "capabilities": null,
         "config_entry_id": "7d31cc7153c9069c2407f3d87587caa2",
         "device_class": null,
-        "device_id": null,
+        "device_id": "54b9d927a861f20f16d783f091c70b71",
         "disabled_by": null,
         "entity_category": "diagnostic",
         "entity_id": "device_tracker.joe_joes_iphone",
@@ -13813,7 +13813,7 @@
         "capabilities": null,
         "config_entry_id": "7d31cc7153c9069c2407f3d87587caa2",
         "device_class": null,
-        "device_id": null,
+        "device_id": "4807685042b7a3ad309ec3424ee93b4a",
         "disabled_by": null,
         "entity_category": "diagnostic",
         "entity_id": "device_tracker.jamie_jamies_iphone",
@@ -20438,7 +20438,7 @@
         "capabilities": null,
         "config_entry_id": "7d31cc7153c9069c2407f3d87587caa2",
         "device_class": null,
-        "device_id": null,
+        "device_id": "ceac14c92b1f266baeb039b33eca8676",
         "disabled_by": null,
         "entity_category": "diagnostic",
         "entity_id": "device_tracker.user_be2582f9_05c2_4af9_ae0c_7e8053f679f2",
@@ -41312,7 +41312,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-70",
+        "original_icon": "mdi:battery-90",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41342,7 +41342,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-20",
+        "original_icon": "mdi:battery",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41432,7 +41432,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-50",
+        "original_icon": "mdi:battery-alert",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41492,7 +41492,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-80",
+        "original_icon": "mdi:battery",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41522,7 +41522,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-70",
+        "original_icon": "mdi:battery",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -42784,6 +42784,38 @@
         "unique_id": "kitchen_motion_detected",
         "previous_unique_id": null,
         "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "exercise_room_door_opened"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.exercise_room_door_opened",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8411a08bb81e988512554159d73fc367",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Exercise Room Door Opened",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "exercise_room_door_opened",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
       }
     ],
     "deleted_entities": [
@@ -42922,6 +42954,22 @@
         "orphaned_timestamp": 1705407920.1525526,
         "platform": "automation",
         "unique_id": "1583283013697"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.piano_room_motion_detected_x",
+        "id": "692e7ed2c6255b835f39a7717174a80f",
+        "orphaned_timestamp": 1705409109.2753909,
+        "platform": "automation",
+        "unique_id": "1705409082616"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.piano_room_motion_detected_3",
+        "id": "7e60b13f90dd32fdfcad17df6db6f652",
+        "orphaned_timestamp": 1705409146.3002923,
+        "platform": "automation",
+        "unique_id": "1705409115731"
       }
     ]
   }
