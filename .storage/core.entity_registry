@@ -826,166 +826,6 @@
       {
         "aliases": [],
         "area_id": null,
-        "capabilities": {
-          "id": "1585016862253"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.check_lakehouse_disconnected",
-        "hidden_by": null,
-        "icon": null,
-        "id": "4245df50f7d59ad22ec153dcae81b74c",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Check Lakehouse Disconnected",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "1585016862253",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "1585017089811"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.check_lakehouse_connected",
-        "hidden_by": null,
-        "icon": null,
-        "id": "438a11116b1b1659815758c709e98744",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Check Lakehouse Connected",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "1585017089811",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "1585054962692"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.store_kitchen_motion_sensor",
-        "hidden_by": null,
-        "icon": null,
-        "id": "05df83a4a8afd374959b484c319ac511",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Store Kitchen Motion Time",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "1585054962692",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "piano_room_motion"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.store_piano_room_motion_time",
-        "hidden_by": null,
-        "icon": null,
-        "id": "55ae8a63ee2c6b0ca9b38d8ed1c87945",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Store Piano Room Motion Time",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "piano_room_motion",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "exercise_room_motion"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.store_exercise_room_motion_time",
-        "hidden_by": null,
-        "icon": null,
-        "id": "ebfef5089918ff9fd8f06703dba8f3bd",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Store Exercise Room Motion Time",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "exercise_room_motion",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
         "capabilities": {},
         "config_entry_id": "97fe9ae22b364e0abcf42342726dfa1d",
         "device_class": null,
@@ -1474,38 +1314,6 @@
         "unique_id": "28-72057594513981441",
         "previous_unique_id": null,
         "unit_of_measurement": "%"
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "driveway_motion"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.store_driveway_motion_time",
-        "hidden_by": null,
-        "icon": null,
-        "id": "d04c63927259a7b5fd172e6bec299600",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Store Driveway Motion Time",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "driveway_motion",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
       },
       {
         "aliases": [],
@@ -42503,70 +42311,6 @@
         "aliases": [],
         "area_id": null,
         "capabilities": {
-          "id": "store_piano_room_motion"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.store_piano_room_motion_time_2",
-        "hidden_by": null,
-        "icon": null,
-        "id": "55a007c672fd30c801c7274231c34af4",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Store Piano Room Motion Time",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "store_piano_room_motion",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "store_driveway_motion"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.store_driveway_motion_time_2",
-        "hidden_by": null,
-        "icon": null,
-        "id": "f37919956c0949e2f48a5b32519feec0",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Store Driveway Motion Time",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "store_driveway_motion",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
           "id": "reboot_noitification"
         },
         "config_entry_id": null,
@@ -42725,102 +42469,6 @@
         "aliases": [],
         "area_id": null,
         "capabilities": {
-          "id": "store_exercise_room_motion"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.store_exercise_room_motion_time_2",
-        "hidden_by": null,
-        "icon": null,
-        "id": "77c56fe835126a2e3e84c6e32a95158b",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Store Exercise Room Motion Time",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "store_exercise_room_motion",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "lakebhouse_disconnected"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.check_lakehouse_disconnected_2",
-        "hidden_by": null,
-        "icon": null,
-        "id": "eec368babf956799039af9df705882fb",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Check Lakehouse Disconnected",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "lakebhouse_disconnected",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
-          "id": "lakebhouse_connected"
-        },
-        "config_entry_id": null,
-        "device_class": null,
-        "device_id": null,
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "automation.check_lakehouse_connected_2",
-        "hidden_by": null,
-        "icon": null,
-        "id": "998982c86be72c13833f67d6821df2b0",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": null,
-        "original_name": "Check Lakehouse Connected",
-        "platform": "automation",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "lakebhouse_connected",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": {
           "id": "reset_air_cond_warning"
         },
         "config_entry_id": null,
@@ -42944,6 +42592,166 @@
         "unique_id": "set_trusted_home",
         "previous_unique_id": null,
         "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "lakebhouse_connected"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.check_lakehouse_connected",
+        "hidden_by": null,
+        "icon": null,
+        "id": "998982c86be72c13833f67d6821df2b0",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Check Lakehouse Connected",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "lakebhouse_connected",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "lakebhouse_disconnected"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.check_lakehouse_disconnected",
+        "hidden_by": null,
+        "icon": null,
+        "id": "eec368babf956799039af9df705882fb",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Check Lakehouse Disconnected",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "lakebhouse_disconnected",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "store_driveway_motion"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.store_driveway_motion_time",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f37919956c0949e2f48a5b32519feec0",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Store Driveway Motion Time",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "store_driveway_motion",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "store_exercise_room_motion"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.store_exercise_room_motion_time",
+        "hidden_by": null,
+        "icon": null,
+        "id": "77c56fe835126a2e3e84c6e32a95158b",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Store Exercise Room Motion Time",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "store_exercise_room_motion",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "id": "store_piano_room_motion"
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "automation.store_piano_room_motion_time",
+        "hidden_by": null,
+        "icon": null,
+        "id": "55a007c672fd30c801c7274231c34af4",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Store Piano Room Motion Time",
+        "platform": "automation",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "store_piano_room_motion",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
       }
     ],
     "deleted_entities": [
@@ -43026,6 +42834,54 @@
         "orphaned_timestamp": 1705362252.5569587,
         "platform": "automation",
         "unique_id": "1638284825567"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.check_lakehouse_connected",
+        "id": "438a11116b1b1659815758c709e98744",
+        "orphaned_timestamp": 1705362488.7968566,
+        "platform": "automation",
+        "unique_id": "1585017089811"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.check_lakehouse_disconnected",
+        "id": "4245df50f7d59ad22ec153dcae81b74c",
+        "orphaned_timestamp": 1705362503.8481853,
+        "platform": "automation",
+        "unique_id": "1585016862253"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.store_piano_room_motion_time",
+        "id": "55ae8a63ee2c6b0ca9b38d8ed1c87945",
+        "orphaned_timestamp": 1705362638.357682,
+        "platform": "automation",
+        "unique_id": "piano_room_motion"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.store_kitchen_motion_sensor",
+        "id": "05df83a4a8afd374959b484c319ac511",
+        "orphaned_timestamp": 1705362644.7923193,
+        "platform": "automation",
+        "unique_id": "1585054962692"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.store_exercise_room_motion_time",
+        "id": "ebfef5089918ff9fd8f06703dba8f3bd",
+        "orphaned_timestamp": 1705362651.123782,
+        "platform": "automation",
+        "unique_id": "exercise_room_motion"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "automation.store_driveway_motion_time",
+        "id": "d04c63927259a7b5fd172e6bec299600",
+        "orphaned_timestamp": 1705362657.761121,
+        "platform": "automation",
+        "unique_id": "driveway_motion"
       }
     ]
   }
