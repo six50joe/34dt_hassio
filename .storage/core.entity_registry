@@ -8267,7 +8267,7 @@
           }
         },
         "original_device_class": null,
-        "original_icon": "mdi:eye",
+        "original_icon": "mdi:sleep",
         "original_name": "Node status",
         "platform": "zwave_js",
         "supported_features": 0,
@@ -41282,7 +41282,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-60",
+        "original_icon": "mdi:battery-80",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41312,7 +41312,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery-90",
+        "original_icon": "mdi:battery-charging-60",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41402,7 +41402,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery",
+        "original_icon": "mdi:battery-50",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -41522,7 +41522,7 @@
           }
         },
         "original_device_class": "battery",
-        "original_icon": "mdi:battery",
+        "original_icon": "mdi:battery-40",
         "original_name": "Battery",
         "platform": "icloud",
         "supported_features": 0,
@@ -42970,6 +42970,54 @@
         "orphaned_timestamp": 1705409146.3002923,
         "platform": "automation",
         "unique_id": "1705409115731"
+      },
+      {
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "entity_id": "binary_sensor.samba_share_running",
+        "id": "3a362e93a975b2af005a020e98354571",
+        "orphaned_timestamp": null,
+        "platform": "hassio",
+        "unique_id": "core_samba_state"
+      },
+      {
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "entity_id": "sensor.samba_share_version",
+        "id": "06246edee18a1597d5c2834529b343da",
+        "orphaned_timestamp": null,
+        "platform": "hassio",
+        "unique_id": "core_samba_version"
+      },
+      {
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "entity_id": "sensor.samba_share_newest_version",
+        "id": "ad414de9dccc934f948f6880780d81aa",
+        "orphaned_timestamp": null,
+        "platform": "hassio",
+        "unique_id": "core_samba_version_latest"
+      },
+      {
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "entity_id": "sensor.samba_share_cpu_percent",
+        "id": "d44c69b0f191a3b9a6e5ec3a4be78483",
+        "orphaned_timestamp": null,
+        "platform": "hassio",
+        "unique_id": "core_samba_cpu_percent"
+      },
+      {
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "entity_id": "sensor.samba_share_memory_percent",
+        "id": "6e6ed4bbb9776e39f3deec5ef32b1d72",
+        "orphaned_timestamp": null,
+        "platform": "hassio",
+        "unique_id": "core_samba_memory_percent"
+      },
+      {
+        "config_entry_id": "5b2940ab7297f0ab449ca61b4a9a5796",
+        "entity_id": "update.samba_share_update",
+        "id": "344a5726a34d882177cbfeb5065de06f",
+        "orphaned_timestamp": null,
+        "platform": "hassio",
+        "unique_id": "core_samba_version_latest"
       }
     ]
   }

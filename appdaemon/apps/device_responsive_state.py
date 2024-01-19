@@ -10,11 +10,11 @@ import datetime
 from enum import Enum
 from collections import defaultdict
 
-CONFIG_FILE_DIR           = "/config/data"
+CONFIG_FILE_DIR           = "/homeassistant/data"
 DEVICE_ENTRIES            = "device_status_list.txt"
-VARIABLE_FILE_DIR         = "/config/variables"
+VARIABLE_FILE_DIR         = "/homeassistant/variables"
 VARIABLE_FILE             = "monitoring_vars.yaml"
-LOVELACE_FILE_DIR         = "/config/lovelace"
+LOVELACE_FILE_DIR         = "/homeassistant/lovelace"
 DEVICE_STATE_CARDS_FILE   = "device_state_cards.yaml"
 
 class DeviceType(Enum):

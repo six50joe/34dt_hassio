@@ -231,13 +231,9 @@
   - platform: state
     entity_id: var.water_usage_rate
   condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
   - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
   action:
   - service: notify.pushover
     data:
