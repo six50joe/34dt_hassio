@@ -1,0 +1,94 @@
+- id: sonos_volume_mute
+  alias: Sonos Volume Mute
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Mute
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room
+      volume_level: 0
+- id: sonos_volume_low
+  alias: Sonos Volume Low
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Volume Low
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room
+      volume_level: 0.1
+- id: sonos_volume_mid
+  alias: Sonos Volume Mid
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Volume Mid
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room
+      volume_level: 0.26
+- id: sonos_volume_high
+  alias: Sonos Volume High
+  description: ''
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: Living Room Volume High
+  condition: []
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.living_room
+      volume_level: 0.6
+- id: Living Room Lights On
+  alias: Living Room Lights On
+  trigger:
+  - platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      node_id: 51
+      property_key: '001'
+  condition: []
+  action:
+  - service: input_select.select_next
+    entity_id: input_select.living_room_scene
+  - service: hue.hue_activate_scene
+    data_template:
+      group_name: Living room
+      scene_name: '{{ states.input_select.living_room_scene.state }}'
+  mode: single
+- id: Living Room Lights Off
+  alias: Living Room Lights Off
+  trigger:
+  - event_data:
+      node_id: 51
+      property_key: '002'
+    event_type: zwave_js_value_notification
+    platform: event
+  condition: []
+  action:
+  - service: homeassistant.turn_off
+    entity_id: light.hue_color_lamp_1
+  - service: homeassistant.turn_off
+    entity_id: light.hue_color_downlight_1
+  - service: homeassistant.turn_off
+    entity_id: light.hue_color_downlight_2
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.living_room_scene
+      option: Dance Party
+  mode: single

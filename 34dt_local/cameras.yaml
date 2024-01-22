@@ -1,0 +1,22 @@
+  - host: 192.168.0.54
+    username: six50joe
+    password: unbelief-ramp-best
+    name: Living Room
+
+  - host: 192.168.0.58
+    username: six50joe
+    password: unbelief-ramp-best
+    name: DrivewayView
+
+  - host: 192.168.0.56
+    username: six50joe
+    password: unbelief-ramp-best
+    name: Piano Room
+
+  - host: 192.168.0.60
+    username: six50joe
+    password: unbelief-ramp-best
+    name: Exercise Room
+
+
+

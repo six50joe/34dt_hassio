@@ -1,0 +1,9 @@
+To send events to Home Assistant, you will need to set up the webhook feature in Traccar.
+
+Use the following URL: http://deerjoe.groks-the.info/api/webhook/8399c4ba0c2a18d2a3c8939acecf74f823f430d450960c0e21542b81b6dfa731
+
+See the documentation for further details.
+Created configuration for Traccar Webhook.
+
+
+* 1/4/24: Installed MariaDB and Traccar Server add-on

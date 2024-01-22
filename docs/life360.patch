@@ -1,0 +1,7 @@
+Update to the life360 package has been released. As an interim fix (i.e., before a HA release that updates to it), if you are using a container install, and you know how to get to a command line, you can do:
+
+cd /usr/src/homeassistant/homeassistant/components/life360/
+Sed -i "s/6.0.0/6.0.1/" manifest.json
+Then restart HA.
+
+https://community.home-assistant.io/t/life360-device-tracker-platform/52406/1745?page=86

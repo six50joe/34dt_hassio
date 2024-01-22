@@ -1,0 +1,18 @@
+  living_room_scene:
+    name: Living Room Scene
+    options:
+      - Read
+      - Night show
+      - Relax
+      - Energize
+      - Concentrate
+      - Bright
+      - Nightlight
+      - Spring blossom
+      - Tropical twilight
+      - Arctic aurora
+      - Savanna sunset
+      - Game Night
+      - Dance Party
+    initial: Read
+    icon: mdi:lightbulb-multiple

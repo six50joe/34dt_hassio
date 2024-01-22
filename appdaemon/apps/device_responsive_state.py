@@ -10,11 +10,11 @@ import datetime
 from enum import Enum
 from collections import defaultdict
 
-CONFIG_FILE_DIR           = "/config/data"
+CONFIG_FILE_DIR           = "/homeassistant/data"
 DEVICE_ENTRIES            = "device_status_list.txt"
-VARIABLE_FILE_DIR         = "/config/variables"
+VARIABLE_FILE_DIR         = "/homeassistant/variables"
 VARIABLE_FILE             = "monitoring_vars.yaml"
-LOVELACE_FILE_DIR         = "/config/lovelace"
+LOVELACE_FILE_DIR         = "/homeassistant/lovelace"
 DEVICE_STATE_CARDS_FILE   = "device_state_cards.yaml"
 
 class DeviceType(Enum):
@@ -72,6 +72,7 @@ class DeviceResponsiveState(hass.Hass):
                 outputFile.write(f"  initial_value: 0\n")
                 outputFile.write(f"  unique_id: {device['var_name']}\n")
                 outputFile.write(f"  friendly_name: {device['name']}\n")
+                outputFile.write(f"  force_update: true\n")
 
         outputFile.close()
 
