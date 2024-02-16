@@ -48,16 +48,6 @@ hue_color_lamp_lupd:
   unique_id: hue_color_lamp_lupd
   friendly_name: Hue Living Room Lamp
   force_update: true
-hue_color_downlight_1_lupd:
-  initial_value: 0
-  unique_id: hue_color_downlight_1_lupd
-  friendly_name: Hue Living Room Downlight 1
-  force_update: true
-hue_color_downlight_2_lupd:
-  initial_value: 0
-  unique_id: hue_color_downlight_2_lupd
-  friendly_name: Hue Living Room Downlight 2
-  force_update: true
 liv_room_light_upd:
   initial_value: 0
   unique_id: liv_room_light_upd

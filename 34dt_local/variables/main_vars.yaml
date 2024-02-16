@@ -12,6 +12,11 @@ water_usage:
   friendly_name: WaterUsage
   force_update: true
   initial_value: 0
+prev_water_usage:
+  unique_id: PrevWaterUsage
+  friendly_name: PrevWaterUsage
+  force_update: true
+  initial_value: 0
 prev_water_time:
   unique_id: PrevWaterTime
   friendly_name: PrevWaterTime

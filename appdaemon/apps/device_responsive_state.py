@@ -12,7 +12,7 @@ from collections import defaultdict
 
 CONFIG_FILE_DIR           = "/homeassistant/data"
 DEVICE_ENTRIES            = "device_status_list.txt"
-VARIABLE_FILE_DIR         = "/homeassistant/variables"
+VARIABLE_FILE_DIR         = "/homeassistant/34dt_local/variables"
 VARIABLE_FILE             = "monitoring_vars.yaml"
 LOVELACE_FILE_DIR         = "/homeassistant/lovelace"
 DEVICE_STATE_CARDS_FILE   = "device_state_cards.yaml"
@@ -63,7 +63,6 @@ class DeviceResponsiveState(hass.Hass):
 
     def generate_upd_variables(self):
         path = VARIABLE_FILE_DIR + "/" + VARIABLE_FILE
-
         outputFile = open(path, 'w')
 
         for dtype in self.device_set.keys():
@@ -194,10 +193,10 @@ class DeviceResponsiveState(hass.Hass):
 
         dev_name = self.entity_id_to_device_name(entity)
 
-        if dev_name:
-            self.log(f"{dev_name} recevied an update")
-        else:
-            self.log(f"Error: {entity} not registered")
+        # if dev_name:
+        #     self.log(f"{dev_name} recevied an update")
+        # else:
+        #     self.log(f"Error: {entity} not registered")
 
         var_name = f"var.{self.entity_id_to_var_name(entity)}"
 

@@ -2,7 +2,7 @@
   alias: Piano Room Motion Detected
   description: ''
   trigger:
-  - entity_id: binary_sensor.piano_room_motion_home_security_motion_detection
+  - entity_id: binary_sensor.piano_room_motion_motion_detection
     from: 'off'
     platform: state
     to: 'on'
@@ -25,7 +25,7 @@
   alias: Store Piano Room Motion Time
   description: ''
   trigger:
-  - entity_id: binary_sensor.piano_room_motion_home_security_motion_detection
+  - entity_id: binary_sensor.piano_room_motion_motion_detection
     from: 'off'
     platform: state
     to: 'on'
@@ -40,7 +40,7 @@
   alias: Kitchen Motion Detected
   description: ''
   trigger:
-  - entity_id: binary_sensor.kitchen_motion_home_security_motion_detection
+  - entity_id: binary_sensor.kitchen_motion_motion_detection
     from: 'off'
     platform: state
     to: 'on'
@@ -63,7 +63,7 @@
   alias: Store Kitchen Motion Time
   description: ''
   trigger:
-  - entity_id: binary_sensor.kitchen_motion_home_security_motion_detection
+  - entity_id: binary_sensor.kitchen_motion_motion_detection
     from: 'off'
     platform: state
     to: 'on'
@@ -78,7 +78,7 @@
   alias: Exercise Room Motion Detected
   description: ''
   trigger:
-  - entity_id: binary_sensor.exercise_room_motion_home_security_motion_detection
+  - entity_id: binary_sensor.exercise_room_motion_motion_detection
     from: 'off'
     platform: state
     to: 'on'
@@ -101,7 +101,7 @@
   alias: Store Exercise Room Motion Time
   description: ''
   trigger:
-  - entity_id: binary_sensor.exercise_room_motion_home_security_motion_detection
+  - entity_id: binary_sensor.exercise_room_motion_motion_detection
     from: 'off'
     platform: state
     to: 'on'
@@ -116,7 +116,7 @@
   alias: Store Driveway Motion Time
   description: ''
   trigger:
-  - entity_id: binary_sensor.driveway_floodlight_sensor_home_security_motion_detection
+  - entity_id: binary_sensor.driveway_floodlight_sensor
     from: 'off'
     platform: state
     to: 'on'
@@ -131,7 +131,7 @@
   alias: Motion in driveway while away
   description: ''
   trigger:
-  - entity_id: binary_sensor.driveway_floodlight_sensor_home_security_motion_detection
+  - entity_id: binary_sensor.driveway_floodlight_sensor_motion_detection
     from: 'off'
     platform: state
     to: 'on'

@@ -88,10 +88,11 @@
     event: sunset
   condition: []
   action:
-  - type: turn_on
-    device_id: d5c9618bf075d4657def9c581c7aa9eb
-    entity_id: switch.front_path_lights
-    domain: switch
+  - service: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.front_path_lights
   mode: single
 - id: '1607037786126'
   alias: Path Lights Off
@@ -101,10 +102,11 @@
     at: '20:00:00'
   condition: []
   action:
-  - type: turn_off
-    device_id: d5c9618bf075d4657def9c581c7aa9eb
-    entity_id: switch.front_path_lights
-    domain: switch
+  - service: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.front_path_lights
   mode: single
 - id: set_joe_home_state
   alias: Set Joe Home State
@@ -148,7 +150,7 @@
       person: jamie
       state: not_home
 - id: '1614001081756'
-  alias: Set Joe Home State 2
+  alias: Set Joe Home State
   description: ''
   trigger: []
   condition: []
@@ -296,4 +298,19 @@
         retry: 1800
         expire: 3600
       title: 34DT Home Alert
+  mode: single
+- id: '1706831869430'
+  alias: Daily Enablement of Notifications
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:00:00
+  condition: []
+  action:
+  - service: automation.trigger
+    metadata: {}
+    data:
+      skip_condition: true
+    target:
+      entity_id: automation.resume_notifications
   mode: single

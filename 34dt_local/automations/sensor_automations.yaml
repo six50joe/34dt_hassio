@@ -54,7 +54,7 @@
   alias: Upstairs Carbon Monoxide
   description: ''
   trigger:
-  - entity_id: sensor.smoke_upstairs_status
+  - entity_id: sensor.co_upstairs_status
     from: idle
     platform: state
     to: co
@@ -94,7 +94,7 @@
   alias: Main Floor Carbon Monoxide
   description: ''
   trigger:
-  - entity_id: sensor.smoke_main_level_status
+  - entity_id: sensor.co_main_level_status
     from: idle
     platform: state
     to: co
@@ -134,7 +134,7 @@
   alias: Downstairs Carbon Monoxide
   description: ''
   trigger:
-  - entity_id: sensor.smoke_downstairs_status
+  - entity_id: sensor.co_downstairs_status
     from: idle
     platform: state
     to: co

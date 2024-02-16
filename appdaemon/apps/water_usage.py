@@ -15,7 +15,7 @@ now = None
 
 class WaterUsage(hass.Hass):
     def initialize(self):
-        self.listen_state(self.flow_detected, "sensor.flow_meter_water_consumed_us_gallons")
+        self.listen_state(self.flow_detected, "sensor.flow_meter_water_consumption_us_gallons")
 
     def not_home(self):
         joe_home = self.get_state("device_tracker.joe", attribute='name')
@@ -57,7 +57,7 @@ class WaterUsage(hass.Hass):
 
         rate = float((water_usage - prev_water_usage) / minutes_passed)
         rate = round(rate, 3)
-        self.log("USAGE RATE: %f (reading=%f)" % (rate, water_usage))
+        self.log("USAGE RATE: %f (reading=%f, previous=%f)" % (rate, water_usage, prev_water_usage))
 
         if rate > 1:
             if self.not_home():
