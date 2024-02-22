@@ -1,11 +1,20 @@
-  - platform: traccar
-    host: deerjoe.groks-the.info
-    port: 8082
-    username: six50joe@gmail.com
-    password: tuneless-bone-mash
-    monitored_conditions: ["all_events"]
-    ssl: false
-    verify_ssl: false
-    new_device_defaults:
-      track_new_devices: true
-
+# Uses composite custom integration
+trackers:
+  - name: joe_home_or_away
+    time_as: device_or_local
+    require_movement: true
+    entity_id:
+      - sensor.joe_wifi_tracker
+      - device_tracker.joe_iphone_15
+  - name: jamie_home_or_away
+    time_as: device_or_local
+    require_movement: true
+    entity_id:
+      - sensor.jamie_wifi_tracker
+      - device_tracker.jamie_iphone_13
+  - name: jemma_home_or_away
+    time_as: device_or_local
+    require_movement: true
+    entity_id:
+      - sensor.jemma_wifi_tracker
+      - device_tracker.jemma_iphone_xs

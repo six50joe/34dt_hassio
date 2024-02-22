@@ -2784,7 +2784,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": "diagnostic",
         "entity_id": "device_tracker.jamies_iphone",
         "hidden_by": null,
@@ -2814,7 +2814,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": null,
         "entity_id": "sensor.jamies_iphone_battery_level",
         "hidden_by": null,
@@ -2844,7 +2844,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": null,
         "entity_id": "sensor.jamies_iphone_bssid",
         "hidden_by": null,
@@ -2874,7 +2874,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": null,
         "entity_id": "sensor.jamies_iphone_storage",
         "hidden_by": null,
@@ -2904,7 +2904,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": null,
         "entity_id": "sensor.jamies_iphone_battery_state",
         "hidden_by": null,
@@ -2934,7 +2934,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": null,
         "entity_id": "sensor.jamies_iphone_ssid",
         "hidden_by": null,
@@ -2964,7 +2964,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": null,
         "entity_id": "sensor.jamies_iphone_connection_type",
         "hidden_by": null,
@@ -2994,7 +2994,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": null,
         "entity_id": "sensor.jamies_iphone_sim_1",
         "hidden_by": null,
@@ -3024,7 +3024,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": null,
         "entity_id": "sensor.jamies_iphone_geocoded_location",
         "hidden_by": null,
@@ -3054,7 +3054,7 @@
         "config_entry_id": "f1443085d10a2fa9873bab3e3007f930",
         "device_class": null,
         "device_id": "73f81eb180f3e829b30b64e2e9d95f1e",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": null,
         "entity_id": "sensor.jamies_iphone_last_update_trigger",
         "hidden_by": null,
@@ -4700,7 +4700,7 @@
         "icon": null,
         "id": "e7e6488a9063b2e33ed56abc26a3df44",
         "has_entity_name": false,
-        "name": null,
+        "name": "Jamies IPhone 13",
         "options": {
           "conversation": {
             "should_expose": false
@@ -4985,36 +4985,6 @@
         "unique_id": "2840861c8620d6ac429d80d34514b86f6445a39fd5fa3fe75a57971c4353bb08_storage",
         "previous_unique_id": null,
         "unit_of_measurement": "% available"
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "fae1cbd61157960fbecfb46eff2ab7e0",
-        "device_class": null,
-        "device_id": "dace6f87484b38e958e4e902e0abcbf4",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.iphone_ssid",
-        "hidden_by": null,
-        "icon": null,
-        "id": "e04d07564ffdbc40bcb59202de7f882d",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:wifi-off",
-        "original_name": "iPhone SSID",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "2840861c8620d6ac429d80d34514b86f6445a39fd5fa3fe75a57971c4353bb08_connectivity_ssid",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
       },
       {
         "aliases": [],
@@ -5810,10 +5780,10 @@
         "aliases": [],
         "area_id": null,
         "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
         "device_class": null,
         "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
+        "disabled_by": "config_entry",
         "entity_category": "diagnostic",
         "entity_id": "device_tracker.jamies_iphone_13",
         "hidden_by": null,
@@ -5828,521 +5798,11 @@
         },
         "original_device_class": null,
         "original_icon": null,
-        "original_name": "Jamie’s iPhone 13",
+        "original_name": "Jamie’s iPhone",
         "platform": "mobile_app",
         "supported_features": 0,
         "translation_key": null,
         "unique_id": "E581C4E7-6881-41DA-9377-448B59C7F025",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_battery_level",
-        "hidden_by": null,
-        "icon": null,
-        "id": "199d6c2da6d5ce25d7b204640bebec2b",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": "battery",
-        "original_icon": "mdi:battery-40",
-        "original_name": "Jamie’s iPhone 13 Battery Level",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_battery_level",
-        "previous_unique_id": null,
-        "unit_of_measurement": "%"
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_sim_1",
-        "hidden_by": null,
-        "icon": null,
-        "id": "ff60a404336721d732e077ae025ed24e",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:sim",
-        "original_name": "Jamie’s iPhone 13 SIM 1",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_sim_1",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_battery_state",
-        "hidden_by": null,
-        "icon": null,
-        "id": "0173ca9790aed2aff67789150547ce93",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:battery-40",
-        "original_name": "Jamie’s iPhone 13 Battery State",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_battery_state",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_storage",
-        "hidden_by": null,
-        "icon": null,
-        "id": "5c43e5dd2923273833e6631c4464c0af",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:database",
-        "original_name": "Jamie’s iPhone 13 Storage",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_storage",
-        "previous_unique_id": null,
-        "unit_of_measurement": "% available"
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_sim_2",
-        "hidden_by": null,
-        "icon": null,
-        "id": "47ecd361d0e93d1995d393436c71a867",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:sim",
-        "original_name": "Jamie’s iPhone 13 SIM 2",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_sim_2",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_geocoded_location",
-        "hidden_by": null,
-        "icon": null,
-        "id": "b5008fcc3e90c2e706576abc5231a2c5",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:map",
-        "original_name": "Jamie’s iPhone 13 Geocoded Location",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_geocoded_location",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_ssid",
-        "hidden_by": null,
-        "icon": null,
-        "id": "712da3110910ffc4daf4f2e62afd246b",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:wifi-off",
-        "original_name": "Jamie’s iPhone 13 SSID",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_ssid",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_last_update_trigger",
-        "hidden_by": null,
-        "icon": null,
-        "id": "a0fdf0bc599065ab7a473d03144009fe",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:cellphone-wireless",
-        "original_name": "Jamie’s iPhone 13 Last Update Trigger",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_last_update_trigger",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_bssid",
-        "hidden_by": null,
-        "icon": null,
-        "id": "159bd42881a61a9d6bd2af043f6b1b1d",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:wifi-off",
-        "original_name": "Jamie’s iPhone 13 BSSID",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_bssid",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_connection_type",
-        "hidden_by": null,
-        "icon": null,
-        "id": "56676af17d7eecffdd6cc2371a1ef9a0",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:wifi",
-        "original_name": "Jamie’s iPhone 13 Connection Type",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_connection_type",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_activity",
-        "hidden_by": null,
-        "icon": null,
-        "id": "747db87c72099f261efb70b980233af5",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:help-circle",
-        "original_name": "Jamie’s iPhone 13 Activity",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_activity",
-        "previous_unique_id": null,
-        "unit_of_measurement": null
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_distance",
-        "hidden_by": null,
-        "icon": null,
-        "id": "51f3a329bff3ec4e372365c27a5b9cff",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:hiking",
-        "original_name": "Jamie’s iPhone 13 Distance",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_distance",
-        "previous_unique_id": null,
-        "unit_of_measurement": "m"
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_floors_ascended",
-        "hidden_by": null,
-        "icon": null,
-        "id": "da82c8fa4df5419df15f472ea6e3475e",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:stairs-up",
-        "original_name": "Jamie’s iPhone 13 Floors Ascended",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_floors_ascended",
-        "previous_unique_id": null,
-        "unit_of_measurement": "floors"
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_floors_descended",
-        "hidden_by": null,
-        "icon": null,
-        "id": "8cbbf2c08fa156a54f444c1994a72dd4",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:stairs-down",
-        "original_name": "Jamie’s iPhone 13 Floors Descended",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_floors_descended",
-        "previous_unique_id": null,
-        "unit_of_measurement": "floors"
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_steps",
-        "hidden_by": null,
-        "icon": null,
-        "id": "f89ea763f3db65502a20c8087b7afd2a",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:walk",
-        "original_name": "Jamie’s iPhone 13 Steps",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_steps",
-        "previous_unique_id": null,
-        "unit_of_measurement": "steps"
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "sensor.jamies_iphone_13_average_active_pace",
-        "hidden_by": null,
-        "icon": null,
-        "id": "c8fec4bf5cba633d2ece54be7c506716",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:speedometer",
-        "original_name": "Jamie’s iPhone 13 Average Active Pace",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_avg_active_pace",
-        "previous_unique_id": null,
-        "unit_of_measurement": "m/s"
-      },
-      {
-        "aliases": [],
-        "area_id": null,
-        "capabilities": null,
-        "config_entry_id": "237fed5b12e40eed3cd53e8a4e3c45ac",
-        "device_class": null,
-        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
-        "disabled_by": null,
-        "entity_category": null,
-        "entity_id": "binary_sensor.jamies_iphone_13_focus",
-        "hidden_by": null,
-        "icon": null,
-        "id": "9608ebcc53041e0e478d3553264fa1f6",
-        "has_entity_name": false,
-        "name": null,
-        "options": {
-          "conversation": {
-            "should_expose": false
-          }
-        },
-        "original_device_class": null,
-        "original_icon": "mdi:moon-waning-crescent",
-        "original_name": "Jamie’s iPhone 13 Focus",
-        "platform": "mobile_app",
-        "supported_features": 0,
-        "translation_key": null,
-        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_focus",
         "previous_unique_id": null,
         "unit_of_measurement": null
       },
@@ -42477,6 +41937,1071 @@
         "unique_id": "3296772875.23-50-0-value-197120",
         "previous_unique_id": null,
         "unit_of_measurement": "US gallons"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "d21eb104460e1c416ed3227389d63971",
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.joe_home_or_away_speed",
+        "hidden_by": null,
+        "icon": null,
+        "id": "38db74acc445bec35f1129c0474fe7a1",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "sensor.private": {
+            "suggested_unit_of_measurement": "mph"
+          },
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "speed",
+        "original_icon": "mdi:car-speed-limiter",
+        "original_name": "Joe Home Or Away Speed",
+        "platform": "composite",
+        "supported_features": 0,
+        "translation_key": "speed",
+        "unique_id": "joe_home_or_away_speed",
+        "previous_unique_id": null,
+        "unit_of_measurement": "mph"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "b876ad52a28f0e93a6f98d622e75d07d",
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jamie_home_or_away_speed",
+        "hidden_by": null,
+        "icon": null,
+        "id": "df20669b39df483fe50a878f2d54c23f",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "sensor.private": {
+            "suggested_unit_of_measurement": "mph"
+          },
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "speed",
+        "original_icon": "mdi:car-speed-limiter",
+        "original_name": "Jamie Home Or Away Speed",
+        "platform": "composite",
+        "supported_features": 0,
+        "translation_key": "speed",
+        "unique_id": "jamie_home_or_away_speed",
+        "previous_unique_id": null,
+        "unit_of_measurement": "mph"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "b876ad52a28f0e93a6f98d622e75d07d",
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "device_tracker.jamie_home_or_away",
+        "hidden_by": null,
+        "icon": null,
+        "id": "c3dc443e4cef198648eaf347dee81458",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Jamie Home Or Away",
+        "platform": "composite",
+        "supported_features": 0,
+        "translation_key": "tracker",
+        "unique_id": "jamie_home_or_away",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "device_tracker.jemmas_iphone",
+        "hidden_by": null,
+        "icon": null,
+        "id": "10cf22c845b700163c51fadbf238a69d",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Jemma’s iPhone",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "ED3B0A77-AEA5-4917-9729-B60252981E0D",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_bssid",
+        "hidden_by": null,
+        "icon": null,
+        "id": "ab8fb86dd3de7c694c972f2322ca3208",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi-off",
+        "original_name": "Jemma’s iPhone BSSID",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_connectivity_bssid",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_connection_type",
+        "hidden_by": null,
+        "icon": null,
+        "id": "fa00cada63fa493453d1b027921c832c",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi",
+        "original_name": "Jemma’s iPhone Connection Type",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_connectivity_connection_type",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_battery_level",
+        "hidden_by": null,
+        "icon": null,
+        "id": "0d882018cda05f59a9edaee3bf8ce99e",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "battery",
+        "original_icon": "mdi:battery-90",
+        "original_name": "Jemma’s iPhone Battery Level",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_battery_level",
+        "previous_unique_id": null,
+        "unit_of_measurement": "%"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_battery_state",
+        "hidden_by": null,
+        "icon": null,
+        "id": "7db83a708668b06e1e7d5acb1596078c",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:battery-90",
+        "original_name": "Jemma’s iPhone Battery State",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_battery_state",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_storage",
+        "hidden_by": null,
+        "icon": null,
+        "id": "33dbbbc4bc1e1b0221674097f8f53e5c",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:database",
+        "original_name": "Jemma’s iPhone Storage",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_storage",
+        "previous_unique_id": null,
+        "unit_of_measurement": "% available"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_ssid",
+        "hidden_by": null,
+        "icon": null,
+        "id": "3feae19dbde721e892bb46ac5e4d9982",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi-off",
+        "original_name": "Jemma’s iPhone SSID",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_connectivity_ssid",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_sim_1",
+        "hidden_by": null,
+        "icon": null,
+        "id": "946a2442df3078763643e28bc44ab310",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:sim",
+        "original_name": "Jemma’s iPhone SIM 1",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_connectivity_sim_1",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_sim_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "35a859304da374f6501ea312f6e5526c",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:sim",
+        "original_name": "Jemma’s iPhone SIM 2",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_connectivity_sim_2",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_geocoded_location",
+        "hidden_by": null,
+        "icon": null,
+        "id": "df8ed58bc8e30a6616ff4c0cf4734a31",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:map",
+        "original_name": "Jemma’s iPhone Geocoded Location",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_geocoded_location",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "c9a2ae9dae44aa467581b2a9a1801840",
+        "device_class": null,
+        "device_id": "e8635a84c8114a9805e337d8e4b71080",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemmas_iphone_last_update_trigger",
+        "hidden_by": null,
+        "icon": null,
+        "id": "bd5c079b6e61fd3656ceabab2a17546d",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:cellphone-wireless",
+        "original_name": "Jemma’s iPhone Last Update Trigger",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "09d75698ac96415784d6c491006a2b2029ae34a186b02ec911bc1cd07d9f31d8_last_update_trigger",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_distance",
+        "hidden_by": null,
+        "icon": null,
+        "id": "dd4b18ef34df1240b19434d6188ba8cb",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:hiking",
+        "original_name": "Jamie’s iPhone Distance",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_pedometer_distance",
+        "previous_unique_id": null,
+        "unit_of_measurement": "m"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_activity",
+        "hidden_by": null,
+        "icon": null,
+        "id": "5e8033d0172d2f4efe6a8450fdc3688f",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:help-circle",
+        "original_name": "Jamie’s iPhone Activity",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_activity",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_battery_level_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "3afac3d743f9515e92c726acfe213d28",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "battery",
+        "original_icon": "mdi:battery-10",
+        "original_name": "Jamie’s iPhone Battery Level",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_battery_level",
+        "previous_unique_id": null,
+        "unit_of_measurement": "%"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_battery_state_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "62ed013af79f37bc5702be8dfa926c3e",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:battery-10",
+        "original_name": "Jamie’s iPhone Battery State",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_battery_state",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_floors_ascended",
+        "hidden_by": null,
+        "icon": null,
+        "id": "ff63b2f60f582c2c71c60039bb8c3a0f",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:stairs-up",
+        "original_name": "Jamie’s iPhone Floors Ascended",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_pedometer_floors_ascended",
+        "previous_unique_id": null,
+        "unit_of_measurement": "floors"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_floors_descended",
+        "hidden_by": null,
+        "icon": null,
+        "id": "3e35f2d321fae1240bb8a2a74add00ab",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:stairs-down",
+        "original_name": "Jamie’s iPhone Floors Descended",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_pedometer_floors_descended",
+        "previous_unique_id": null,
+        "unit_of_measurement": "floors"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_storage_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "b5b88d8148d02f363dfb29972a012a09",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:database",
+        "original_name": "Jamie’s iPhone Storage",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_storage",
+        "previous_unique_id": null,
+        "unit_of_measurement": "% available"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_steps",
+        "hidden_by": null,
+        "icon": null,
+        "id": "c0c3f80b59b3563b509b361f88fcab19",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:walk",
+        "original_name": "Jamie’s iPhone Steps",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_pedometer_steps",
+        "previous_unique_id": null,
+        "unit_of_measurement": "steps"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_ssid_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f5cef526b47774369a6cd0272ac69fbb",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi",
+        "original_name": "Jamie’s iPhone SSID",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_connectivity_ssid",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_average_active_pace",
+        "hidden_by": null,
+        "icon": null,
+        "id": "270326eb9ad019911df108b33b421f3f",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:speedometer",
+        "original_name": "Jamie’s iPhone Average Active Pace",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_pedometer_avg_active_pace",
+        "previous_unique_id": null,
+        "unit_of_measurement": "m/s"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_bssid_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "625fe19df2da24c153ecb80e0864325a",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi-star",
+        "original_name": "Jamie’s iPhone BSSID",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_connectivity_bssid",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_connection_type_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "0bef6b4ef03ffe166cc042c812c07ad1",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi",
+        "original_name": "Jamie’s iPhone Connection Type",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_connectivity_connection_type",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_sim_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "cb14048a1d04d221d263f7f4eba9c715",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:sim",
+        "original_name": "Jamie’s iPhone SIM 2",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_connectivity_sim_2",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_sim_1_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "d807f8762ae71b20f8dde1b6cce27241",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:sim",
+        "original_name": "Jamie’s iPhone SIM 1",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_connectivity_sim_1",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_geocoded_location_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "68a356eada0ef1077e0d7a5752e8edb3",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:map",
+        "original_name": "Jamie’s iPhone Geocoded Location",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_geocoded_location",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "binary_sensor.jamies_iphone_focus",
+        "hidden_by": null,
+        "icon": null,
+        "id": "ab25fbd28459d9ac8efb0a5bec418e01",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:moon-waning-crescent",
+        "original_name": "Jamie’s iPhone Focus",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_focus",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "e0bf81cc19cb17df13bf14207a805918",
+        "device_class": null,
+        "device_id": "d1bc37d79d3a0276fcd97225ab28d7f1",
+        "disabled_by": "config_entry",
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_last_update_trigger_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "49b1e372133f6c775cc6d4592f79a959",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:cellphone-wireless",
+        "original_name": "Jamie’s iPhone Last Update Trigger",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "9a7235d74ad27941c382d1448d3d488f58e96eaba277675db691fdf254e8e01e_last_update_trigger",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "d21eb104460e1c416ed3227389d63971",
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "device_tracker.joe_home_or_away",
+        "hidden_by": null,
+        "icon": null,
+        "id": "dc1d98242466c4ac4c8c7eb448816700",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Joe Home Or Away",
+        "platform": "composite",
+        "supported_features": 0,
+        "translation_key": "tracker",
+        "unique_id": "joe_home_or_away",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "fae1cbd61157960fbecfb46eff2ab7e0",
+        "device_class": null,
+        "device_id": "dace6f87484b38e958e4e902e0abcbf4",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jamies_iphone_13_ssid",
+        "hidden_by": null,
+        "icon": null,
+        "id": "e04d07564ffdbc40bcb59202de7f882d",
+        "has_entity_name": false,
+        "name": "Jamies IPhone 13 SSID",
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:wifi",
+        "original_name": "iPhone SSID",
+        "platform": "mobile_app",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "2840861c8620d6ac429d80d34514b86f6445a39fd5fa3fe75a57971c4353bb08_connectivity_ssid",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "de451683427015280da526da6a1339a2",
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "device_tracker.jemma_home_or_away",
+        "hidden_by": null,
+        "icon": null,
+        "id": "92f27e5fccf2d44af52099467a5687a1",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Jemma Home Or Away",
+        "platform": "composite",
+        "supported_features": 0,
+        "translation_key": "tracker",
+        "unique_id": "jemma_home_or_away",
+        "previous_unique_id": null,
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "de451683427015280da526da6a1339a2",
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.jemma_home_or_away_speed",
+        "hidden_by": null,
+        "icon": null,
+        "id": "bd65b42d1e4becdce54ca67653f3f511",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "sensor.private": {
+            "suggested_unit_of_measurement": "mph"
+          },
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "speed",
+        "original_icon": "mdi:car-speed-limiter",
+        "original_name": "Jemma Home Or Away Speed",
+        "platform": "composite",
+        "supported_features": 0,
+        "translation_key": "speed",
+        "unique_id": "jemma_home_or_away_speed",
+        "previous_unique_id": null,
+        "unit_of_measurement": "mph"
       }
     ],
     "deleted_entities": [
@@ -49807,6 +50332,142 @@
         "orphaned_timestamp": null,
         "platform": "zwave_js",
         "unique_id": "3425276030.59.statistics_timeoutResponse"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_battery_level",
+        "id": "199d6c2da6d5ce25d7b204640bebec2b",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_battery_level"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_sim_1",
+        "id": "ff60a404336721d732e077ae025ed24e",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_sim_1"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_battery_state",
+        "id": "0173ca9790aed2aff67789150547ce93",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_battery_state"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_storage",
+        "id": "5c43e5dd2923273833e6631c4464c0af",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_storage"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_sim_2",
+        "id": "47ecd361d0e93d1995d393436c71a867",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_sim_2"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_geocoded_location",
+        "id": "b5008fcc3e90c2e706576abc5231a2c5",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_geocoded_location"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_ssid",
+        "id": "712da3110910ffc4daf4f2e62afd246b",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_ssid"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_last_update_trigger",
+        "id": "a0fdf0bc599065ab7a473d03144009fe",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_last_update_trigger"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_bssid",
+        "id": "159bd42881a61a9d6bd2af043f6b1b1d",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_bssid"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_connection_type",
+        "id": "56676af17d7eecffdd6cc2371a1ef9a0",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_connectivity_connection_type"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_activity",
+        "id": "747db87c72099f261efb70b980233af5",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_activity"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_distance",
+        "id": "51f3a329bff3ec4e372365c27a5b9cff",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_distance"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_floors_ascended",
+        "id": "da82c8fa4df5419df15f472ea6e3475e",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_floors_ascended"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_floors_descended",
+        "id": "8cbbf2c08fa156a54f444c1994a72dd4",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_floors_descended"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_steps",
+        "id": "f89ea763f3db65502a20c8087b7afd2a",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_steps"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "sensor.jamies_iphone_13_average_active_pace",
+        "id": "c8fec4bf5cba633d2ece54be7c506716",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_pedometer_avg_active_pace"
+      },
+      {
+        "config_entry_id": null,
+        "entity_id": "binary_sensor.jamies_iphone_13_focus",
+        "id": "9608ebcc53041e0e478d3553264fa1f6",
+        "orphaned_timestamp": 1708562375.152077,
+        "platform": "mobile_app",
+        "unique_id": "01d4ab1ca272b5c897b4e09d6c85c4581e62710ac325bc765adcb5617d8ff7e4_focus"
       }
     ]
   }

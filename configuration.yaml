@@ -41,7 +41,8 @@ automation ui: !include automations.yaml
 automation manual: !include_dir_merge_list 34dt_local/automations/
 
 # Where we all are
-device_tracker: !include 34dt_local/device_trackers.yaml
+# Traccar yaml cfg deprecated
+composite: !include 34dt_local/device_trackers.yaml
 
 # Sensors- Monitoring entities
 sensor: !include_dir_merge_list 34dt_local/sensors
