@@ -1,0 +1,248 @@
+- id: lakebhouse_disconnected
+  alias: Check Lakehouse Disconnected
+  description: ''
+  trigger:
+  - entity_id: sensor.lakehouse_hassio
+    from: Up
+    platform: state
+    to: Down
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Lakehouse had been reachable but is now not
+      target:
+      - six50joePhone
+  mode: single
+- id: lakebhouse_connected
+  alias: Check Lakehouse Connected
+  description: ''
+  trigger:
+  - entity_id: sensor.lakehouse_hassio
+    from: Down
+    platform: state
+    to: Up
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Lakehouse had not been reachable, but is now
+      target:
+      - six50joePhone
+  mode: single
+- id: 34dt_upstairs_smoke
+  alias: Upstairs Smoke
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_upstairs_status
+    from: idle
+    platform: state
+    to: smoke
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Smoke detected upstairs at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_upstairs_co
+  alias: Upstairs Carbon Monoxide
+  description: ''
+  trigger:
+  - entity_id: sensor.co_upstairs_status
+    from: idle
+    platform: state
+    to: co
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Carbon Monoxide detected upstairs at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_main_level_smoke
+  alias: Main Floor Smoke
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_main_level_status
+    from: idle
+    platform: state
+    to: smoke
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Smoke detected main floor at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_main_level_co
+  alias: Main Floor Carbon Monoxide
+  description: ''
+  trigger:
+  - entity_id: sensor.co_main_level_status
+    from: idle
+    platform: state
+    to: co
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Carbon Monoxide detected main floor at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_downstairs_smoke
+  alias: Downstairs Smoke
+  description: ''
+  trigger:
+  - entity_id: sensor.smoke_downstairs_status
+    from: idle
+    platform: state
+    to: smoke
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Smoke detected downstairs at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: 34dt_downstairs_co
+  alias: Downstairs Carbon Monoxide
+  description: ''
+  trigger:
+  - entity_id: sensor.co_downstairs_status
+    from: idle
+    platform: state
+    to: co
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Carbon Monoxide detected downstairs at 34DT!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 500
+        expire: 7200
+- id: reset_air_cond_warning
+  alias: Reset Air Conditioning Warning
+  description: ''
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition: []
+  action:
+  - data: {}
+    entity_id: input_boolean.air_cond_warn_triggered
+    service: input_boolean.turn_off
+- id: ac_imminent
+  alias: Air Conditioning Imminent
+  description: ''
+  trigger:
+  - above: '79'
+    entity_id: sensor.air_conditioning_temperature
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_boolean.air_cond_warn_triggered
+    state: 'off'
+  action:
+  - service: notify.pushover
+    data:
+      message: Air conditioning imminent; close windows
+      target:
+      - six50joePhone
+      - JamieIPhone
+  - data: {}
+    entity_id: input_boolean.air_cond_warn_triggered
+    service: input_boolean.turn_on
+- id: water_shutoff
+  alias: Water Main Shut Off
+  description: Water main has been closed manually or leak detected
+  trigger:
+  - entity_id: switch.basement_water_main_current_value
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: Basement leak detected or main manually shut off
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 900
+        expire: 7200
+        sound: mechanical
+- id: 34dt_low_temperature
+  alias: 34DT Low Temperature
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.thermostat_piano_room_temperature
+    below: '55'
+  condition: []
+  action:
+  - service: notify.pushover
+    data:
+      message: 34 Deer Track temperature dangerously low!
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 900
+        expire: 7200
+        sound: climb
+  mode: single
+- id: water_flowing
+  alias: Water Flowing While Away
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: var.water_usage_rate
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: Water flowing while away
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+  mode: single

@@ -1,0 +1,152 @@
+- id: piano_room_motion_detected
+  alias: Piano Room Motion Detected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.piano_room_motion_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: Piano Room Motion Detected without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: store_piano_room_motion
+  alias: Store Piano Room Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.piano_room_motion_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
+      topic: hass/storage/motion/on_time/pianoroommotion
+    service: mqtt.publish
+- id: kitchen_motion_detected
+  alias: Kitchen Motion Detected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.kitchen_motion_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: Kitchen Area Motion Detected without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: store_kitchen_motion
+  alias: Store Kitchen Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.kitchen_motion_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
+      topic: hass/storage/motion/on_time/kitchenmotion
+    service: mqtt.publish
+- id: '1583283118831'
+  alias: Exercise Room Motion Detected
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.exercise_room_motion_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: Exercise Room Motion Detected without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: store_exercise_room_motion
+  alias: Store Exercise Room Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.exercise_room_motion_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
+      topic: hass/storage/motion/on_time/exerciseroommotion
+    service: mqtt.publish
+- id: store_driveway_motion
+  alias: Store Driveway Motion Time
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.driveway_floodlight_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - data:
+      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
+        }}'
+      topic: hass/storage/motion/on_time/drivewaymotion
+    service: mqtt.publish
+  mode: single
+- id: driveway_motion_while_away
+  alias: Motion in driveway while away
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.driveway_floodlight_sensor_motion_detection
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: Motion detected in 34DT Driveway while away
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: -1
+        retry: 1800
+        expire: 3600

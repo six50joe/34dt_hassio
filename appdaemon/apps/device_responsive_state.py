@@ -10,11 +10,11 @@ import datetime
 from enum import Enum
 from collections import defaultdict
 
-CONFIG_FILE_DIR           = "/config/data"
+CONFIG_FILE_DIR           = "/homeassistant/data"
 DEVICE_ENTRIES            = "device_status_list.txt"
-VARIABLE_FILE_DIR         = "/config/variables"
+VARIABLE_FILE_DIR         = "/homeassistant/34dt_local/variables"
 VARIABLE_FILE             = "monitoring_vars.yaml"
-LOVELACE_FILE_DIR         = "/config/lovelace"
+LOVELACE_FILE_DIR         = "/homeassistant/lovelace"
 DEVICE_STATE_CARDS_FILE   = "device_state_cards.yaml"
 
 class DeviceType(Enum):
@@ -63,7 +63,6 @@ class DeviceResponsiveState(hass.Hass):
 
     def generate_upd_variables(self):
         path = VARIABLE_FILE_DIR + "/" + VARIABLE_FILE
-
         outputFile = open(path, 'w')
 
         for dtype in self.device_set.keys():
@@ -72,6 +71,7 @@ class DeviceResponsiveState(hass.Hass):
                 outputFile.write(f"  initial_value: 0\n")
                 outputFile.write(f"  unique_id: {device['var_name']}\n")
                 outputFile.write(f"  friendly_name: {device['name']}\n")
+                outputFile.write(f"  force_update: true\n")
 
         outputFile.close()
 
@@ -193,10 +193,10 @@ class DeviceResponsiveState(hass.Hass):
 
         dev_name = self.entity_id_to_device_name(entity)
 
-        if dev_name:
-            self.log(f"{dev_name} recevied an update")
-        else:
-            self.log(f"Error: {entity} not registered")
+        # if dev_name:
+        #     self.log(f"{dev_name} recevied an update")
+        # else:
+        #     self.log(f"Error: {entity} not registered")
 
         var_name = f"var.{self.entity_id_to_var_name(entity)}"
 

@@ -1,0 +1,20 @@
+# Uses composite custom integration
+trackers:
+  - name: joe_home_or_away
+    time_as: device_or_local
+    require_movement: true
+    entity_id:
+      - sensor.joe_wifi_tracker
+      - device_tracker.six50joe_iphone15
+  - name: jamie_home_or_away
+    time_as: device_or_local
+    require_movement: true
+    entity_id:
+      - sensor.jamie_wifi_tracker
+      - device_tracker.jamie_iphone_16
+  - name: jemma_home_or_away
+    time_as: device_or_local
+    require_movement: true
+    entity_id:
+      - sensor.jemma_wifi_tracker
+      - device_tracker.jemmas_iphone

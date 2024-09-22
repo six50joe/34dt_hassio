@@ -1,52 +1,98 @@
 - platform: template
-  sensors: !include "../ha_homes_common/config/common_sensor_templates.yaml"
-
-- platform: template
   sensors:
     #
     # Smoke and Carbon Monixide Detectors
     #
+
+    # Upstairs
     smoke_upstairs_status:
       friendly_name: "Smoke Upstairs Status"
       value_template: >-
-        {% if is_state("binary_sensor.upstairs_smoke_smoke_alarm_smoke_detected", "on") %}
+        {% if is_state("binary_sensor.smoke_upstairs_smoke_detected", "on") %}
           smoke
         {% else %}
           idle
         {% endif %}
       icon_template: >-
-        {% if is_state("binary_sensor.upstairs_smoke_smoke_alarm_smoke_detected", "on") %}
+        {% if is_state("binary_sensor.smoke_upstairs_smoke_detected", "on") %}
           mdi:fire
         {% else %}
           mdi:smoke-detector
         {% endif %}
 
+    co_upstairs_status:
+      friendly_name: "Carbon Monoxide Upstairs Status"
+      value_template: >-
+        {% if is_state("binary_sensor.smoke_upstairs_carbon_monoxide_detected", "on") %}
+          co
+        {% else %}
+          idle
+        {% endif %}
+      icon_template: >-
+        {% if is_state("binary_sensor.smoke_upstairs_carbon_monoxide_detected", "on") %}
+          mdi:smoke
+        {% else %}
+          mdi:smoke-detector
+        {% endif %}
+
+    # Main Level
     smoke_main_level_status:
       friendly_name: "Smoke Main Level Status"
       value_template: >-
-        {% if is_state("binary_sensor.main_level_smoke_smoke_alarm_smoke_detected", "on") %}
+        {% if is_state("binary_sensor.smoke_main_level_smoke_detected", "on") %}
           smoke
         {% else %}
           idle
         {% endif %}
       icon_template: >-
-        {% if is_state("binary_sensor.main_level_smoke_smoke_alarm_smoke_detected", "on") %}
+        {% if is_state("binary_sensor.smoke_main_level_smoke_detected", "on") %}
           mdi:fire
         {% else %}
           mdi:smoke-detector
         {% endif %}
 
+    co_main_level_status:
+      friendly_name: "Carbon Monoxide Main Level Status"
+      value_template: >-
+        {% if is_state("binary_sensor.smoke_main_level_carbon_monoxide_detected", "on") %}
+          co
+        {% else %}
+          idle
+        {% endif %}
+      icon_template: >-
+        {% if is_state("binary_sensor.smoke_main_level_carbon_monoxide_detected", "on") %}
+          mdi:smoke
+        {% else %}
+          mdi:smoke-detector
+        {% endif %}
+
+    # Downstairs
     smoke_downstairs_status:
       friendly_name: "Smoke Downstairs Status"
       value_template: >-
-        {% if is_state("binary_sensor.downstairs_smoke_smoke_alarm_smoke_detected", "on") %}
+        {% if is_state("binary_sensor.smoke_downstairs_smoke_detected", "on") %}
           smoke
         {% else %}
           idle
         {% endif %}
       icon_template: >-
-        {% if is_state("binary_sensor.downstairs_smoke_smoke_alarm_smoke_detected", "on") %}
+        {% if is_state("binary_sensor.smoke_downstairs_smoke_detected", "on") %}
           mdi:fire
+        {% else %}
+          mdi:smoke-detector
+        {% endif %}
+
+    co_downstairs_status:
+      friendly_name: "Carbon Monoxide Downstairs Status"
+      value_template: >-
+        {% if is_state("binary_sensor.smoke_downstairs_carbon_monoxide_detected", "on") %}
+          co
+        {% else %}
+          idle
+        {% endif %}
+      icon_template: >-
+        {% if is_state("binary_sensor.smoke_downstairs_carbon_monoxide_detected", "on") %}
+          mdi:smoke
         {% else %}
           mdi:smoke-detector
         {% endif %}
@@ -54,13 +100,13 @@
     driveway_motion_detected:
       friendly_name: "Driveway Motion Status"
       value_template: >-
-        {% if not is_state("sensor.driveway_floodlight_sensor_burglar", "0")%}
+        {% if not is_state("binary_sensor.driveway_floodlight_sensor_motion_detection", "on")%}
           motion
         {% else %}
           sleep
         {% endif %}
       icon_template: >-
-        {% if not is_state("sensor.driveway_floodlight_sensor_burglar", "0")%}
+        {% if not is_state("binary_sensor.driveway_floodlight_sensor_motion_detection", "on")%}
           mdi:motion-sensor
         {% else %}
           mdi:sleep

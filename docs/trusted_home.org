@@ -19,3 +19,73 @@ Testing:
 
 * Add trusted home state to main screen
 * Add buttons to force trusted home state
+
+
+* Old UI code (prior to 1/24)
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: button
+        icon: mdi:face-man
+        show_icon: true
+        show_name: true
+        tap_action:
+          action: call-service
+          service: automation.trigger
+          service_data:
+            entity_id: automation.set_joe_home_state_2
+      - type: button
+        icon: mdi:face-man-outline
+        show_icon: true
+        show_name: true
+        tap_action:
+          action: call-service
+          service: automation.trigger
+          service_data:
+            entity_id: automation.set_joe_not_home_state
+      - type: button
+        icon: mdi:face-woman
+        show_icon: true
+        show_name: true
+        tap_action:
+          action: call-service
+          service: automation.trigger
+          service_data:
+            entity_id: automation.set_jamie_home_state
+      - type: button
+        icon: mdi:face-woman-outline
+        show_icon: true
+        show_name: true
+        tap_action:
+          action: call-service
+          service: automation.trigger
+          service_data:
+            entity_id: automation.set_jamie_not_home_state
+  - type: horizontal-stack
+    cards:
+      - type: button
+        icon: mdi:home-variant
+        show_icon: true
+        show_name: true
+        tap_action:
+          action: call-service
+          service: var.set
+          service_data:
+            entity_id: var.trusted_home
+            value: true
+      - type: button
+        icon: mdi:home-variant-outline
+        show_icon: true
+        show_name: true
+        tap_action:
+          action: call-service
+          service: var.set
+          service_data:
+            entity_id: var.trusted_home
+            value: false
+  - type: horizontal-stack
+    cards:
+      - type: markdown
+        content: |
+          Trusted Home:  {{ states('var.trusted_home') }}

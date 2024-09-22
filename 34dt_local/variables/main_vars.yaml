@@ -1,0 +1,24 @@
+home_name:
+  initial_value: 34DT
+  unique_id: HomeName
+  friendly_name: HomeName
+water_usage_rate:
+  initial_value: 0
+  unique_id: WaterUsageRate
+  force_update: true
+  friendly_name: WaterUsageRate
+water_usage:
+  unique_id: WaterUsage
+  friendly_name: WaterUsage
+  force_update: true
+  initial_value: 0
+prev_water_usage:
+  unique_id: PrevWaterUsage
+  friendly_name: PrevWaterUsage
+  force_update: true
+  initial_value: 0
+prev_water_time:
+  unique_id: PrevWaterTime
+  friendly_name: PrevWaterTime
+  force_update: true
+  initial_value: 0

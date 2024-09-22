@@ -1,0 +1,115 @@
+- id: front_door_opened
+  alias: Front Door Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.front_door
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: The front Door at 34 Deer Track has opened without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: garage_door_opened
+  alias: Garage Door Entry Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.garage_entry
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: 34DT Garage Entry Opened without parents home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: kitchen_sliding_door_opened
+  alias: Kitchen Sliding Door Openend
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.kitchen_sliding_doors_status
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: Kitchen Sliding Door Opened while parents not home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: family_room_sliding_doors_opened
+  alias: Family Room Sliding Doors Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.family_room_sliding_door_status
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: Family Room sliding door opened while parents not home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600
+- id: exercise_room_door_opened
+  alias: Exercise Room Door Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.downstairs_sliding_door
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.nobody_home
+    state: 'on'
+  action:
+  - service: notify.pushover
+    data:
+      message: Downstairs sliding door opened while parents not home.
+      target:
+      - six50joePhone
+      - JamieIPhone
+      data:
+        priority: 2
+        retry: 1800
+        expire: 3600

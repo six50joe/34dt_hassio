@@ -1,0 +1,254 @@
+* TODO Liv Room Lights
+[[http://www.gocontrol.com/manuals/WA00Z-1-Install.pdf][Manual]]
+Device: 'Wall Mounted Switch''
+Automation: media_automations.yaml: Living Room Lights Off / On- node id hardcoded there
+Trigger catches zwave_js_value_notification event by node id
+** DONE HA References
+** Inclusion
+With your Controller in Discovery or Add Mode, press either button on the WA00Z-1. The green LED should flash twice.
+2. You should see an indication on your Controller that the “device was added” to the network.
+3. The device will appear in the list of Switches. It should display as a switch.
+✓ NOTE: If the Controller/Gateway shows the addition failed or the WA00Z-1
+LED flashed red, repeat Steps 1-3.
+✓ NOTE: If you have trouble adding the WA00Z-1 to a group it may be that the Home ID and Node ID were not cleared from it after testing. You must first “RESET UNIT” to remove it from the network. Although adding it to a group includes it in the network, removing it from a group does not remove it from the network. If removed from a group, it functions as a repeater (only). “RESET UNIT” removes it completely from the network.
+** Exclusion
+The WA00Z-1 can be removed from the network by the Controller/Gateway. Refer to the Controller operating instructions for details.
+1. Set the Controller into Removal Mode and follow its instruction to delete the WA00Z-1 from the Controller.
+2. Remove the switch by pressing either button on the WA00Z-1. The LED will flash twice indicating that it has been removed.
+3. You should see an indication on your Controller that the “device was removed” from the network.
+* DONE Path Lights
+[[https://s2.img-b.com/build.com/mediabase/specifications/nutone/1143799/nutone-nwd500z-installation-13.pdf][NWD500Z Manual]]
+entity_id: switch.front_path_lights
+device: 'Front Path Lights'
+** DONE HA References
+** Inclusion
+1. Prepare the Controller to include a unit to the network by adding
+   it to a group (method of adding a node to the network). Refer to
+   controller instructions.
+2. The NWD500Z must be in its permanently installed location. Tap
+   either the top or bottom of the NWD500Z switch once.
+3. You should see an indication on your Controller that the “device
+   was included” in the network.
+
+✓ ✓ NOTE: If you have trouble adding the NWD500Z to a group it may be that the Home
+ID and Node ID were not cleared from it after testing. You must first “RESET UNIT”
+with your controller to remove it from the network.”
+Although adding it to a group includes it in the network, removing it from a group does not
+remove it from the network. If removed from a group, it functions only as a repeater.
+** Exclusion
+Same as inclusion
+* DONE Sensative Comfort Strip
+Device: "Outside Environment"
+Auto inclusion
+** TODO HA References
+* TODO Flood Lights
+[[https://homeseer.com/wp-content/uploads/2020/09/HS-FLS100-user-manual2.pdf][HS-FLS100+ Manual]]
+entity_id: switch.driveway_floodlight_sensor
+device: 'Driveway Floodlight Sensor'
+** TODO HA References
+** Inclusion
+The unit supports Auto Inclusion feature where it will automatically
+enter Inclusionmode when first powered up after a factory
+reset.
+
+1. Turn off power to the floodlight by turning off the wall switch.
+2. Try to relocate the Z-Wave controller nearer to the floodlight,
+   with at most onewall separation between them.
+3. Put the Z-Wave Controller into Inclusion mode.
+4. Turn on the wall switch of the floodlight. The floodlight will then
+   turn on for 5seconds and the Link LED will start to blink
+   slowly.
+5. When the Link LED stops blinking, the inclusion process is
+   complete.Note: If you are connecting this unit to a Z-Wave
+   controller that utilizes the 1S2security protocol, you may be asked
+   by your controller to enter a 5-digitDevice Specific Key (DSK) that
+   is unique to each unit. This can be found inone of two places:- on
+   the QR code label on the back of the unit- on the insert card
+   inside the packaging.
+6. Turn on the floodlight using the Z-Wave controller to check if the
+   autoinclusion is working properly. If Auto Inclusion fails, refer
+   to the Troubleshooting section regarding ManualInclusion
+
+
+Manual Inclusion:
+1. Put Controller in to inclusion mode
+2. Press the link button 3 times within 1.5 seconds to put unit into
+   inclusion mode
+
+LED brlinks rapidly during inclusion LED stops when inclusion is complete
+
+** Exclusion
+1. Put Controller in to inclusion mode
+2. Press the link button 3 times within 1.5 seconds to put unit into
+   exclusion mode
+
+* DONE Thermostats
+[[http://www.gocontrol.com/manuals/GC-TBZ48-Install.pdf][GC-TBZ48 Manual]]
+** Inclusion / Exclusion
+General Programming Procedure (for controllers suppor􏰁ng the thermostat device class):
+1. Set your primary controller to Include, add or Install mode, to add
+   the thermostat as a node on your network (see your controller’s
+   user manual for detailed instruc􏰁ons).
+2. Press any bu􏰀on to take thermostat out of sleep mode.
+3. Press and hold FAN bu􏰀on for 5 seconds. SETUP will be displayed in
+   the status display line.
+4. Scroll to “Z-Wave” using vw bu􏰀ons. Press SELECT.
+5. When prompted by your Z-Wave controller, Press the YES bu􏰀on in the
+   Z-Wave Install screen.
+p6. Press SELECT (mode bu􏰀on) to add thermostat to network.
+7. Display line should flash WAIT then SUCCESS if Z-Wave connec􏰁on is
+   made.
+8. If Z-Wave does not connect to controller, WAIT, then FAIL will
+   flash in status display line.
+9. If thermostat fails to connect, repeat Steps three (3) thru (7) to
+   re-try connec􏰁ng.
+Your controller will indicate the thermostat was successfully added to
+its network (see your controller’s user manual for details). Also, you
+can check if the thermostat was successfully added to the network by
+checking the ZHID (Home ID) and ZNID (Node ID) located in the
+Thermostat Info screen.  For other specific tasks such as adding the
+thermostat to Scenes or Groups, or dele􏰁ng the thermostat from an
+exis􏰁ng network, refer to the Z-Wave controller instruc􏰁ons.
+Inclusion and Exclusion Inclusion or exclusion is started by pu􏰂ng the
+controller into add node or remove node state and performing the
+General Programming Procedure outlined above. As part of the process,
+the thermostat sends a node informa􏰁on frame at normal power. Low
+power inclusion or low power exclusion is not possible.  CAUTION: Do
+not install ba􏰀eries and temporarily power the thermostat from 24VAC
+to include onto a Z-Wave network. Shortened ba􏰀ery life may occur when
+24VAC power is removed.
+
+** DONE HA References
+** DONE Master Bath
+Master Bath
+climate.master_bath
+** DONE Master Bedroom
+Master Bedroom
+climate.master_bedroom
+** DONE Den / Emmmett's Room
+Den Emmetts Room
+climate.den_emmetts_room
+** DONE Piano Room
+Piano Room
+climate.piano_room
+** DONE Kitchen / Living Room
+Kitchen Living Room
+climate.kitchen_living_room
+** DONE Exercise Room
+Exercise Room
+climate.exercise_room
+** DONE Air Conditioning
+Air Conditioning
+climate.air_conditioning
+* DONE Fire Alarms
+[[https://digitalassets.resideo.com/damroot/Original/1/M08-0456-169793_D132.pdf][First Alert ZCombo Manual]]
+** DONE HA References
+** Inclusion
+1. Slide battery door open.
+2. Insert batteries checking the correct orientation.
+3. Press and hold the test button with your finger or thumb. Keep it
+   held down as you slide the battery drawer closed. You may then
+   release the button.
+NOTE: Use only your finger or thumb on the test button. The use of any
+other instrument is strictly prohibited.
+** Exclusion
+1. Slide battery door open.
+2. Remove and re-insert batteries checking the correct orientation.
+3. Press and hold the test button with your finger or thumb. Keep it
+   held down as you slide the battery drawer closed. You may then
+   release the button.
+NOTE: Use only your finger or thumb on the test button. The use of any
+other instrument is strictly prohibited.  • The alarm will remain
+awake for 30 seconds on inclusion.
+
+** DONE Upstairs
+Device Name: 'Smoke Upstairs'
+** DONE Kitchen
+Device Name: 'Smoke Main Level
+** DONE Downstairs
+Device Name: 'Smoke Downstairs'
+* TODO Water Main Valve
+Device name: 'Basement Water Main'
+[[https://www.homecontrols.com/homecontrols/products/pdfs/FZ-FortrezZ/FZWV01-User-Manual.pdf][Fortrezz WV-01 Water Valve Manual]]
+** TODO HA References
+** Inclusion
+1. Put controller into inclusion mode
+2. Ensure status light is flashing periodically
+3. Press program button once.  Light should stop flashing
+** Exclusion
+1. Put controller into exclusion mode
+2. Same as inclusion
+* TODO Flow Meter
+[[http://manuals-backend.z-wave.info/make.php?lang=en&sku=FMI&cert=ZC10-16045038][Fortrezz Flow Meter Manual]]
+Device name: 'Flow Meter'
+** TODO HA References
+** Inclusion
+1. Set controller in inclusion mode
+2. Press switch once, LED when inclusion completes
+** Exclusion
+1. Put controller into exclusion mode
+2. Press switch, LED will blink when exclusion completes
+* DONE Motion Detectors
+[[http://manuals-backend.z-wave.info/make.php?lang=en&sku=PIRZWAVE2.5-ECO&cert=ZC10-16020001][PIR-ZWAVE2.5-ECO Manual]]
+** TODO HA References
+** Inclusion
+Once the controller is in inclusion mode, simply remove the battery
+isolation tab, OR insert the battery, OR press the small button on the
+back of the Motion Detector.
+** Exclusion
+Once the controller is in exclusion mode, simply remove the battery
+isolation tab, OR insert the battery, OR press the small button on the
+back of the Motion Detector.
+** DONE Piano Room
+Device name: 'Piano Room Motion'
+binary_sensor.piano_room_motion_home_security_motion_detection
+USE:
+Piano Room Motion
+binary_sensor.piano_room_motion
+** DONE Kitchen
+Device name: 'Kitchen Room Motion'
+** DONE Exercise Room
+Device name: 'Exercise Room Room Motion'
+* TODO Garage Door Sensors
+[[https://www.urcsupport.com/wp-content/uploads/2020/11/TILTZWAVE2.5-ECO-manual.pdf][TILT-ZWAVE2.5-ECO Manual]]
+** TODO HA References
+** Inclusion
+1. Start by placing the controller into inclusion mode.
+2. Activate inclusion mode for the sensor by inserting the
+   battery. When the inclusion process is complete the red LED will
+   turn on for approximately 10 seconds and then it will go out. If
+   the LED continues to flash, repeat the inclusion process.
+3. Test the garage door sensor before mounting it. Hold the sensor in
+   your hand. Flip the sensor upside-down and watch the LED while
+   doing so. The LED will flash each time the position of the sensor
+   is changed. If your Z-Wave network has a software interface you may
+   verify that the messages from the sensor are being received each
+   time the sensor is flipped.
+** Exclusion
+Exclusion mode on the senor is initiated following the same exact procedure as inclusion
+** DONE Inner
+Device Name: 'Inner Garage'
+** DONE Outer
+Device Name: 'Outer Garage'
+* DONE Energy Meter
+[[https://aeotec.freshdesk.com/support/solutions/articles/6000161943-home-energy-meter-gen5-user-guide-][ZW095 Home Energy Meter Manual]]
+Device Name: 'Home Energy Meter'
+** TODO HA References
+** Inclusion
+1. Put your primary Z-Wave controller, usually a gateway or hub, into
+   inclusion mode. If you are not sure how to do this, please refer to
+   your controller’s user manual.
+2. Press the Action Button on your HEM. If it has been successfully
+   linked to your network, its LED will remain illuminated. If the
+   linking was unsuccessful, your HEM’s LED will continue to blink.
+**
+Exclusion
+Not mentioned in instructions- perhaps same as inclusion?
+** Factory Reset
+Your Home Energy Meter can be reset to default factory settings with
+ease.
+
+1) Press and hold the Action Button for 10 seconds.
+2) If successful, the LED on the HEM should begin to blink slowly.
+* TODO Christmas Tree Plug
+** TODO HA References

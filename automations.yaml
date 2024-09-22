@@ -1,156 +1,3 @@
-- id: '1583167274451'
-  alias: Reboot notification
-  description: Notify when system rebooted
-  trigger:
-  - event: start
-    platform: homeassistant
-  condition:
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: 34DT Hassio Rebooted
-      target:
-      - six50joePhone
-      data:
-        priority: -1
-- id: '1583167744310'
-  alias: Front Door Opened
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.front_door
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: The front Door at 34 Deer Track has opened without parents home.
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 1800
-        expire: 3600
-- id: '1583167835627'
-  alias: Garage Door Entry Opened
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.garage_entry
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: 34DT Garage Entry Opened without parents home.
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 1800
-        expire: 3600
-- id: '1583283013697'
-  alias: Piano Room Motion Detected
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.piano_room_motion_home_security_motion_detection
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: Piano Room Motion Detected without parents home.
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 1800
-        expire: 3600
-- id: '1583283118831'
-  alias: Exercise Room Motion Detected
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.exercise_room_motion_home_security_motion_detection
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: Exercise Room Motion Detected without parents home.
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 1800
-        expire: 3600
-- id: '1583838999172'
-  alias: Kitchen Motion Detected
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.kitchen_motion_home_security_motion_detection
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: Kitchen Area Motion Detected without parents home.
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 1800
-        expire: 3600
 - id: '1583840584254'
   alias: Joe Left Home
   description: ''
@@ -221,469 +68,6 @@
       - six50joePhone
       data:
         priority: 0
-- id: '1583884186260'
-  alias: Kitchen Sliding Door Openend
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.kitchen_sliding_doors_status
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: Kitchen Sliding Door Opened while parents not home.
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 1800
-        expire: 3600
-- id: '1583970826722'
-  alias: Family Room Sliding Doors Opened
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.family_room_sliding_door_status
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: Family Room sliding door opened while parents not home.
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 1800
-        expire: 3600
-- id: '1585016862253'
-  alias: Check Lakehouse Disconnected
-  description: ''
-  trigger:
-  - entity_id: sensor.lakehouse_hassio
-    from: Up
-    platform: state
-    to: Down
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Lakehouse had been reachable but is now not
-      target:
-      - six50joePhone
-  mode: single
-- id: '1585017089811'
-  alias: Check Lakehouse Connected
-  description: ''
-  trigger:
-  - entity_id: sensor.lakehouse_hassio
-    from: Down
-    platform: state
-    to: Up
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Lakehouse had not been reachable, but is now
-      target:
-      - six50joePhone
-  mode: single
-- id: '1585054962692'
-  alias: Store Kitchen Motion Time
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.kitchen_motion_home_security_motion_detection
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - data:
-      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
-        }}'
-      topic: hass/storage/motion/on_time/kitchenmotion
-    service: mqtt.publish
-- id: piano_room_motion
-  alias: Store Piano Room Motion Time
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.piano_room_motion_home_security_motion_detection
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - data:
-      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
-        }}'
-      topic: hass/storage/motion/on_time/pianoroommotion
-    service: mqtt.publish
-- id: exercise_room_motion
-  alias: Store Exercise Room Motion Time
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.exercise_room_motion_home_security_motion_detection
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - data:
-      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
-        }}'
-      topic: hass/storage/motion/on_time/exerciseroommotion
-    service: mqtt.publish
-- id: driveway_motion
-  alias: Store Driveway Motion Time
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.driveway_floodlight_sensor_home_security_motion_detection
-    from: 'off'
-    platform: state
-    to: 'on'
-  action:
-  - data:
-      payload_template: '{{ as_timestamp(now()) | timestamp_custom(''%m-%d-%y %H:%M:%S'')
-        }}'
-      topic: hass/storage/motion/on_time/drivewaymotion
-    service: mqtt.publish
-  mode: single
-- id: driveway_motion_while_away
-  alias: Motion in driveway while away
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.driveway_floodlight_sensor_home_security_motion_detection
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: Motion detected in 34DT Driveway while away
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: -1
-        retry: 1800
-        expire: 3600
-- id: 34dt_upstairs_smoke
-  alias: Upstairs Smoke
-  description: ''
-  trigger:
-  - entity_id: sensor.smoke_upstairs_status
-    from: idle
-    platform: state
-    to: smoke
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Smoke detected upstairs at 34DT!
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 500
-        expire: 7200
-- id: 34dt_upstairs_co
-  alias: Upstairs Carbon Monoxide
-  description: ''
-  trigger:
-  - entity_id: sensor.smoke_upstairs_status
-    from: idle
-    platform: state
-    to: co
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Carbon Monoxide detected upstairs at 34DT!
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 500
-        expire: 7200
-- id: 34dt_main_level_smoke
-  alias: Main Floor Smoke
-  description: ''
-  trigger:
-  - entity_id: sensor.smoke_main_level_status
-    from: idle
-    platform: state
-    to: smoke
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Smoke detected main floor at 34DT!
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 500
-        expire: 7200
-- id: 34dt_main_level_co
-  alias: Main Floor Carbon Monoxide
-  description: ''
-  trigger:
-  - entity_id: sensor.smoke_main_level_status
-    from: idle
-    platform: state
-    to: co
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Carbon Monoxide detected main floor at 34DT!
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 500
-        expire: 7200
-- id: 34dt_downstairs_smoke
-  alias: Downstairs Smoke
-  description: ''
-  trigger:
-  - entity_id: sensor.smoke_downstairs_status
-    from: idle
-    platform: state
-    to: smoke
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Smoke detected downstairs at 34DT!
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 500
-        expire: 7200
-- id: 34dt_downstairs_co
-  alias: Downstairs Carbon Monoxide
-  description: ''
-  trigger:
-  - entity_id: sensor.smoke_downstairs_status
-    from: idle
-    platform: state
-    to: co
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Carbon Monoxide detected downstairs at 34DT!
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 500
-        expire: 7200
-- id: sonos_volume_mute
-  alias: Sonos Volume Mute
-  description: ''
-  trigger:
-  - platform: event
-    event_type: ios.action_fired
-    event_data:
-      actionName: Living Room Mute
-  condition: []
-  action:
-  - service: media_player.volume_set
-    data_template:
-      entity_id: media_player.living_room
-      volume_level: 0
-- id: sonos_volume_low
-  alias: Sonos Volume Low
-  description: ''
-  trigger:
-  - platform: event
-    event_type: ios.action_fired
-    event_data:
-      actionName: Living Room Volume Low
-  condition: []
-  action:
-  - service: media_player.volume_set
-    data_template:
-      entity_id: media_player.living_room
-      volume_level: 0.1
-- id: sonos_volume_mid
-  alias: Sonos Volume Mid
-  description: ''
-  trigger:
-  - platform: event
-    event_type: ios.action_fired
-    event_data:
-      actionName: Living Room Volume Mid
-  condition: []
-  action:
-  - service: media_player.volume_set
-    data_template:
-      entity_id: media_player.living_room
-      volume_level: 0.26
-- id: sonos_volume_high
-  alias: Sonos Volume High
-  description: ''
-  trigger:
-  - platform: event
-    event_type: ios.action_fired
-    event_data:
-      actionName: Living Room Volume High
-  condition: []
-  action:
-  - service: media_player.volume_set
-    data_template:
-      entity_id: media_player.living_room
-      volume_level: 0.6
-- id: ac_imminent
-  alias: Air Conditioning Imminent
-  description: ''
-  trigger:
-  - above: '79'
-    entity_id: sensor.air_conditioning_temperature
-    platform: numeric_state
-  condition:
-  - condition: state
-    entity_id: input_boolean.air_cond_warn_triggered
-    state: 'off'
-  action:
-  - service: notify.pushover
-    data:
-      message: Air conditioning imminent; close windows
-      target:
-      - six50joePhone
-      - JamieIPhone
-  - data: {}
-    entity_id: input_boolean.air_cond_warn_triggered
-    service: input_boolean.turn_on
-- id: water_shutoff
-  alias: Water Main Shut Off
-  description: Water main has been closed manually or leak detected
-  trigger:
-  - entity_id: switch.basement_water_main_current_value
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Basement leak detected or main manually shut off
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 900
-        expire: 7200
-        sound: mechanical
-- id: '1594236029982'
-  alias: Reset Air Conditioning Warning
-  description: ''
-  trigger:
-  - event: sunrise
-    platform: sun
-  condition: []
-  action:
-  - data: {}
-    entity_id: input_boolean.air_cond_warn_triggered
-    service: input_boolean.turn_off
-- id: '1599530976085'
-  alias: Router Admin Page Hung
-  description: ''
-  trigger:
-  - entity_id: sensor.netgear_router_admin
-    from: Up
-    platform: state
-    to: Down
-  condition: []
-  action:
-  - device_id: f38d9a61965c4082a22992ded90eddfb
-    domain: switch
-    entity_id: switch.modem_reset_switch
-    type: turn_off
-  - delay: '20'
-  - type: turn_on
-    device_id: f38d9a61965c4082a22992ded90eddfb
-    entity_id: switch.modem_reset_switch
-    domain: switch
-  - service: notify.pushover
-    data:
-      message: 34DT Router Was Rebooted due to Admin Page Hung
-  mode: single
-- id: Living Room Lights On
-  alias: Living Room Lights On
-  trigger:
-  - platform: event
-    event_type: zwave_js_value_notification
-    event_data:
-      node_id: 51
-      property_key: '001'
-  condition: []
-  action:
-  - service: input_select.select_next
-    entity_id: input_select.living_room_scene
-  - service: hue.hue_activate_scene
-    data_template:
-      group_name: Living room
-      scene_name: '{{ states.input_select.living_room_scene.state }}'
-  mode: single
-- id: Living Room Lights Off
-  alias: Living Room Lights Off
-  trigger:
-  - event_data:
-      node_id: 51
-      property_key: '002'
-    event_type: zwave_js_value_notification
-    platform: event
-  condition: []
-  action:
-  - service: homeassistant.turn_off
-    entity_id: light.hue_color_lamp_1
-  - service: homeassistant.turn_off
-    entity_id: light.hue_color_downlight_1
-  - service: homeassistant.turn_off
-    entity_id: light.hue_color_downlight_2
-  - service: input_select.select_option
-    data:
-      entity_id: input_select.living_room_scene
-      option: Dance Party
-  mode: single
 - id: '1605561802870'
   alias: Daily Device Batteries Check
   description: ''
@@ -704,10 +88,11 @@
     event: sunset
   condition: []
   action:
-  - type: turn_on
-    device_id: d5c9618bf075d4657def9c581c7aa9eb
-    entity_id: switch.front_path_lights
-    domain: switch
+  - service: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.front_path_lights
   mode: single
 - id: '1607037786126'
   alias: Path Lights Off
@@ -717,31 +102,11 @@
     at: '20:00:00'
   condition: []
   action:
-  - type: turn_off
-    device_id: d5c9618bf075d4657def9c581c7aa9eb
-    entity_id: switch.front_path_lights
-    domain: switch
-  mode: single
-- id: 34dt_low_temperature
-  alias: 34DT Low Temperature
-  description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.thermostat_piano_room_temperature
-    below: '55'
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: 34 Deer Track temperature dangerously low!
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 900
-        expire: 7200
-        sound: climb
+  - service: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.front_path_lights
   mode: single
 - id: set_joe_home_state
   alias: Set Joe Home State
@@ -785,7 +150,7 @@
       person: jamie
       state: not_home
 - id: '1614001081756'
-  alias: Set Joe Home State 2
+  alias: Set Joe Home State
   description: ''
   trigger: []
   condition: []
@@ -837,128 +202,6 @@
         }}{% endif %}'
       target:
       - six50joePhone
-- id: water_flowing
-  alias: Water Flowing While Away
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: var.water_usage_rate
-  condition:
-  - condition: not
-    conditions:
-    - condition: template
-      value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  - condition: state
-    entity_id: var.disable_notifications
-    state: 'False'
-  action:
-  - service: notify.pushover
-    data:
-      message: Water flowing while away
-      target:
-      - six50joePhone
-      - JamieIPhone
-      data:
-        priority: 2
-        retry: 1800
-        expire: 3600
-  mode: single
-- id: set_trusted_home
-  alias: Set Trusted Home
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: person.joe
-  - platform: state
-    entity_id: person.jamie
-  - platform: time
-    at: 07:00:00
-  condition:
-  - condition: or
-    conditions:
-    - condition: template
-      value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-        == ''home'' }}'
-    - condition: time
-      after: 07:00:00
-      before: 09:00:00
-      weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-  action:
-  - service: var.set
-    data:
-      entity_id:
-      - var.trusted_home
-      value: true
-  mode: single
-- id: set_not_trusted_home
-  alias: Set Not Trusted Home
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: person.joe
-  - platform: state
-    entity_id: person.jamie
-  - platform: time
-    at: 09:00:00
-  condition:
-  - condition: not
-    conditions:
-    - condition: or
-      conditions:
-      - condition: template
-        value_template: '{{ states(''person.joe'').lower()  == ''home'' or states(''person.jamie'').lower()
-          == ''home'' }}'
-      - condition: time
-        after: 07:00:00
-        before: 09:00:00
-        weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
-  action:
-  - service: var.set
-    data:
-      entity_id:
-      - var.trusted_home
-      value: false
-  mode: single
-- id: trust_home_test
-  alias: Testing
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: var.trusted_home
-  condition:
-  - condition: template
-    value_template: '{{ states(''var.trusted_home'').lower()  == ''true'' }}'
-  action:
-  - service: var.set
-    data:
-      entity_id:
-      - var.test_var
-      value: TRUSTED HOME TRIGGERED
-- id: trust_not_home_test
-  alias: Testing
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: var.trusted_home
-  condition:
-  - condition: template
-    value_template: '{{ states(''var.trusted_home'').lower()  != ''true'' }}'
-  action:
-  - service: var.set
-    data:
-      entity_id:
-      - var.test_var
-      value: TRUSTED *NOT* HOME TRIGGERED
 - id: '1671150769271'
   alias: Jemma's Xmas Lights On
   description: ''
@@ -1031,80 +274,6 @@
     entity_id: 054ab60f7960515d6cf4f6847542e4eb
     domain: switch
   mode: single
-- id: '1700344410607'
-  alias: Ping Wave Device Test
-  description: ''
-  trigger: []
-  condition: []
-  action:
-  - device_id: 93ffc0d5c56d124c808cbb60db7e6fc9
-    domain: zwave_js
-    entity_id: 6e8302ce6d3209adcec921d5d7ef27d9
-    type: refresh_value
-    refresh_all_values: true
-  mode: single
-- id: '1700346127425'
-  alias: Test Wave Device Updated
-  description: ''
-  trigger:
-  - platform: device
-    device_id: 93ffc0d5c56d124c808cbb60db7e6fc9
-    domain: button
-    entity_id: 6e8302ce6d3209adcec921d5d7ef27d9
-    type: pressed
-  condition: []
-  action:
-  - service: notify.pushover
-    data:
-      message: Test ZWave updated
-  mode: single
-- id: enable_all_notifications
-  alias: enable_all_notifications
-  description: Disable all HA notifications
-  trigger: []
-  condition: []
-  action:
-  - service: var.set
-    data:
-      entity_id: var.disable_notifications
-      value: false
-  mode: single
-- id: '1704406845222'
-  alias: New automation
-  description: stop_notifications
-  trigger: []
-  condition: []
-  action:
-  - service: var.set
-    metadata: {}
-    data:
-      entity_id: var.disable_notifications
-      value: true
-  mode: single
-- id: '1704406913838'
-  alias: resume_notifications
-  description: ''
-  trigger: []
-  condition: []
-  action:
-  - service: var.set
-    metadata: {}
-    data:
-      entity_id: var.disable_notifications
-      value: false
-  mode: single
-- id: '1704407021473'
-  alias: stop_notifications
-  description: ''
-  trigger: []
-  condition: []
-  action:
-  - service: var.set
-    metadata: {}
-    data:
-      entity_id: var.disable_notifications
-      value: true
-  mode: single
 - id: '1704412552860'
   alias: send_notification
   description: Send a home alert
@@ -1129,4 +298,47 @@
         retry: 1800
         expire: 3600
       title: 34DT Home Alert
+  mode: single
+- id: '1706831869430'
+  alias: Daily Enablement of Notifications
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:00:00
+  condition: []
+  action:
+  - service: automation.trigger
+    metadata: {}
+    data:
+      skip_condition: true
+    target:
+      entity_id: automation.resume_notifications
+  mode: single
+- id: '1709873405874'
+  alias: Turn seedling light off
+  description: ''
+  trigger:
+  - platform: time
+    at: '10:00:00'
+  condition: []
+  action:
+  - service: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.garden_light_plug
+  mode: single
+- id: '1709873462799'
+  alias: Turn seedling light on
+  description: ''
+  trigger:
+  - platform: time
+    at: '18:00:00'
+  condition: []
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id:
+      - switch.garden_light_plug
+    data: {}
   mode: single
